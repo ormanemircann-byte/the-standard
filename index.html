@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>THE STANDARD v4.8 Clean Core</title>
+<title>THE STANDARD v4.9 Clean Core</title>
 <style>
 :root{
   --bg:#050505;
@@ -152,7 +152,7 @@ textarea{min-height:92px;resize:vertical}
   h1{font-size:36px}
 }
 
-/* ===== v4.8 Daily Task + Workout History + Profile Crop Fix ===== */
+/* ===== v4.9 Daily Task + Workout History + Profile Crop Fix ===== */
 .daily-task-input{display:grid;grid-template-columns:1fr auto;gap:10px;margin-bottom:12px}
 .history-filter{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end;margin:14px 0}
 .workout-history-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(0,0,0,.18);margin-bottom:10px}
@@ -163,7 +163,7 @@ textarea{min-height:92px;resize:vertical}
 .task-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);border-radius:999px;padding:5px 9px;font-size:11px;color:#bbb;margin-top:6px}
 
 
-/* ===== v4.8 Profile crop exact preview/application fix ===== */
+/* ===== v4.9 Profile crop exact preview/application fix ===== */
 #avatarBox.ts-bg-avatar,
 .profile-preview.ts-bg-preview{
   background-repeat:no-repeat;
@@ -175,7 +175,7 @@ textarea{min-height:92px;resize:vertical}
 }
 
 
-/* ===== THE STANDARD v4.8 — TRUE MOBILE APP LAYOUT =====
+/* ===== THE STANDARD v4.9 — TRUE MOBILE APP LAYOUT =====
    Desktop remains unchanged.
    Mobile becomes a real app layout: compact top header + bottom nav + full-width content.
 */
@@ -511,8 +511,8 @@ textarea{min-height:92px;resize:vertical}
 }
 
 
-/* ===== THE STANDARD v4.8 STABLE REFRESH FIX =====
-   Based on v4.8 working logic.
+/* ===== THE STANDARD v4.9 STABLE REFRESH FIX =====
+   Based on v4.9 working logic.
    Keeps full render behavior so actions appear immediately.
    Only light mobile touch/CSS performance improvements.
 */
@@ -577,7 +577,7 @@ button:active{
     </div>
 
     <nav class="nav" id="nav"></nav>
-    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v4.8</div>
+    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v4.9</div>
   </aside>
 
   <main class="main">
@@ -1137,7 +1137,7 @@ window.addEventListener('DOMContentLoaded',init);
 </script>
 
 <script>
-/* ===== THE STANDARD v4.8 PATCH ===== */
+/* ===== THE STANDARD v4.9 PATCH ===== */
 (function(){
   const oldDefault = window.defaultState;
   window.defaultState = function(){
@@ -1352,7 +1352,7 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v4.8 PROFILE PICKER FIX ONLY ===== */
+/* ===== THE STANDARD v4.9 PROFILE PICKER FIX ONLY ===== */
 (function(){
   // Allows selecting the same photo twice by clearing input before click.
   window.choosePhoto = function(){
@@ -1446,7 +1446,7 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v4.8 PROFILE CROP EXACT FIX =====
+/* ===== THE STANDARD v4.9 PROFILE CROP EXACT FIX =====
    Uses background-size/background-position on both preview and avatar.
    This makes the modal preview and final avatar use the exact same crop logic.
 */
@@ -1553,8 +1553,8 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v4.8 SMALL STABILITY PATCH =====
-   No renderAll override. Keeps v4.8 immediate UI updates.
+/* ===== THE STANDARD v4.9 SMALL STABILITY PATCH =====
+   No renderAll override. Keeps v4.9 immediate UI updates.
 */
 (function(){
   document.addEventListener('DOMContentLoaded', function(){
@@ -1562,6 +1562,157 @@ window.addEventListener('DOMContentLoaded',init);
       var sp = document.getElementById('splash');
       if(sp) sp.classList.add('hide');
     }, 650);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v4.9 PHOTO IMMEDIATE REFRESH FIX =====
+   Fixes: photo is saved but only appears after changing tabs.
+   Does not touch portfolio/body/book/habits logic.
+*/
+(function(){
+  function setAvatarNow(src, zoom, x, y){
+    var avatar = document.getElementById('avatarBox');
+    var img = document.getElementById('avatarImg');
+    var initials = document.getElementById('avatarInitials');
+    if(!avatar || !initials) return;
+
+    if(src){
+      avatar.classList.add('ts-bg-avatar');
+      avatar.style.backgroundImage = 'url("' + src + '")';
+      avatar.style.backgroundSize = Math.max(100, Math.round((Number(zoom)||1.15) * 100)) + '%';
+      avatar.style.backgroundPosition = (50 + (Number(x)||0)/2) + '% ' + (50 + (Number(y)||0)/2) + '%';
+      avatar.style.backgroundRepeat = 'no-repeat';
+      if(img){
+        img.removeAttribute('src');
+        img.style.display = 'none';
+      }
+      initials.style.display = 'none';
+    }else{
+      avatar.classList.remove('ts-bg-avatar');
+      avatar.style.backgroundImage = '';
+      avatar.style.backgroundSize = '';
+      avatar.style.backgroundPosition = '';
+      avatar.style.backgroundRepeat = '';
+      if(img){
+        img.removeAttribute('src');
+        img.style.display = 'none';
+      }
+      initials.style.display = 'block';
+    }
+  }
+
+  function currentPhotoValues(){
+    return {
+      zoom: Number(document.getElementById('photoZoom')?.value || 1.15),
+      x: Number(document.getElementById('photoX')?.value || 0),
+      y: Number(document.getElementById('photoY')?.value || 0)
+    };
+  }
+
+  window.applyProfile = function(){
+    if(!state || !state.profile){
+      setAvatarNow('', 1.15, 0, 0);
+      return;
+    }
+    setAvatarNow(state.profile.image || '', state.profile.zoom || 1.15, state.profile.x || 0, state.profile.y || 0);
+  };
+
+  window.updatePhotoPreview = function(){
+    var box = document.querySelector('.profile-preview');
+    var src = pendingPhoto || (state && state.profile && state.profile.image) || '';
+    var v = currentPhotoValues();
+    if(!box) return;
+
+    box.classList.add('ts-bg-preview');
+    box.style.backgroundImage = src ? 'url("' + src + '")' : '';
+    box.style.backgroundSize = Math.max(100, Math.round(v.zoom * 100)) + '%';
+    box.style.backgroundPosition = (50 + v.x/2) + '% ' + (50 + v.y/2) + '%';
+    box.style.backgroundRepeat = 'no-repeat';
+
+    var previewImg = document.getElementById('photoPreview');
+    if(previewImg) previewImg.style.display = 'none';
+  };
+
+  window.choosePhoto = function(){
+    var input = document.getElementById('photoFile');
+    if(!input) return;
+
+    // This allows selecting the same file again.
+    input.value = '';
+
+    input.onchange = function(e){
+      var f = e.target.files && e.target.files[0];
+      if(!f) return;
+
+      var r = new FileReader();
+      r.onload = function(ev){
+        pendingPhoto = ev.target.result;
+
+        var previewImg = document.getElementById('photoPreview');
+        if(previewImg){
+          previewImg.src = pendingPhoto;
+          previewImg.style.display = 'none';
+        }
+
+        var modal = document.getElementById('photoModal');
+        if(modal) modal.classList.add('open');
+
+        updatePhotoPreview();
+      };
+      r.readAsDataURL(f);
+    };
+
+    input.click();
+  };
+
+  window.savePhoto = function(){
+    if(!state.profile) state.profile = {};
+    if(!pendingPhoto){
+      closePhotoModal();
+      applyProfile();
+      return;
+    }
+
+    var v = currentPhotoValues();
+    state.profile.image = pendingPhoto;
+    state.profile.zoom = v.zoom;
+    state.profile.x = v.x;
+    state.profile.y = v.y;
+
+    save();
+
+    // Critical fix: update the visible avatar immediately, without waiting for tab/render.
+    setAvatarNow(state.profile.image, state.profile.zoom, state.profile.x, state.profile.y);
+
+    closePhotoModal();
+
+    // A second paint on the next frame makes iOS/Safari update reliably.
+    requestAnimationFrame(function(){
+      setAvatarNow(state.profile.image, state.profile.zoom, state.profile.x, state.profile.y);
+    });
+  };
+
+  window.clearPhoto = function(){
+    if(!state.profile) state.profile = {};
+    state.profile.image = '';
+    state.profile.zoom = 1.15;
+    state.profile.x = 0;
+    state.profile.y = 0;
+    pendingPhoto = null;
+    save();
+    setAvatarNow('', 1.15, 0, 0);
+    requestAnimationFrame(function(){ setAvatarNow('', 1.15, 0, 0); });
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){
+      if(typeof state !== 'undefined' && state.profile){
+        setAvatarNow(state.profile.image || '', state.profile.zoom || 1.15, state.profile.x || 0, state.profile.y || 0);
+      }
+    }, 250);
   });
 })();
 </script>
