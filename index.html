@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>THE STANDARD v5.0 Clean Core</title>
+<title>THE STANDARD v6.1 Clean Core</title>
 <style>
 :root{
   --bg:#050505;
@@ -152,7 +152,7 @@ textarea{min-height:92px;resize:vertical}
   h1{font-size:36px}
 }
 
-/* ===== v5.0 Daily Task + Workout History + Profile Crop Fix ===== */
+/* ===== v6.1 Daily Task + Workout History + Profile Crop Fix ===== */
 .daily-task-input{display:grid;grid-template-columns:1fr auto;gap:10px;margin-bottom:12px}
 .history-filter{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end;margin:14px 0}
 .workout-history-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(0,0,0,.18);margin-bottom:10px}
@@ -163,7 +163,7 @@ textarea{min-height:92px;resize:vertical}
 .task-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);border-radius:999px;padding:5px 9px;font-size:11px;color:#bbb;margin-top:6px}
 
 
-/* ===== v5.0 Profile crop exact preview/application fix ===== */
+/* ===== v6.1 Profile crop exact preview/application fix ===== */
 #avatarBox.ts-bg-avatar,
 .profile-preview.ts-bg-preview{
   background-repeat:no-repeat;
@@ -175,7 +175,7 @@ textarea{min-height:92px;resize:vertical}
 }
 
 
-/* ===== THE STANDARD v5.0 — TRUE MOBILE APP LAYOUT =====
+/* ===== THE STANDARD v6.1 — TRUE MOBILE APP LAYOUT =====
    Desktop remains unchanged.
    Mobile becomes a real app layout: compact top header + bottom nav + full-width content.
 */
@@ -511,8 +511,8 @@ textarea{min-height:92px;resize:vertical}
 }
 
 
-/* ===== THE STANDARD v5.0 STABLE REFRESH FIX =====
-   Based on v5.0 working logic.
+/* ===== THE STANDARD v6.1 STABLE REFRESH FIX =====
+   Based on v6.1 working logic.
    Keeps full render behavior so actions appear immediately.
    Only light mobile touch/CSS performance improvements.
 */
@@ -542,7 +542,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v5.0 NO PHOTO STABLE =====
+/* ===== THE STANDARD v6.1 NO PHOTO STABLE =====
    Profile image upload/crop removed for stability on mobile Safari.
 */
 .op-actions{display:none!important}
@@ -553,7 +553,618 @@ button:active{
 #avatarImg{display:none!important}
 #avatarInitials{display:block!important}
 
+
+/* ===== THE STANDARD v6.1 BACKUP & STABILITY ===== */
+.backup-status-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(201,141,61,.08),rgba(255,255,255,.018));border-radius:18px;padding:16px;margin-bottom:14px}
+.backup-status-main{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.backup-status-title{font-weight:950;font-size:16px;margin-bottom:5px}.backup-status-note{color:var(--muted);font-size:13px;line-height:1.45}
+.backup-status-pill{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line2);border-radius:999px;padding:8px 11px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.backup-ok{color:var(--green);border-color:rgba(46,233,131,.28);background:rgba(46,233,131,.08)}.backup-warn{color:var(--amber);border-color:rgba(201,141,61,.34);background:rgba(201,141,61,.09)}.backup-danger{color:var(--red);border-color:rgba(255,107,107,.32);background:rgba(255,107,107,.09)}
+.backup-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.backup-mini{background:#080808;border:1px solid var(--line);border-radius:14px;padding:11px}.backup-mini b{display:block;font-size:18px}.backup-mini span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-top:5px}
+.backup-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.backup-actions .btn{width:auto}.backup-validate-list{display:grid;gap:9px}.backup-check{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);background:rgba(0,0,0,.18);border-radius:14px;padding:12px 13px}.backup-check span:first-child{color:#ded7cf;font-weight:800}.backup-check span:last-child{font-weight:950;font-size:12px}
+.backup-banner{display:none;border:1px solid rgba(201,141,61,.34);background:rgba(201,141,61,.10);color:#f2dfc1;border-radius:18px;padding:14px 16px;margin-bottom:16px;line-height:1.45}.backup-banner.show{display:block}
+@media(max-width:900px){.backup-status-main{display:block}.backup-status-pill{margin-top:10px}.backup-mini-grid{grid-template-columns:1fr}.backup-actions .btn{width:100%}}
+
+
+/* ===== THE STANDARD v6.1 HABIT STREAK SYSTEM ===== */
+.habit-streak-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.habit-streak-card{border:1px solid var(--line);background:rgba(0,0,0,.22);border-radius:16px;padding:14px}
+.habit-streak-card b{display:block;font-size:24px;letter-spacing:-.04em}
+.habit-streak-card span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-top:5px}
+.habit-progress-line{height:7px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin-top:9px}
+.habit-progress-line i{display:block;height:100%;width:0%;border-radius:99px;background:linear-gradient(90deg,var(--amber),#f0c16a)}
+.habit-streak-pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);background:rgba(255,255,255,.035);color:#d8d0c8;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:850;margin-top:8px}
+.habit-warning{border:1px solid rgba(255,107,107,.25);background:rgba(255,107,107,.08);color:#ffb4b4;border-radius:14px;padding:12px 13px;margin-bottom:12px;line-height:1.45}
+.habit-good{border:1px solid rgba(46,233,131,.24);background:rgba(46,233,131,.07);color:#bff7d6;border-radius:14px;padding:12px 13px;margin-bottom:12px;line-height:1.45}
+.habit-month-table{width:100%;border-collapse:collapse}
+.habit-month-table th,.habit-month-table td{border-bottom:1px solid var(--line);padding:11px 9px;text-align:left;font-size:13px}
+.habit-month-table th{color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:900px){.habit-streak-grid{grid-template-columns:1fr 1fr}.habit-month-table{display:block;overflow-x:auto;white-space:nowrap}}
+
+
+/* ===== THE STANDARD v6.1 PORTFOLIO PRICE UPDATE MODE ===== */
+.price-update-grid{
+  display:grid;
+  gap:10px;
+}
+.price-update-row{
+  display:grid;
+  grid-template-columns:1.1fr .75fr .75fr .75fr auto;
+  gap:10px;
+  align-items:center;
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.18);
+  border-radius:15px;
+  padding:12px;
+}
+.price-update-row b{
+  display:block;
+  font-size:14px;
+}
+.price-update-row small{
+  display:block;
+  color:var(--muted);
+  margin-top:3px;
+}
+.price-update-row input{
+  width:100%;
+  background:#080808;
+  border:1px solid var(--line2);
+  border-radius:12px;
+  color:#fff;
+  padding:11px 12px;
+  font-weight:750;
+}
+.price-update-summary{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  margin-bottom:14px;
+}
+.price-update-note{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.45;
+  margin-bottom:14px;
+}
+.price-update-chip{
+  display:inline-flex;
+  border:1px solid var(--line2);
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:11px;
+  color:#cfc7bf;
+  margin-top:6px;
+}
+@media(max-width:900px){
+  .price-update-summary{grid-template-columns:1fr 1fr}
+  .price-update-row{grid-template-columns:1fr}
+}
+
+
+/* ===== THE STANDARD v6.1 DYNAMIC SCHOOL MEMORY ===== */
+.school-builder-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+.school-tag-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:10px;
+}
+.school-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  border:1px solid var(--line2);
+  background:rgba(255,255,255,.035);
+  color:#d9d1c8;
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:12px;
+  font-weight:800;
+}
+.school-tag button{
+  border:0;
+  background:transparent;
+  color:#ff9b9b;
+  font-weight:950;
+  padding:0;
+}
+.school-course-card{
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.18);
+  border-radius:16px;
+  padding:14px;
+  margin-bottom:10px;
+}
+.school-course-card b{
+  display:block;
+  font-size:15px;
+  margin-bottom:5px;
+}
+.school-course-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:11px;
+}
+.school-memory-pill{
+  display:inline-flex;
+  border:1px solid var(--line2);
+  border-radius:999px;
+  padding:5px 9px;
+  color:#cfc7bf;
+  font-size:11px;
+  margin:4px 5px 0 0;
+}
+.school-note-box{
+  border:1px solid var(--line);
+  background:#080808;
+  border-radius:15px;
+  padding:13px;
+  color:#cfc7bf;
+  line-height:1.5;
+}
+@media(max-width:900px){
+  .school-builder-grid{grid-template-columns:1fr}
+}
+
+
+/* ===== THE STANDARD v6.1 PORTFOLIO DATA HYGIENE ===== */
+.portfolio-hygiene-card{
+  border:1px solid rgba(46,233,131,.22);
+  background:rgba(46,233,131,.055);
+  border-radius:16px;
+  padding:13px 14px;
+  margin-bottom:14px;
+  color:#c9f5da;
+  line-height:1.45;
+}
+.portfolio-hygiene-card b{
+  color:#e7fff0;
+}
+.portfolio-hygiene-metrics{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:12px;
+}
+.portfolio-hygiene-metric{
+  border:1px solid var(--line);
+  background:#080808;
+  border-radius:13px;
+  padding:10px;
+}
+.portfolio-hygiene-metric b{
+  display:block;
+  font-size:18px;
+}
+.portfolio-hygiene-metric span{
+  display:block;
+  color:var(--muted);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-top:4px;
+}
+@media(max-width:900px){
+  .portfolio-hygiene-metrics{grid-template-columns:1fr}
+}
+
+
+/* ===== THE STANDARD v6.1 EDIT HISTORY ===== */
+.edit-modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  background:rgba(0,0,0,.72);
+  z-index:999999;
+}
+.edit-modal.open{display:flex}
+.edit-modal-card{
+  width:min(560px,94vw);
+  max-height:88vh;
+  overflow:auto;
+  border:1px solid var(--line2);
+  background:#121110;
+  border-radius:22px;
+  padding:18px;
+  box-shadow:0 24px 80px rgba(0,0,0,.6);
+}
+.edit-modal-title{
+  font-size:12px;
+  color:var(--amber);
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:950;
+  margin-bottom:14px;
+}
+.edit-actions{
+  display:flex;
+  gap:10px;
+  margin-top:14px;
+  flex-wrap:wrap;
+}
+.edit-actions .btn{width:auto}
+.history-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.history-actions .btn-mini{
+  border:1px solid var(--line2);
+  background:#151515;
+  color:var(--text);
+  border-radius:11px;
+  padding:8px 10px;
+  font-size:12px;
+  font-weight:850;
+}
+.history-actions .btn-mini.danger{
+  color:#ff9b9b;
+  border-color:rgba(255,80,80,.28);
+  background:rgba(255,70,70,.09);
+}
+.history-meta-line{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:7px;
+}
+.history-chip{
+  display:inline-flex;
+  border:1px solid var(--line2);
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:11px;
+  color:#cfc7bf;
+}
+.workout-edit-exercise{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:12px;
+  background:rgba(0,0,0,.18);
+  margin-bottom:10px;
+}
+.workout-edit-grid{
+  display:grid;
+  grid-template-columns:1fr .45fr .45fr .7fr;
+  gap:8px;
+  align-items:end;
+}
+@media(max-width:900px){
+  .edit-actions .btn{width:100%}
+  .workout-edit-grid{grid-template-columns:1fr}
+}
+
+
+/* ===== THE STANDARD v6.1 SCHOOL MEMORY PLUS / ACADEMIC CRM ===== */
+.academic-crm-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+.academic-crm-row{
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.18);
+  border-radius:16px;
+  padding:14px;
+  margin-bottom:10px;
+}
+.academic-crm-row b{
+  display:block;
+  font-size:15px;
+  margin-bottom:5px;
+}
+.academic-crm-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:8px;
+}
+.academic-pill{
+  display:inline-flex;
+  border:1px solid var(--line2);
+  background:rgba(255,255,255,.035);
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:11px;
+  font-weight:850;
+  color:#d6cec6;
+}
+.academic-pill.danger{
+  color:#ffb4b4;
+  border-color:rgba(255,107,107,.3);
+  background:rgba(255,107,107,.08);
+}
+.academic-pill.warn{
+  color:#f0d09b;
+  border-color:rgba(201,141,61,.32);
+  background:rgba(201,141,61,.08);
+}
+.academic-pill.ok{
+  color:#bff7d6;
+  border-color:rgba(46,233,131,.25);
+  background:rgba(46,233,131,.07);
+}
+.topic-table{
+  width:100%;
+  border-collapse:collapse;
+}
+.topic-table th,.topic-table td{
+  border-bottom:1px solid var(--line);
+  padding:10px 8px;
+  text-align:left;
+  font-size:13px;
+}
+.topic-table th{
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.topic-status{
+  border:1px solid var(--line2);
+  background:#080808;
+  color:#fff;
+  border-radius:10px;
+  padding:8px 10px;
+}
+.academic-next-box{
+  border:1px solid rgba(201,141,61,.28);
+  background:rgba(201,141,61,.075);
+  border-radius:16px;
+  padding:14px;
+  line-height:1.5;
+  color:#ead8bd;
+}
+.academic-file-list{
+  display:grid;
+  gap:8px;
+  margin-top:10px;
+}
+.academic-file-item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  padding:10px 12px;
+  background:rgba(0,0,0,.18);
+}
+@media(max-width:900px){
+  .academic-crm-grid{grid-template-columns:1fr}
+  .topic-table{display:block;overflow-x:auto;white-space:nowrap}
+}
+
+
+/* ===== THE STANDARD v6.1 ACADEMIC ALERTS + CLICKABLE REFERENCES ===== */
+.academic-alerts-box{
+  display:grid;
+  gap:10px;
+  margin-bottom:14px;
+}
+.academic-alert-card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:13px 14px;
+  background:rgba(0,0,0,.20);
+  line-height:1.45;
+}
+.academic-alert-card b{
+  display:block;
+  font-size:14px;
+  margin-bottom:4px;
+}
+.academic-alert-card.danger{
+  border-color:rgba(255,107,107,.38);
+  background:rgba(255,107,107,.095);
+  color:#ffd0d0;
+}
+.academic-alert-card.warn{
+  border-color:rgba(201,141,61,.40);
+  background:rgba(201,141,61,.095);
+  color:#f2ddb9;
+}
+.academic-alert-card.ok{
+  border-color:rgba(46,233,131,.22);
+  background:rgba(46,233,131,.065);
+  color:#c9f5da;
+}
+.academic-alert-pill{
+  display:inline-flex;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  padding:4px 8px;
+  font-size:11px;
+  margin-top:7px;
+  color:inherit;
+}
+.ref-link{
+  color:#f0c16a;
+  text-decoration:none;
+  border-bottom:1px solid rgba(240,193,106,.45);
+  word-break:break-word;
+}
+.ref-link:hover{
+  color:#ffd98a;
+  border-bottom-color:#ffd98a;
+}
+.ref-copy-btn{
+  border:1px solid var(--line2);
+  background:#151515;
+  color:var(--text);
+  border-radius:10px;
+  padding:7px 9px;
+  font-size:12px;
+  font-weight:850;
+}
+
+
+/* ===== THE STANDARD v6.1 FINAL LOCAL POLISH ===== */
+.system-health-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  margin-bottom:14px;
+}
+.system-health-card{
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.20);
+  border-radius:16px;
+  padding:14px;
+}
+.system-health-card b{
+  display:block;
+  font-size:22px;
+  letter-spacing:-.04em;
+}
+.system-health-card span{
+  display:block;
+  color:var(--muted);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-top:5px;
+}
+.system-health-card.ok{border-color:rgba(46,233,131,.25);background:rgba(46,233,131,.055)}
+.system-health-card.warn{border-color:rgba(201,141,61,.34);background:rgba(201,141,61,.075)}
+.system-health-card.danger{border-color:rgba(255,107,107,.35);background:rgba(255,107,107,.075)}
+.system-action-list{
+  display:grid;
+  gap:10px;
+}
+.system-action-item{
+  border:1px solid var(--line);
+  background:rgba(0,0,0,.18);
+  border-radius:15px;
+  padding:13px 14px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+.system-action-item b{display:block;margin-bottom:4px}
+.system-action-item .small{line-height:1.45}
+.version-note{
+  border:1px solid rgba(201,141,61,.30);
+  background:rgba(201,141,61,.08);
+  border-radius:16px;
+  padding:14px;
+  color:#ecd8b8;
+  line-height:1.5;
+}
+.dashboard-stack{
+  display:grid;
+  gap:12px;
+  margin-bottom:16px;
+}
+.workout-edit-add{
+  border:1px dashed rgba(255,255,255,.22);
+  background:rgba(255,255,255,.025);
+  border-radius:14px;
+  padding:12px;
+  margin-top:12px;
+}
+.workout-edit-exercise .remove-exercise{
+  margin-top:10px;
+}
+@media(max-width:900px){
+  .system-health-grid{grid-template-columns:1fr 1fr}
+  .system-action-item{display:block}
+  .system-action-item .btn-mini{margin-top:10px}
+}
+
+
+/* ===== THE STANDARD v6.1 CLOUD SYNC ===== */
+.cloud-status-card{
+  border:1px solid var(--line);
+  background:linear-gradient(145deg,rgba(125,183,255,.08),rgba(255,255,255,.018));
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:14px;
+}
+.cloud-status-title{
+  font-weight:950;
+  font-size:16px;
+  margin-bottom:5px;
+}
+.cloud-status-note{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.45;
+}
+.cloud-pill{
+  display:inline-flex;
+  border:1px solid var(--line2);
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-top:10px;
+}
+.cloud-pill.ok{color:var(--green);border-color:rgba(46,233,131,.28);background:rgba(46,233,131,.08)}
+.cloud-pill.warn{color:var(--amber);border-color:rgba(201,141,61,.34);background:rgba(201,141,61,.09)}
+.cloud-pill.danger{color:var(--red);border-color:rgba(255,107,107,.32);background:rgba(255,107,107,.09)}
+.cloud-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+.cloud-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
+}
+.cloud-actions .btn{width:auto}
+.cloud-log{
+  border:1px solid var(--line);
+  background:#080808;
+  border-radius:15px;
+  padding:12px;
+  color:#cfc7bf;
+  font-size:12px;
+  line-height:1.45;
+  max-height:180px;
+  overflow:auto;
+  margin-top:12px;
+}
+.cloud-warning{
+  border:1px solid rgba(201,141,61,.36);
+  background:rgba(201,141,61,.08);
+  color:#ecd8b8;
+  border-radius:16px;
+  padding:13px 14px;
+  line-height:1.5;
+  margin-bottom:14px;
+}
+@media(max-width:900px){
+  .cloud-grid{grid-template-columns:1fr}
+  .cloud-actions .btn{width:100%}
+}
+
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#050505">
+<meta name="application-name" content="THE STANDARD">
+<meta name="apple-mobile-web-app-title" content="THE STANDARD">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
 </head>
 <body>
 <div id="splash" class="splash" onclick="hideSplash()">
@@ -589,7 +1200,7 @@ button:active{
     </div>
 
     <nav class="nav" id="nav"></nav>
-    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v5.0</div>
+    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v6.1</div>
   </aside>
 
   <main class="main">
@@ -602,12 +1213,14 @@ button:active{
     </div>
 
     <section id="dashboard" class="screen active">
+      <div id="backupBanner" class="backup-banner"></div>
       <div class="grid four" style="margin-bottom:16px">
         <div class="metric"><b id="dashSteps">0</b><span>bugünkü adım</span></div>
         <div class="metric"><b id="dashPages">0</b><span>bugün okunan sayfa</span></div>
         <div class="metric"><b id="dashWeight">—</b><span>son kilo</span></div>
         <div class="metric"><b id="dashPortfolio" class="pos">0₺</b><span>toplam portföy Kar/Zarar</span></div>
       </div>
+      <div id="dashboardSystemHealth" class="dashboard-stack"></div>
 
       <div class="grid two">
         <div class="card">
@@ -621,6 +1234,7 @@ button:active{
         </div>
         <div class="card">
           <div class="section-title">Bugünün Omurgası</div>
+          <div id="dashboardAcademicAlerts" class="academic-alerts-box"></div>
           <div class="daily-task-input">
             <input id="dailyTaskInput" class="input" placeholder="Bugüne özel görev ekle: teklif ara, hocaya mail, alışveriş...">
             <button class="btn" onclick="addDailyTask()">Ekle</button>
@@ -784,7 +1398,9 @@ button:active{
       </div>
       <div class="card" style="margin-top:16px">
         <div class="section-title">Alışkanlık Analizi</div>
+        <div id="habitWarnings"></div>
         <div id="habitStats"></div>
+        <div id="habitMonthDetail" style="margin-top:14px"></div>
       </div>
     </section>
 
@@ -807,6 +1423,21 @@ button:active{
         <div id="portfolioSummary" class="grid four" style="margin-bottom:16px"></div>
         <div id="portfolioPositions"></div>
       </div>
+      <div class="card" style="margin-top:16px">
+        <div class="section-title">Fiyat Güncelleme Modu</div>
+        <div class="price-update-note">
+          İşlem eklemeden sadece güncel fiyatları yenile. Adet ve ortalama maliyet değişmez; toplam değer ve Kar/Zarar yeniden hesaplanır.
+        </div>
+        <div id="portfolioHygieneStatus"></div>
+        <div id="priceUpdateSummary" class="price-update-summary"></div>
+        <div id="priceUpdateList" class="price-update-grid"></div>
+        <div class="row" style="margin-top:14px">
+          <button class="btn" onclick="savePriceUpdates()">Fiyatları Güncelle</button>
+          <button class="btn secondary" onclick="fillLastPrices()">Son Fiyatları Doldur</button>
+          <button class="btn secondary" onclick="copyPriceUpdatePrompt()">Fiyat Güncelleme Promptu</button>
+        </div>
+      </div>
+
       <div class="card" style="margin-top:16px">
         <div class="section-title">Aylık Reçete</div>
         <div id="monthlyRecipe"></div>
@@ -832,6 +1463,120 @@ button:active{
           <div id="schoolMemory"></div>
         </div>
       </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="section-title">Dinamik Ders Ekle / Düzenle</div>
+        <div class="school-builder-grid">
+          <div>
+            <label class="label">Ders adı</label>
+            <input id="dynCourseName" class="input" placeholder="Temel İnşaatı">
+          </div>
+          <div>
+            <label class="label">Kaynak / dönem</label>
+            <input id="dynCourseSource" class="input" placeholder="2026 Bahar / Hoca notları">
+          </div>
+          <div class="full">
+            <label class="label">Ders özeti</label>
+            <textarea id="dynCourseSummary" class="input" placeholder="Bu dersin sınav mantığı, hoca tarzı, genel strateji..."></textarea>
+          </div>
+          <div>
+            <label class="label">Odak konu ekle</label>
+            <div class="row">
+              <input id="dynFocusInput" class="input" placeholder="ör. tekil temel">
+              <button class="btn secondary" onclick="addDynTag('focus')">Ekle</button>
+            </div>
+            <div id="dynFocusTags" class="school-tag-list"></div>
+          </div>
+          <div>
+            <label class="label">Muhtemel soru tipi ekle</label>
+            <div class="row">
+              <input id="dynQuestionInput" class="input" placeholder="ör. temel hesabı">
+              <button class="btn secondary" onclick="addDynTag('question')">Ekle</button>
+            </div>
+            <div id="dynQuestionTags" class="school-tag-list"></div>
+          </div>
+          <div class="full">
+            <label class="label">Son 3 saat modu</label>
+            <textarea id="dynRescue" class="input" placeholder="Sınava çok az kaldığında ne çalışılacak?"></textarea>
+          </div>
+          <div class="full row">
+            <button class="btn" onclick="saveDynamicCourse()">Dersi Kaydet</button>
+            <button class="btn secondary" onclick="clearDynamicCourseForm()">Formu Temizle</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="section-title">Ders Yönetimi</div>
+        <div id="dynamicCourseList"></div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="section-title">Academic CRM</div>
+        <div class="academic-next-box" id="academicNextAction">Ders seç; akademik takip paneli burada oluşacak.</div>
+
+        <div class="academic-crm-grid" style="margin-top:14px">
+          <div>
+            <label class="label">Hoca / Sorumlu</label>
+            <input id="crmTeacher" class="input" placeholder="Örn. Anıl Hoca / Atike Hoca">
+          </div>
+          <div>
+            <label class="label">Dönem</label>
+            <input id="crmTerm" class="input" placeholder="2025-2026 Bahar">
+          </div>
+          <div>
+            <label class="label">Sınav Tarihi</label>
+            <input id="crmExamDate" class="input" type="date">
+          </div>
+          <div>
+            <label class="label">Önem / Öncelik</label>
+            <select id="crmPriority" class="input">
+              <option>Yüksek</option>
+              <option>Orta</option>
+              <option>Düşük</option>
+            </select>
+          </div>
+          <div>
+            <label class="label">Ders Durumu</label>
+            <select id="crmStatus" class="input">
+              <option>Hiç başlamadım</option>
+              <option>Temel atıldı</option>
+              <option>Orta seviye</option>
+              <option>Sınava yakın</option>
+              <option>Hazır</option>
+            </select>
+          </div>
+          <div>
+            <label class="label">Geçme Hedefi</label>
+            <input id="crmGradeGoal" class="input" placeholder="AA / BB / geçmek yeter">
+          </div>
+          <div class="full">
+            <label class="label">Dosya / kaynak referansı</label>
+            <div class="row">
+              <input id="crmFileInput" class="input" placeholder="PDF, klasör, WhatsApp görseli, çıkmış sorular...">
+              <button class="btn secondary" onclick="addAcademicFile()">Ekle</button>
+            </div>
+            <div id="crmFileList" class="academic-file-list"></div>
+          </div>
+          <div class="full">
+            <label class="label">Akademik not</label>
+            <textarea id="crmNote" class="input" placeholder="Bu derste hoca neye önem veriyor? Nerede zorlanıyorsun?"></textarea>
+          </div>
+          <div class="full row">
+            <button class="btn" onclick="saveAcademicCRM()">Akademik CRM Kaydet</button>
+            <button class="btn secondary" onclick="copyAcademicPrompt()">Akademik Koç Promptu</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px">
+        <div class="section-title">Konu Takip Sistemi</div>
+        <div class="row">
+          <input id="topicNameInput" class="input" placeholder="Konu ekle: mesela Tekil temel / Bernoulli / Cramer">
+          <button class="btn secondary" onclick="addAcademicTopic()">Konu Ekle</button>
+        </div>
+        <div id="academicTopicTable" style="margin-top:14px"></div>
+      </div>
     </section>
 
     <section id="reports" class="screen">
@@ -842,6 +1587,76 @@ button:active{
     </section>
 
     <section id="settings" class="screen">
+      <div class="card" style="margin-bottom:16px">
+        <div class="section-title">Sistem Sağlığı</div>
+        <div id="systemHealthPanel"></div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="section-title">Veri Temizleme Araçları</div>
+        <div class="system-action-list">
+          <div class="system-action-item">
+            <div><b>Boş kayıtları temizle</b><div class="small">Adı, değeri veya içeriği tamamen boş kalan kayıtları kaldırır.</div></div>
+            <button class="btn-mini" onclick="cleanupEmptyRecords()">Temizle</button>
+          </div>
+          <div class="system-action-item">
+            <div><b>Duplicate kayıt kontrolü</b><div class="small">Aynı ID ile tekrarlanan kayıtları tekilleştirir.</div></div>
+            <button class="btn-mini" onclick="cleanupDuplicateIds()">Kontrol Et</button>
+          </div>
+          <div class="system-action-item">
+            <div><b>Portföy hijyeni</b><div class="small">Eski qty:0 fiyat kayıtlarını currentPrices yapısına taşır.</div></div>
+            <button class="btn-mini" onclick="runPortfolioHygieneManual()">Çalıştır</button>
+          </div>
+          <div class="system-action-item">
+            <div><b>Veri sağlık kontrolü</b><div class="small">Ana veri alanlarının eksik/bozuk olup olmadığını kontrol eder.</div></div>
+            <button class="btn-mini" onclick="runFullSystemCheck()">Kontrol Et</button>
+          </div>
+        </div>
+        <div id="systemCleanupResult" style="margin-top:14px"></div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="section-title">Sürüm / v6.1 Hazırlık</div>
+        <div id="versionReadiness" class="version-note"></div>
+      </div>
+
+      <div class="card" style="margin-bottom:16px">
+        <div class="section-title">Cloud Sync / Supabase</div>
+        <div class="cloud-warning">
+          Cloud Sync için önce Supabase projesi oluşturup ZIP içindeki <b>supabase-schema.sql</b> dosyasındaki SQL'i çalıştırman gerekir. Sonra Project URL ve anon key'i buraya gir.
+        </div>
+        <div id="cloudStatus"></div>
+        <div class="cloud-grid">
+          <div>
+            <label class="label">Supabase Project URL</label>
+            <input id="cloudUrl" class="input" placeholder="https://xxxx.supabase.co">
+          </div>
+          <div>
+            <label class="label">Supabase anon public key</label>
+            <input id="cloudAnon" class="input" placeholder="eyJhbGciOi...">
+          </div>
+          <div>
+            <label class="label">Email ile giriş</label>
+            <input id="cloudEmail" class="input" type="email" placeholder="mail adresin">
+          </div>
+          <div>
+            <label class="label">Cloud mod</label>
+            <select id="cloudMode" class="input">
+              <option>Manuel Sync</option>
+              <option>Kaydetmeden Önce Sor</option>
+            </select>
+          </div>
+        </div>
+        <div class="cloud-actions">
+          <button class="btn secondary" onclick="saveCloudConfig()">Cloud Ayarlarını Kaydet</button>
+          <button class="btn secondary" onclick="sendMagicLink()">Giriş Linki Gönder</button>
+          <button class="btn secondary" onclick="checkCloudSession()">Oturumu Kontrol Et</button>
+          <button class="btn" onclick="pushToCloud()">Buluta Kaydet</button>
+          <button class="btn secondary" onclick="pullFromCloud()">Buluttan Yükle</button>
+          <button class="btn danger" onclick="signOutCloud()">Çıkış</button>
+        </div>
+        <div id="cloudLog" class="cloud-log">Cloud log hazır.</div>
+      </div>
       <div class="grid two">
         <div class="card">
           <div class="section-title">Profil</div>
@@ -852,12 +1667,16 @@ button:active{
           </div>
         </div>
         <div class="card">
-          <div class="section-title">Yedek</div>
-          <div class="row">
-            <button class="btn" onclick="exportData()">Verileri Dışa Aktar</button>
-            <button class="btn secondary" onclick="document.getElementById('importFile').click()">Verileri İçe Aktar</button>
+          <div class="section-title">Yedek & Stabilite</div>
+          <div id="backupStatus"></div>
+          <div class="backup-actions">
+            <button class="btn" onclick="exportData()">Yedek Al</button>
+            <button class="btn secondary" onclick="exportCSV()">CSV Özet Al</button>
+            <button class="btn secondary" onclick="document.getElementById('importFile').click()">Yedeği İçe Aktar</button>
+            <button class="btn secondary" onclick="validateData()">Veri Kontrolü</button>
             <input id="importFile" type="file" accept=".json" style="display:none" onchange="importData(event)">
           </div>
+          <div id="backupValidation" style="margin-top:14px"></div>
         </div>
       </div>
     </section>
@@ -1149,7 +1968,7 @@ window.addEventListener('DOMContentLoaded',init);
 </script>
 
 <script>
-/* ===== THE STANDARD v5.0 PATCH ===== */
+/* ===== THE STANDARD v6.1 PATCH ===== */
 (function(){
   const oldDefault = window.defaultState;
   window.defaultState = function(){
@@ -1364,7 +2183,7 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v5.0 PROFILE PICKER FIX ONLY ===== */
+/* ===== THE STANDARD v6.1 PROFILE PICKER FIX ONLY ===== */
 (function(){
   // Allows selecting the same photo twice by clearing input before click.
   window.choosePhoto = function(){
@@ -1458,7 +2277,7 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v5.0 PROFILE CROP EXACT FIX =====
+/* ===== THE STANDARD v6.1 PROFILE CROP EXACT FIX =====
    Uses background-size/background-position on both preview and avatar.
    This makes the modal preview and final avatar use the exact same crop logic.
 */
@@ -1565,8 +2384,8 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v5.0 SMALL STABILITY PATCH =====
-   No renderAll override. Keeps v5.0 immediate UI updates.
+/* ===== THE STANDARD v6.1 SMALL STABILITY PATCH =====
+   No renderAll override. Keeps v6.1 immediate UI updates.
 */
 (function(){
   document.addEventListener('DOMContentLoaded', function(){
@@ -1580,7 +2399,7 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v5.0 — REMOVE PROFILE PHOTO ENGINE =====
+/* ===== THE STANDARD v6.1 — REMOVE PROFILE PHOTO ENGINE =====
    Reason: base64 image in localStorage + mobile Safari causes delayed renders.
    Keeps all other modules intact.
 */
@@ -1640,6 +2459,2230 @@ window.addEventListener('DOMContentLoaded',init);
 
   window.addEventListener('load', function(){
     setTimeout(clearProfileEngine, 150);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 BACKUP & STABILITY ===== */
+(function(){
+  const TS_BACKUP_VERSION = '5.1';
+  const BACKUP_INTERVAL_DAYS = 7;
+  function safeState(){try{if(typeof state !== 'undefined' && state) return state; const raw=localStorage.getItem(STORE); return raw?JSON.parse(raw):{}}catch(e){return {}}}
+  function checksum(str){let h=2166136261; for(let i=0;i<str.length;i++){h^=str.charCodeAt(i); h+=(h<<1)+(h<<4)+(h<<7)+(h<<8)+(h<<24)} return (h>>>0).toString(16)}
+  function getMeta(){try{return JSON.parse(localStorage.getItem('the_standard_backup_meta')||'{}')}catch(e){return {}}}
+  function setMeta(meta){localStorage.setItem('the_standard_backup_meta',JSON.stringify(meta||{}))}
+  function todayStr(){return new Date().toISOString().slice(0,10)}
+  function daysBetween(a,b){if(!a||!b)return null; return Math.floor((new Date(b+'T00:00:00')-new Date(a+'T00:00:00'))/(1000*60*60*24))}
+  function countData(d){return {body:Array.isArray(d.bodyLogs)?d.bodyLogs.length:0,meals:Array.isArray(d.meals)?d.meals.length:0,books:Array.isArray(d.books)?d.books.length:0,habits:Array.isArray(d.habits)?d.habits.length:0,portfolio:Array.isArray(d.portfolioTx)?d.portfolioTx.length:0,workouts:Array.isArray(d.workouts)?d.workouts.length:0}}
+  function backupStatus(){const meta=getMeta(),last=meta.lastBackupDate||'',diff=last?daysBetween(last,todayStr()):null;let level='danger',label='Yedek Yok',note='Henüz yedek alınmamış. Telefon/Safari verisi silinirse geçmişin kaybolabilir.'; if(diff!==null&&diff<=BACKUP_INTERVAL_DAYS){level='ok';label='Güvende';note=`Son yedek ${diff===0?'bugün':diff+' gün önce'} alındı.`}else if(diff!==null&&diff<=14){level='warn';label='Yedek Al';note=`Son yedek ${diff} gün önce alındı. Bugün yeni yedek almak mantıklı.`}else if(diff!==null){level='danger';label='Riskli';note=`Son yedek ${diff} gün önce alındı. Yeni yedek al.`} return {meta,last,diff,level,label,note}}
+  window.renderBackupStatus=function(){const d=safeState(),c=countData(d),st=backupStatus();const pillClass=st.level==='ok'?'backup-ok':st.level==='warn'?'backup-warn':'backup-danger';const html=`<div class="backup-status-card"><div class="backup-status-main"><div><div class="backup-status-title">Veri Güvenliği</div><div class="backup-status-note">${st.note}</div></div><div class="backup-status-pill ${pillClass}">${st.label}</div></div><div class="backup-mini-grid"><div class="backup-mini"><b>${st.last||'—'}</b><span>Son Yedek</span></div><div class="backup-mini"><b>${c.body+c.meals+c.books+c.portfolio+c.workouts}</b><span>Toplam Kayıt</span></div><div class="backup-mini"><b>${st.meta.lastChecksum?st.meta.lastChecksum.slice(0,8):'—'}</b><span>Yedek Kodu</span></div></div></div>`; const box=document.getElementById('backupStatus'); if(box)box.innerHTML=html; const banner=document.getElementById('backupBanner'); if(banner){if(st.level!=='ok'){banner.classList.add('show');banner.innerHTML=`<b>Yedek hatırlatması:</b> ${st.note} <button class="btn-mini" style="margin-left:8px" onclick="exportData()">Şimdi Yedek Al</button>`}else{banner.classList.remove('show');banner.innerHTML=''}}};
+  function makeBackupObject(){const d=safeState();const payload={app:'THE STANDARD',backupVersion:TS_BACKUP_VERSION,exportedAt:new Date().toISOString(),storageKey:typeof STORE!=='undefined'?STORE:'unknown',data:d};payload.checksum=checksum(JSON.stringify(payload));return payload}
+  function downloadText(filename,text,type='application/json'){const blob=new Blob([text],{type});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1200)}
+  window.exportData=function(){const payload=makeBackupObject(),text=JSON.stringify(payload,null,2),cs=checksum(text),date=todayStr();setMeta({lastBackupDate:date,lastBackupAt:new Date().toISOString(),lastChecksum:cs,lastVersion:TS_BACKUP_VERSION});downloadText(`the-standard-backup-${date}.json`,text,'application/json');renderBackupStatus()};
+  function toCSV(rows){return rows.map(row=>row.map(v=>{const st=String(v??'');return /[",\n;]/.test(st)?`"${st.replace(/"/g,'""')}"`:st}).join(';')).join('\n')}
+  window.exportCSV=function(){const d=safeState();const rows=[['Kategori','Tarih','Başlık','Değer 1','Değer 2','Not']];(d.bodyLogs||[]).forEach(x=>rows.push(['Body',x.date||'','Check-in',x.weight||'',x.steps||'',x.note||'']));(d.meals||[]).forEach(x=>rows.push(['Beslenme',x.date||'',x.type||'',x.cal||'',x.protein||'',x.text||'']));(d.books||[]).forEach(x=>rows.push(['Kitap',x.date||'',x.name||'',x.pages||'','',x.learn||'']));(d.portfolioTx||[]).forEach(x=>rows.push(['Portföy',x.date||'',x.name||'',x.qty||'',x.price||'',x.note||'']));(d.workouts||[]).forEach(x=>rows.push(['Antrenman',x.date||'',x.day||'',(x.items||[]).length,'',x.note||'']));downloadText(`the-standard-summary-${todayStr()}.csv`,toCSV(rows),'text/csv;charset=utf-8')};
+  function normalizeImported(obj){if(!obj)throw new Error('Boş dosya.'); if(obj.app==='THE STANDARD'&&obj.data)return obj.data; if(obj.settings||obj.bodyLogs||obj.portfolioTx||obj.meals||obj.books)return obj; throw new Error('Bu dosya THE STANDARD yedeği gibi görünmüyor.')}
+  function validateShape(d){const checks=[];function arr(name){const ok=Array.isArray(d[name]);checks.push([name,ok,ok?d[name].length+' kayıt':'Eksik/bozuk']);if(!ok)d[name]=[]}checks.push(['settings',!!d.settings&&typeof d.settings==='object',d.settings?'Tamam':'Eksik']);if(!d.settings)d.settings={};['bodyLogs','workouts','meals','books','habits','portfolioTx'].forEach(arr);checks.push(['habitLogs',!!d.habitLogs&&typeof d.habitLogs==='object',d.habitLogs?'Tamam':'Eksik']);if(!d.habitLogs)d.habitLogs={};checks.push(['profile',!!d.profile&&typeof d.profile==='object',d.profile?'Tamam':'Eksik']);if(!d.profile)d.profile={};return checks}
+  window.validateData=function(){const d=safeState(),checks=validateShape(d),el=document.getElementById('backupValidation');if(el)el.innerHTML='<div class="backup-validate-list">'+checks.map(c=>`<div class="backup-check"><span>${c[0]}</span><span class="${c[1]?'pos':'neg'}">${c[2]}</span></div>`).join('')+'</div>';return checks.every(c=>c[1])};
+  window.importData=function(e){const f=e.target.files&&e.target.files[0];if(!f)return;const reader=new FileReader();reader.onload=function(ev){try{const before=makeBackupObject();localStorage.setItem('the_standard_pre_import_snapshot',JSON.stringify(before));const parsed=JSON.parse(ev.target.result),imported=normalizeImported(parsed);validateShape(imported);if(!confirm('Bu yedek içe aktarılacak. Mevcut verinin üstüne yazılacak. Devam edilsin mi?'))return;state=imported;save();setMeta({lastImportDate:todayStr(),lastImportAt:new Date().toISOString(),lastImportedFile:f.name||''});if(typeof renderAll==='function')renderAll();renderBackupStatus();alert('Yedek içe aktarıldı.')}catch(err){alert('Yedek içe aktarılamadı: '+err.message)}finally{e.target.value=''}};reader.readAsText(f)};
+  const oldRenderAll=window.renderAll;if(typeof oldRenderAll==='function'&&!oldRenderAll.__backupPatched){window.renderAll=function(){oldRenderAll();renderBackupStatus()};window.renderAll.__backupPatched=true;try{renderAll=window.renderAll}catch(e){}}
+  document.addEventListener('DOMContentLoaded',function(){setTimeout(renderBackupStatus,150);setTimeout(renderBackupStatus,800)});window.addEventListener('load',renderBackupStatus);
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 HABIT STREAK SYSTEM ===== */
+(function(){
+  function dstr(d){return d.toISOString().slice(0,10)}
+  function addDays(day,n){const d=new Date(day+'T00:00:00');d.setDate(d.getDate()+n);return dstr(d)}
+  function mkey(){return new Date().toISOString().slice(0,7)}
+  function monthDaysToToday(){const now=new Date(), first=new Date(now.getFullYear(),now.getMonth(),1), out=[]; for(let d=new Date(first); d<=now; d.setDate(d.getDate()+1)) out.push(dstr(d)); return out}
+  function done(hid,day){return !!(state.habitLogs&&state.habitLogs[day]&&state.habitLogs[day][hid])}
+  function currentStreak(hid){let s=0, day=today(); while(done(hid,day)){s++; day=addDays(day,-1)} return s}
+  function longestStreak(hid){const days=Object.keys(state.habitLogs||{}).sort(); let max=0,cur=0,prev=null; days.forEach(day=>{if(done(hid,day)){cur=(prev&&addDays(prev,1)===day)?cur+1:1; max=Math.max(max,cur); prev=day}}); return max}
+  function monthDone(hid){const m=mkey(); return Object.keys(state.habitLogs||{}).filter(day=>day.startsWith(m)&&done(hid,day)).length}
+  function monthRate(hid){const days=monthDaysToToday(); return days.length?days.filter(day=>done(hid,day)).length/days.length*100:0}
+  function stat(h){return {current:currentStreak(h.id),longest:longestStreak(h.id),month:monthDone(h.id),rate:monthRate(h.id)}}
+  function allStats(){return (state.habits||[]).map(h=>({habit:h,stats:stat(h)}))}
+  function strongest(){const a=allStats(); if(!a.length)return null; return a.sort((x,y)=>(y.stats.month-x.stats.month)||(y.stats.current-x.stats.current)||(y.stats.longest-x.stats.longest))[0]}
+  function todayDone(){return (state.habits||[]).filter(h=>done(h.id,today())).length}
+  function monthTotal(){return (state.habits||[]).reduce((sum,h)=>sum+monthDone(h.id),0)}
+  function overallRate(){const possible=monthDaysToToday().length*((state.habits||[]).length||1); return possible?monthTotal()/possible*100:0}
+  function warningHtml(){
+    const habits=state.habits||[]; if(!habits.length)return '';
+    const missing=habits.filter(h=>!done(h.id,today()));
+    if(!missing.length)return '<div class="habit-good"><b>Zincir sağlam.</b> Bugünün fix alışkanlıkları tamamlanmış görünüyor.</div>';
+    const critical=missing.map(h=>({h,st:stat(h)})).sort((a,b)=>b.st.longest-a.st.longest)[0];
+    if(critical&&critical.st.longest>=3)return `<div class="habit-warning"><b>Zinciri kırma riski:</b> "${esc(critical.h.name)}" bugün yapılmadı. En uzun serin ${critical.st.longest} gündü; bugün küçük de olsa tamamla.</div>`;
+    return `<div class="habit-warning"><b>Eksik alışkanlık var:</b> Bugün ${missing.length} fix alışkanlık tamamlanmadı.</div>`;
+  }
+
+  window.renderHabitStreakStats=function(){
+    const habits=state.habits||[], strong=strongest(), td=todayDone(), mt=monthTotal(), rate=overallRate();
+    const warn=document.getElementById('habitWarnings'); if(warn)warn.innerHTML=warningHtml();
+    const box=document.getElementById('habitStats');
+    if(box)box.innerHTML=`<div class="habit-streak-grid">
+      <div class="habit-streak-card"><b>${td}/${habits.length}</b><span>Bugün Tamamlanan</span><div class="habit-progress-line"><i style="width:${habits.length?td/habits.length*100:0}%"></i></div></div>
+      <div class="habit-streak-card"><b>${mt}</b><span>Bu Ay Toplam</span></div>
+      <div class="habit-streak-card"><b>%${(rate||0).toLocaleString('tr-TR',{maximumFractionDigits:0})}</b><span>Bu Ay Başarı</span><div class="habit-progress-line"><i style="width:${Math.min(100,rate)}%"></i></div></div>
+      <div class="habit-streak-card"><b>${strong?esc(strong.habit.name):'—'}</b><span>Ayın En Güçlüsü</span></div>
+    </div>`;
+    const detail=document.getElementById('habitMonthDetail');
+    if(detail)detail.innerHTML=habits.length?`<table class="habit-month-table"><thead><tr><th>Alışkanlık</th><th>Mevcut Seri</th><th>En Uzun</th><th>Bu Ay</th><th>Başarı</th></tr></thead><tbody>${habits.map(h=>{const st=stat(h);return `<tr><td><b>${esc(h.name)}</b><div class="small">${esc(h.cat)}</div></td><td>${st.current} gün</td><td>${st.longest} gün</td><td>${st.month} gün</td><td>%${st.rate.toLocaleString('tr-TR',{maximumFractionDigits:0})}</td></tr>`}).join('')}</tbody></table>`:'<div class="empty">Alışkanlık yok.</div>';
+  };
+
+  window.renderHabits=function(){
+    const habits=state.habits||[];
+    const settings=document.getElementById('habitSettings');
+    if(settings)settings.innerHTML=habits.map(h=>{const st=stat(h);return `<div class="item"><div class="item-head"><div><b>${esc(h.name)}</b><div class="small">${esc(h.cat)} • ${esc(h.target)} • ${esc(h.priority)}</div><span class="habit-streak-pill">🔥 Seri: ${st.current} gün</span><span class="habit-streak-pill">🏆 En uzun: ${st.longest} gün</span></div><button class="btn-mini danger" onclick="deleteHabit('${h.id}')">Sil</button></div></div>`}).join('')||'<div class="empty">Fix alışkanlık yok.</div>';
+    const todayEl=document.getElementById('habitToday');
+    if(todayEl)todayEl.innerHTML=habits.map(h=>{const isDone=done(h.id,today()), st=stat(h);return `<div class="item"><div class="item-head"><div><b style="${isDone?'text-decoration:line-through;color:#888':''}">${esc(h.name)}</b><div class="small">${esc(h.cat)} • Mevcut seri: ${st.current} gün</div></div><button class="btn-mini" onclick="toggleHabit('${h.id}')">${isDone?'Tamam':'Yap'}</button></div></div>`}).join('')||'<div class="empty">Bugün için alışkanlık yok.</div>';
+    renderHabitStreakStats();
+  };
+
+  window.renderTodayHabits=function(){
+    const box=document.getElementById('todayHabits'); if(!box)return;
+    const habits=state.habits||[];
+    box.innerHTML=habits.map(h=>{const isDone=done(h.id,today()), st=stat(h);return `<div class="item"><div class="item-head"><div><b class="${isDone?'muted':''}" style="${isDone?'text-decoration:line-through':''}">${esc(h.name)}</b><div class="small">${esc(h.cat)} • Seri: ${st.current} gün • En uzun: ${st.longest} gün</div></div><button class="btn-mini" onclick="toggleHabit('${h.id}')">${isDone?'✓':'Yap'}</button></div></div>`}).join('')||'<div class="empty">Fix alışkanlık yok.</div>';
+  };
+
+  ['toggleHabit','addHabit','deleteHabit'].forEach(name=>{
+    const old=window[name];
+    if(typeof old==='function'){
+      window[name]=function(){const r=old.apply(this,arguments); setTimeout(()=>{try{renderHabits();renderTodayHabits()}catch(e){}},0); return r};
+      try{eval(name+' = window["'+name+'"]')}catch(e){}
+    }
+  });
+  document.addEventListener('DOMContentLoaded',()=>setTimeout(()=>{try{renderHabitStreakStats();renderTodayHabits()}catch(e){}},200));
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 PORTFOLIO PRICE UPDATE MODE =====
+   Adds a fast manual price update panel.
+   Keeps portfolio transaction logic unchanged.
+*/
+(function(){
+  function getPositionsSafe(){
+    try{
+      if(typeof positions === 'function') return positions();
+    }catch(e){}
+    return [];
+  }
+
+  function getPortfolioTotalsSafe(){
+    try{
+      if(typeof portfolioTotals === 'function') return portfolioTotals();
+    }catch(e){}
+    return {value:0,cost:0,pl:0};
+  }
+
+  function trMoney(x){
+    try{return tl(x)}catch(e){return (Number(x)||0).toLocaleString('tr-TR',{maximumFractionDigits:2})+'₺'}
+  }
+
+  function trNum(x, d=2){
+    return (Number(x)||0).toLocaleString('tr-TR',{maximumFractionDigits:d});
+  }
+
+  function findLatestTx(name,type){
+    const tx = (state.portfolioTx || []).filter(t => t.name === name && t.type === type);
+    return tx.length ? tx[tx.length-1] : null;
+  }
+
+  window.renderPriceUpdateMode = function(){
+    const list = document.getElementById('priceUpdateList');
+    const sum = document.getElementById('priceUpdateSummary');
+    if(!list || !sum) return;
+
+    const pos = getPositionsSafe();
+    const total = getPortfolioTotalsSafe();
+
+    sum.innerHTML = `
+      <div class="metric"><b>${trMoney(total.value)}</b><span>güncel toplam değer</span></div>
+      <div class="metric"><b>${trMoney(total.cost)}</b><span>toplam maliyet</span></div>
+      <div class="metric"><b class="${total.pl>=0?'pos':'neg'}">${trMoney(total.pl)}</b><span>toplam Kar/Zarar</span></div>
+      <div class="metric"><b>${pos.length}</b><span>pozisyon</span></div>
+    `;
+
+    if(!pos.length){
+      list.innerHTML = '<div class="empty">Portföyde pozisyon yok. Önce Portföy İşlemi Ekle alanından varlık ekle.</div>';
+      return;
+    }
+
+    list.innerHTML = pos.map((p,i)=>{
+      const latest = findLatestTx(p.name,p.type);
+      const lastUpdate = latest?.date || '—';
+      return `<div class="price-update-row">
+        <div>
+          <b>${esc(p.name)}</b>
+          <small>${esc(p.type)} • Adet: ${trNum(p.qty,4)} • Ort. maliyet: ${trMoney(p.avg)}</small>
+          <span class="price-update-chip">Son fiyat tarihi: ${esc(lastUpdate)}</span>
+        </div>
+        <div>
+          <label class="label">Eski fiyat</label>
+          <input value="${Number(p.price||0)}" disabled>
+        </div>
+        <div>
+          <label class="label">Yeni fiyat</label>
+          <input id="priceUpdate_${i}" data-name="${esc(p.name)}" data-type="${esc(p.type)}" type="number" step="0.0001" value="${Number(p.price||0)}">
+        </div>
+        <div>
+          <label class="label">Yeni değer</label>
+          <input id="priceValue_${i}" value="${trMoney((Number(p.qty)||0)*(Number(p.price)||0))}" disabled>
+        </div>
+        <button class="btn-mini" onclick="previewSinglePrice(${i})">Önizle</button>
+      </div>`;
+    }).join('');
+  };
+
+  window.previewSinglePrice = function(i){
+    const input = document.getElementById('priceUpdate_'+i);
+    const out = document.getElementById('priceValue_'+i);
+    if(!input || !out) return;
+    const name = input.dataset.name;
+    const type = input.dataset.type;
+    const p = getPositionsSafe().find(x=>x.name===name && x.type===type);
+    if(!p) return;
+    out.value = trMoney((Number(p.qty)||0) * (Number(input.value)||0));
+  };
+
+  window.fillLastPrices = function(){
+    getPositionsSafe().forEach((p,i)=>{
+      const input = document.getElementById('priceUpdate_'+i);
+      if(input) input.value = Number(p.price||0);
+      previewSinglePrice(i);
+    });
+  };
+
+  window.savePriceUpdates = function(){
+    const pos = getPositionsSafe();
+    if(!pos.length){
+      alert('Güncellenecek pozisyon yok.');
+      return;
+    }
+
+    let changed = 0;
+    pos.forEach((p,i)=>{
+      const input = document.getElementById('priceUpdate_'+i);
+      if(!input) return;
+      const newPrice = Number(input.value)||0;
+      if(!newPrice) return;
+
+      const current = Number(p.price)||0;
+      if(Math.abs(newPrice-current) < 0.0000001) return;
+
+      // Price-only transaction: qty 0 means position amount doesn't change.
+      state.portfolioTx.push({
+        id: id(),
+        date: today(),
+        name: p.name,
+        type: p.type,
+        qty: 0,
+        cost: Number(p.avg)||0,
+        price: newPrice,
+        note: 'Fiyat güncellemesi'
+      });
+      changed++;
+    });
+
+    if(!changed){
+      alert('Değişen fiyat yok.');
+      return;
+    }
+
+    save();
+    if(typeof renderAll === 'function') renderAll();
+    renderPriceUpdateMode();
+    alert(changed + ' fiyat güncellendi.');
+  };
+
+  // Override positions so qty=0 price update tx changes latest price without affecting cost/qty.
+  const oldPositions = window.positions || positions;
+  window.positions = function(){
+    const map = {};
+    (state.portfolioTx || []).forEach(t=>{
+      const key = (t.name||'').toUpperCase() + '|' + t.type;
+      if(!map[key]){
+        map[key] = {name:(t.name||'').toUpperCase(),type:t.type,qty:0,costValue:0,price:0};
+      }
+
+      const qty = Number(t.qty)||0;
+      const cost = Number(t.cost)||0;
+      const price = Number(t.price)||0;
+
+      if(qty !== 0){
+        map[key].qty += qty;
+        map[key].costValue += qty * cost;
+      }
+      if(price){
+        map[key].price = price;
+      }
+    });
+
+    return Object.values(map)
+      .filter(p=>p.qty>0)
+      .map(p=>({
+        ...p,
+        avg:p.qty ? p.costValue/p.qty : 0,
+        value:p.qty*p.price,
+        pl:p.qty*p.price-p.costValue,
+        pct:p.costValue ? (p.qty*p.price-p.costValue)/p.costValue*100 : 0
+      }));
+  };
+  try{ positions = window.positions; }catch(e){}
+
+  window.copyPriceUpdatePrompt = function(){
+    const pos = getPositionsSafe();
+    const text = `Portföy fiyat güncelleme ekranım için güncel fiyatları manuel gireceğim. Pozisyonlarım: ${JSON.stringify(pos)}. Bana hangi varlıkların fiyatlarını güncellemem gerektiğini ve portföyümün genel Kar/Zarar durumunu yorumla.`;
+    navigator.clipboard.writeText(text).then(()=>alert('Fiyat güncelleme promptu kopyalandı.'));
+  };
+
+  const oldRenderPortfolio = window.renderPortfolio || renderPortfolio;
+  window.renderPortfolio = function(){
+    if(typeof oldRenderPortfolio === 'function') oldRenderPortfolio();
+    renderPriceUpdateMode();
+  };
+  try{ renderPortfolio = window.renderPortfolio; }catch(e){}
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(renderPriceUpdateMode, 250);
+    setTimeout(renderPriceUpdateMode, 900);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 DYNAMIC SCHOOL MEMORY =====
+   Adds user-editable course memory on top of built-in schoolMemory.
+*/
+(function(){
+  let dynFocusDraft = [];
+  let dynQuestionDraft = [];
+  let editingCourseId = null;
+
+  function ensureDynamicSchool(){
+    state.dynamicSchool = Array.isArray(state.dynamicSchool) ? state.dynamicSchool : [];
+  }
+
+  function allCourses(){
+    ensureDynamicSchool();
+    const builtIn = (typeof schoolMemory !== 'undefined' ? schoolMemory : []).map((c,idx)=>({
+      id:'builtin_'+idx,
+      course:c.course,
+      source:'Gömülü School Memory',
+      summary:'',
+      focus:Array.isArray(c.focus)?c.focus:[],
+      questions:Array.isArray(c.questions)?c.questions:[],
+      rescue:'Çıkmış soru + formül/yöntem şablonu + zayıf konu tekrarı.',
+      builtin:true
+    }));
+    const dynamic = state.dynamicSchool.map(c=>({...c,builtin:false}));
+    return [...builtIn, ...dynamic].sort((a,b)=>String(a.course).localeCompare(String(b.course),'tr'));
+  }
+
+  function selectedCourse(){
+    const val = document.getElementById('schoolCourse')?.value;
+    return allCourses().find(c=>c.id===val) || allCourses()[0];
+  }
+
+  function renderDynTags(){
+    const f = document.getElementById('dynFocusTags');
+    const q = document.getElementById('dynQuestionTags');
+    if(f) f.innerHTML = dynFocusDraft.map((x,i)=>`<span class="school-tag">${esc(x)} <button onclick="removeDynTag('focus',${i})">×</button></span>`).join('');
+    if(q) q.innerHTML = dynQuestionDraft.map((x,i)=>`<span class="school-tag">${esc(x)} <button onclick="removeDynTag('question',${i})">×</button></span>`).join('');
+  }
+
+  window.addDynTag = function(type){
+    const input = document.getElementById(type==='focus'?'dynFocusInput':'dynQuestionInput');
+    if(!input) return;
+    const val = input.value.trim();
+    if(!val) return;
+    if(type==='focus') dynFocusDraft.push(val);
+    else dynQuestionDraft.push(val);
+    input.value='';
+    renderDynTags();
+  };
+
+  window.removeDynTag = function(type, index){
+    if(type==='focus') dynFocusDraft.splice(index,1);
+    else dynQuestionDraft.splice(index,1);
+    renderDynTags();
+  };
+
+  window.clearDynamicCourseForm = function(){
+    editingCourseId = null;
+    dynFocusDraft = [];
+    dynQuestionDraft = [];
+    ['dynCourseName','dynCourseSource','dynCourseSummary','dynRescue','dynFocusInput','dynQuestionInput'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(el) el.value='';
+    });
+    renderDynTags();
+  };
+
+  window.saveDynamicCourse = function(){
+    ensureDynamicSchool();
+
+    const name = document.getElementById('dynCourseName')?.value.trim();
+    if(!name){
+      alert('Ders adı gir.');
+      return;
+    }
+
+    const item = {
+      id: editingCourseId || id(),
+      course: name,
+      source: document.getElementById('dynCourseSource')?.value.trim() || 'Kullanıcı ekledi',
+      summary: document.getElementById('dynCourseSummary')?.value.trim() || '',
+      focus: [...dynFocusDraft],
+      questions: [...dynQuestionDraft],
+      rescue: document.getElementById('dynRescue')?.value.trim() || '',
+      updated: today()
+    };
+
+    const ix = state.dynamicSchool.findIndex(c=>c.id===item.id);
+    if(ix >= 0) state.dynamicSchool[ix] = item;
+    else state.dynamicSchool.push(item);
+
+    save();
+    clearDynamicCourseForm();
+    renderSchoolOptions();
+    document.getElementById('schoolCourse').value = item.id;
+    renderSchool();
+    renderDynamicCourseList();
+  };
+
+  window.editDynamicCourse = function(cid){
+    ensureDynamicSchool();
+    const c = state.dynamicSchool.find(x=>x.id===cid);
+    if(!c) return;
+
+    editingCourseId = cid;
+    document.getElementById('dynCourseName').value = c.course || '';
+    document.getElementById('dynCourseSource').value = c.source || '';
+    document.getElementById('dynCourseSummary').value = c.summary || '';
+    document.getElementById('dynRescue').value = c.rescue || '';
+
+    dynFocusDraft = [...(c.focus||[])];
+    dynQuestionDraft = [...(c.questions||[])];
+    renderDynTags();
+    document.getElementById('dynCourseName')?.scrollIntoView({behavior:'smooth',block:'center'});
+  };
+
+  window.deleteDynamicCourse = function(cid){
+    if(!confirm('Bu dersi silmek istiyor musun?')) return;
+    ensureDynamicSchool();
+    state.dynamicSchool = state.dynamicSchool.filter(c=>c.id!==cid);
+    save();
+    clearDynamicCourseForm();
+    renderSchoolOptions();
+    renderSchool();
+    renderDynamicCourseList();
+  };
+
+  window.renderDynamicCourseList = function(){
+    ensureDynamicSchool();
+    const box = document.getElementById('dynamicCourseList');
+    if(!box) return;
+
+    if(!state.dynamicSchool.length){
+      box.innerHTML = '<div class="empty">Henüz kullanıcı tarafından eklenmiş ders yok.</div>';
+      return;
+    }
+
+    box.innerHTML = state.dynamicSchool.map(c=>`
+      <div class="school-course-card">
+        <b>${esc(c.course)}</b>
+        <div class="small">${esc(c.source || 'Kullanıcı ekledi')} • Güncelleme: ${esc(c.updated || '—')}</div>
+        <div style="margin-top:8px">
+          ${(c.focus||[]).slice(0,6).map(x=>`<span class="school-memory-pill">${esc(x)}</span>`).join('')}
+        </div>
+        <div class="school-course-actions">
+          <button class="btn-mini" onclick="editDynamicCourse('${c.id}')">Düzenle</button>
+          <button class="btn-mini danger" onclick="deleteDynamicCourse('${c.id}')">Sil</button>
+        </div>
+      </div>
+    `).join('');
+  };
+
+  window.renderSchoolOptions = function(){
+    const sel = document.getElementById('schoolCourse');
+    if(!sel) return;
+    const current = sel.value;
+    const courses = allCourses();
+    sel.innerHTML = courses.map(c=>`<option value="${esc(c.id)}">${esc(c.course)}${c.builtin?'':' • özel'}</option>`).join('');
+    if(courses.some(c=>c.id===current)) sel.value = current;
+  };
+
+  window.renderSchool = function(){
+    const c = selectedCourse();
+    const box = document.getElementById('schoolMemory');
+    if(!box || !c){
+      if(box) box.innerHTML = '<div class="empty">Ders yok.</div>';
+      return;
+    }
+
+    box.innerHTML = `<div class="item">
+      <b>${esc(c.course)}</b>
+      <div class="small">${c.builtin ? 'Gömülü ders hafızası' : 'Kullanıcı dersi'} • ${esc(c.source || '')}</div>
+      ${c.summary ? `<div class="school-note-box" style="margin-top:12px">${esc(c.summary)}</div>` : ''}
+      <p><b>Odak:</b> ${(c.focus||[]).length ? (c.focus||[]).map(esc).join(', ') : '—'}</p>
+      <p><b>Muhtemel soru:</b> ${(c.questions||[]).length ? (c.questions||[]).map(esc).join(', ') : '—'}</p>
+      <p><b>Son 3 saat:</b> ${esc(c.rescue || 'Çıkmış soru + formül/yöntem şablonu + zayıf konu tekrarı.')}</p>
+    </div>`;
+
+    renderDynamicCourseList();
+  };
+
+  window.copyExamPrompt = function(){
+    const c = selectedCourse();
+    if(!c) return alert('Ders seç.');
+    const payload = {
+      ders:c.course,
+      kaynak:c.source||'',
+      ozet:c.summary||'',
+      odak:c.focus||[],
+      muhtemel_soru:c.questions||[],
+      son_3_saat:c.rescue||'',
+      sinav_turu:document.getElementById('examType')?.value || '',
+      kalan_sure:document.getElementById('examTime')?.value || '',
+      durumum:document.getElementById('examStatus')?.value || ''
+    };
+    const text = `THE STANDARD School Memory'ye göre sınav koçu ol. Veriler: ${JSON.stringify(payload,null,2)}. Bana sınav odaklı çalışma planı, öncelik sırası, muhtemel soru tipleri ve son saat kurtarma modu hazırla.`;
+    navigator.clipboard.writeText(text).then(()=>alert('Sınav koçu promptu kopyalandı.'));
+  };
+
+  // Ensure dynamicSchool exists in backups/validation naturally.
+  const oldDefault = window.defaultState;
+  if(typeof oldDefault === 'function'){
+    window.defaultState = function(){
+      const d = oldDefault();
+      d.dynamicSchool = d.dynamicSchool || [];
+      return d;
+    };
+    try{ defaultState = window.defaultState; }catch(e){}
+  }
+
+  const oldLoad = window.load;
+  if(typeof oldLoad === 'function'){
+    window.load = function(){
+      oldLoad();
+      ensureDynamicSchool();
+    };
+    try{ load = window.load; }catch(e){}
+  }
+
+  const oldRenderReports = window.renderReports;
+  if(typeof oldRenderReports === 'function'){
+    window.renderReports = function(){
+      oldRenderReports();
+      const el = document.getElementById('dataSummary');
+      if(el && state.dynamicSchool){
+        el.innerHTML += `<div class="item">Dinamik ders: ${state.dynamicSchool.length}</div>`;
+      }
+    };
+    try{ renderReports = window.renderReports; }catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(()=>{ 
+      ensureDynamicSchool();
+      renderSchoolOptions();
+      renderSchool();
+      renderDynamicCourseList();
+      renderDynTags();
+    }, 250);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 PORTFOLIO DATA HYGIENE =====
+   New structure:
+   - portfolioTx: only real buy/sell transactions with qty != 0.
+   - currentPrices: latest manual/current prices keyed by NAME|TYPE.
+   - Migrates old qty:0 price updates into currentPrices and removes them from portfolioTx.
+*/
+(function(){
+  function pKey(name,type){
+    return String(name||'').toUpperCase().trim() + '|' + String(type||'BIST').trim();
+  }
+  function splitKey(key){
+    const parts = String(key||'').split('|');
+    return {name:parts[0]||'', type:parts[1]||'BIST'};
+  }
+  function ensurePortfolioHygiene(){
+    state.currentPrices = state.currentPrices && typeof state.currentPrices === 'object' ? state.currentPrices : {};
+    state.priceUpdatedAt = state.priceUpdatedAt && typeof state.priceUpdatedAt === 'object' ? state.priceUpdatedAt : {};
+    state.portfolioTx = Array.isArray(state.portfolioTx) ? state.portfolioTx : [];
+
+    let migrated = 0;
+    const cleaned = [];
+
+    state.portfolioTx.forEach(tx=>{
+      const key = pKey(tx.name, tx.type);
+      const qty = Number(tx.qty)||0;
+      const price = Number(tx.price)||0;
+
+      // Old v5.3 hack: qty:0 rows were price updates. Migrate them to currentPrices.
+      if(qty === 0 && price){
+        state.currentPrices[key] = price;
+        state.priceUpdatedAt[key] = tx.date || today();
+        migrated++;
+        return;
+      }
+
+      // Real transaction: keep it. Also use price as initial current price if no current price exists.
+      cleaned.push(tx);
+      if(price && !state.currentPrices[key]){
+        state.currentPrices[key] = price;
+        state.priceUpdatedAt[key] = tx.date || today();
+      }
+    });
+
+    if(migrated){
+      state.portfolioTx = cleaned;
+      state.portfolioHygieneMigrated = (Number(state.portfolioHygieneMigrated)||0) + migrated;
+      state.portfolioHygieneLastRun = today();
+      save();
+    }
+
+    return migrated;
+  }
+
+  function getCurrentPrice(name,type,fallback){
+    ensurePortfolioHygiene();
+    const key = pKey(name,type);
+    const val = Number(state.currentPrices[key]) || 0;
+    return val || Number(fallback)||0;
+  }
+
+  // Override positions: price comes from currentPrices, not price-update tx rows.
+  window.positions = function(){
+    ensurePortfolioHygiene();
+
+    const map = {};
+    (state.portfolioTx || []).forEach(t=>{
+      const qty = Number(t.qty)||0;
+      if(qty === 0) return; // real positions never use qty:0 anymore
+
+      const key = pKey(t.name,t.type);
+      if(!map[key]){
+        map[key] = {
+          name:String(t.name||'').toUpperCase(),
+          type:t.type || 'BIST',
+          qty:0,
+          costValue:0,
+          initialPrice:Number(t.price)||0
+        };
+      }
+
+      map[key].qty += qty;
+      map[key].costValue += qty * (Number(t.cost)||0);
+      if(Number(t.price)) map[key].initialPrice = Number(t.price)||map[key].initialPrice;
+      if(!state.currentPrices[key] && Number(t.price)){
+        state.currentPrices[key] = Number(t.price);
+        state.priceUpdatedAt[key] = t.date || today();
+      }
+    });
+
+    return Object.values(map)
+      .filter(p=>p.qty>0)
+      .map(p=>{
+        const key = pKey(p.name,p.type);
+        const price = getCurrentPrice(p.name,p.type,p.initialPrice);
+        const avg = p.qty ? p.costValue / p.qty : 0;
+        const value = p.qty * price;
+        const pl = value - p.costValue;
+        return {
+          ...p,
+          key,
+          avg,
+          price,
+          value,
+          pl,
+          pct:p.costValue ? pl/p.costValue*100 : 0,
+          priceUpdatedAt: state.priceUpdatedAt[key] || '—'
+        };
+      });
+  };
+  try{ positions = window.positions; }catch(e){}
+
+  window.portfolioTotals = function(){
+    const pos = positions();
+    return pos.reduce((a,p)=>{
+      a.value += Number(p.value)||0;
+      a.cost += Number(p.costValue)||0;
+      a.pl += Number(p.pl)||0;
+      return a;
+    },{value:0,cost:0,pl:0});
+  };
+  try{ portfolioTotals = window.portfolioTotals; }catch(e){}
+
+  // Override addPortfolioTx: real transactions only.
+  const oldAddPortfolioTx = window.addPortfolioTx;
+  window.addPortfolioTx = function(){
+    ensurePortfolioHygiene();
+
+    const selected = document.getElementById('assetName')?.value || '';
+    const custom = document.getElementById('customAsset')?.value.trim().toUpperCase() || '';
+    const name = (selected.includes('Yeni') ? custom : selected).toUpperCase();
+    if(!name){
+      alert('Varlık seç.');
+      return;
+    }
+
+    const type = document.getElementById('assetType')?.value || 'BIST';
+    const qty = Number(document.getElementById('assetQty')?.value)||0;
+    const cost = Number(document.getElementById('assetCost')?.value)||0;
+    const price = Number(document.getElementById('assetPrice')?.value)||cost;
+    const note = document.getElementById('assetNote')?.value.trim() || '';
+
+    if(!qty || !cost){
+      alert('Adet ve maliyet gir.');
+      return;
+    }
+
+    state.portfolioTx.push({
+      id:id(),
+      date:today(),
+      name,
+      type,
+      qty,
+      cost,
+      price,
+      note
+    });
+
+    const key = pKey(name,type);
+    if(price){
+      state.currentPrices[key] = price;
+      state.priceUpdatedAt[key] = today();
+    }
+
+    ['customAsset','assetQty','assetCost','assetPrice','assetNote'].forEach(i=>{
+      const el=document.getElementById(i);
+      if(el) el.value='';
+    });
+
+    save();
+    if(typeof renderAll === 'function') renderAll();
+  };
+  try{ addPortfolioTx = window.addPortfolioTx; }catch(e){}
+
+  // Override renderPriceUpdateMode using currentPrices.
+  window.renderPriceUpdateMode = function(){
+    ensurePortfolioHygiene();
+
+    const list = document.getElementById('priceUpdateList');
+    const sum = document.getElementById('priceUpdateSummary');
+    const hygiene = document.getElementById('portfolioHygieneStatus');
+    if(!list || !sum) return;
+
+    const pos = positions();
+    const total = portfolioTotals();
+
+    if(hygiene){
+      const migrated = Number(state.portfolioHygieneMigrated)||0;
+      const txCount = (state.portfolioTx||[]).length;
+      const priceCount = Object.keys(state.currentPrices||{}).length;
+      hygiene.innerHTML = `<div class="portfolio-hygiene-card">
+        <b>Temiz portföy mimarisi aktif.</b> Fiyat güncellemeleri artık işlem geçmişine yazılmaz; <code>currentPrices</code> içinde tutulur.
+        <div class="portfolio-hygiene-metrics">
+          <div class="portfolio-hygiene-metric"><b>${txCount}</b><span>Gerçek İşlem</span></div>
+          <div class="portfolio-hygiene-metric"><b>${priceCount}</b><span>Güncel Fiyat</span></div>
+          <div class="portfolio-hygiene-metric"><b>${migrated}</b><span>Temizlenen Eski Kayıt</span></div>
+        </div>
+      </div>`;
+    }
+
+    sum.innerHTML = `
+      <div class="metric"><b>${tl(total.value)}</b><span>güncel toplam değer</span></div>
+      <div class="metric"><b>${tl(total.cost)}</b><span>toplam maliyet</span></div>
+      <div class="metric"><b class="${total.pl>=0?'pos':'neg'}">${tl(total.pl)}</b><span>toplam Kar/Zarar</span></div>
+      <div class="metric"><b>${pos.length}</b><span>pozisyon</span></div>
+    `;
+
+    if(!pos.length){
+      list.innerHTML = '<div class="empty">Portföyde pozisyon yok. Önce Portföy İşlemi Ekle alanından varlık ekle.</div>';
+      return;
+    }
+
+    list.innerHTML = pos.map((p,i)=>{
+      return `<div class="price-update-row">
+        <div>
+          <b>${esc(p.name)}</b>
+          <small>${esc(p.type)} • Adet: ${(Number(p.qty)||0).toLocaleString('tr-TR',{maximumFractionDigits:4})} • Ort. maliyet: ${tl(p.avg)}</small>
+          <span class="price-update-chip">Fiyat tarihi: ${esc(p.priceUpdatedAt || '—')}</span>
+        </div>
+        <div>
+          <label class="label">Eski fiyat</label>
+          <input value="${Number(p.price||0)}" disabled>
+        </div>
+        <div>
+          <label class="label">Yeni fiyat</label>
+          <input id="priceUpdate_${i}" data-key="${esc(p.key)}" data-qty="${Number(p.qty)||0}" type="number" step="0.0001" value="${Number(p.price||0)}">
+        </div>
+        <div>
+          <label class="label">Yeni değer</label>
+          <input id="priceValue_${i}" value="${tl((Number(p.qty)||0)*(Number(p.price)||0))}" disabled>
+        </div>
+        <button class="btn-mini" onclick="previewSinglePrice(${i})">Önizle</button>
+      </div>`;
+    }).join('');
+  };
+
+  window.previewSinglePrice = function(i){
+    const input = document.getElementById('priceUpdate_'+i);
+    const out = document.getElementById('priceValue_'+i);
+    if(!input || !out) return;
+    const qty = Number(input.dataset.qty)||0;
+    const price = Number(input.value)||0;
+    out.value = tl(qty*price);
+  };
+
+  window.savePriceUpdates = function(){
+    ensurePortfolioHygiene();
+
+    const pos = positions();
+    if(!pos.length){
+      alert('Güncellenecek pozisyon yok.');
+      return;
+    }
+
+    let changed = 0;
+    pos.forEach((p,i)=>{
+      const input = document.getElementById('priceUpdate_'+i);
+      if(!input) return;
+      const key = input.dataset.key;
+      const newPrice = Number(input.value)||0;
+      if(!key || !newPrice) return;
+
+      const oldPrice = Number(state.currentPrices[key])||0;
+      if(Math.abs(newPrice-oldPrice) < 0.0000001) return;
+
+      state.currentPrices[key] = newPrice;
+      state.priceUpdatedAt[key] = today();
+      changed++;
+    });
+
+    if(!changed){
+      alert('Değişen fiyat yok.');
+      return;
+    }
+
+    save();
+    if(typeof renderAll === 'function') renderAll();
+    renderPriceUpdateMode();
+    alert(changed + ' fiyat güncellendi.');
+  };
+
+  window.fillLastPrices = function(){
+    positions().forEach((p,i)=>{
+      const input = document.getElementById('priceUpdate_'+i);
+      if(input) input.value = Number(p.price||0);
+      previewSinglePrice(i);
+    });
+  };
+
+  window.copyPriceUpdatePrompt = function(){
+    const payload = {
+      positions:positions(),
+      currentPrices:state.currentPrices||{},
+      note:'Fiyat güncelleme modu currentPrices objesini kullanır; portföy işlemleri sadece gerçek alımlardır.'
+    };
+    const text = `Portföy fiyat güncelleme ekranım için güncel fiyatları manuel gireceğim. Veriler: ${JSON.stringify(payload,null,2)}. Bana hangi varlıkların fiyatlarını güncellemem gerektiğini ve genel Kar/Zarar durumunu yorumla.`;
+    navigator.clipboard.writeText(text).then(()=>alert('Fiyat güncelleme promptu kopyalandı.'));
+  };
+
+  // Override renderPortfolio only to ensure hygiene is applied before original render.
+  const oldRenderPortfolio = window.renderPortfolio || (typeof renderPortfolio !== 'undefined' ? renderPortfolio : null);
+  window.renderPortfolio = function(){
+    ensurePortfolioHygiene();
+    if(typeof oldRenderPortfolio === 'function') oldRenderPortfolio();
+    renderPriceUpdateMode();
+  };
+  try{ renderPortfolio = window.renderPortfolio; }catch(e){}
+
+  // Extend backup validation naturally.
+  const oldValidateData = window.validateData;
+  window.validateData = function(){
+    ensurePortfolioHygiene();
+    if(typeof oldValidateData === 'function') return oldValidateData();
+    return true;
+  };
+
+  const oldDefault = window.defaultState;
+  if(typeof oldDefault === 'function'){
+    window.defaultState = function(){
+      const d = oldDefault();
+      d.currentPrices = d.currentPrices || {};
+      d.priceUpdatedAt = d.priceUpdatedAt || {};
+      return d;
+    };
+    try{ defaultState = window.defaultState; }catch(e){}
+  }
+
+  const oldLoad = window.load;
+  if(typeof oldLoad === 'function'){
+    window.load = function(){
+      oldLoad();
+      ensurePortfolioHygiene();
+    };
+    try{ load = window.load; }catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(()=>{ ensurePortfolioHygiene(); renderPriceUpdateMode(); }, 250);
+    setTimeout(()=>{ ensurePortfolioHygiene(); renderPriceUpdateMode(); }, 900);
+  });
+})();
+</script>
+
+
+<div id="editModal" class="edit-modal" onclick="if(event.target.id==='editModal')closeEditModal()">
+  <div class="edit-modal-card">
+    <div id="editModalTitle" class="edit-modal-title">Kaydı Düzenle</div>
+    <div id="editModalBody"></div>
+  </div>
+</div>
+
+
+<script>
+/* ===== THE STANDARD v6.1 EDIT HISTORY =====
+   Adds edit flows for:
+   - Nutrition / meals
+   - Books
+   - Workouts
+   Also replaces list rendering with cleaner edit/delete actions.
+*/
+(function(){
+  let editingRef = {type:null,id:null};
+
+  function findById(arr,id){
+    return (arr||[]).find(x=>x.id===id);
+  }
+
+  function removeById(arr,id){
+    return (arr||[]).filter(x=>x.id!==id);
+  }
+
+  function inputHtml(id,label,value,type='text'){
+    return `<div>
+      <label class="label">${label}</label>
+      <input id="${id}" class="input" type="${type}" value="${esc(value ?? '')}">
+    </div>`;
+  }
+
+  function textareaHtml(id,label,value){
+    return `<div class="full">
+      <label class="label">${label}</label>
+      <textarea id="${id}" class="input">${esc(value ?? '')}</textarea>
+    </div>`;
+  }
+
+  window.closeEditModal = function(){
+    const m=document.getElementById('editModal');
+    if(m) m.classList.remove('open');
+    editingRef={type:null,id:null};
+  };
+
+  function openEditModal(title, body){
+    const m=document.getElementById('editModal');
+    const t=document.getElementById('editModalTitle');
+    const b=document.getElementById('editModalBody');
+    if(t) t.textContent=title;
+    if(b) b.innerHTML=body;
+    if(m) m.classList.add('open');
+  }
+
+  // ------------------ MEALS ------------------
+  window.editMeal = function(mid){
+    const meal = findById(state.meals, mid);
+    if(!meal) return;
+
+    editingRef={type:'meal',id:mid};
+    openEditModal('Öğün Kaydını Düzenle', `
+      <div class="form-grid">
+        <div>
+          <label class="label">Öğün</label>
+          <select id="editMealType" class="input">
+            ${['Kahvaltı','Öğle','Akşam','Ara Öğün','Kaçamak'].map(x=>`<option ${meal.type===x?'selected':''}>${x}</option>`).join('')}
+          </select>
+        </div>
+        ${inputHtml('editMealCal','Kalori',meal.cal,'number')}
+        ${inputHtml('editMealProtein','Protein / g',meal.protein,'number')}
+        ${inputHtml('editMealCarbs','Karbonhidrat / g',meal.carbs,'number')}
+        ${inputHtml('editMealFat','Yağ / g',meal.fat,'number')}
+        <div>
+          <label class="label">Protein var mı?</label>
+          <select id="editMealProteinFlag" class="input">
+            ${['Var','Az','Yok'].map(x=>`<option ${meal.proteinFlag===x?'selected':''}>${x}</option>`).join('')}
+          </select>
+        </div>
+        ${textareaHtml('editMealText','Ne yedim?',meal.text)}
+      </div>
+      <div class="edit-actions">
+        <button class="btn" onclick="saveMealEdit()">Değişiklikleri Kaydet</button>
+        <button class="btn secondary" onclick="closeEditModal()">Vazgeç</button>
+      </div>
+    `);
+  };
+
+  window.saveMealEdit = function(){
+    const meal = findById(state.meals, editingRef.id);
+    if(!meal) return closeEditModal();
+
+    meal.type = document.getElementById('editMealType')?.value || meal.type;
+    meal.cal = Number(document.getElementById('editMealCal')?.value)||0;
+    meal.protein = Number(document.getElementById('editMealProtein')?.value)||0;
+    meal.carbs = Number(document.getElementById('editMealCarbs')?.value)||0;
+    meal.fat = Number(document.getElementById('editMealFat')?.value)||0;
+    meal.proteinFlag = document.getElementById('editMealProteinFlag')?.value || meal.proteinFlag;
+    meal.text = document.getElementById('editMealText')?.value.trim() || '';
+    meal.updated = today();
+
+    save();
+    closeEditModal();
+    renderAll();
+  };
+
+  window.deleteMealClean = function(mid){
+    if(!confirm('Bu öğün kaydı silinsin mi?')) return;
+    state.meals = removeById(state.meals, mid);
+    save();
+    renderAll();
+  };
+
+  window.renderNutrition = function(){
+    const mt = mealTotals();
+    if(document.getElementById('nutCal')) document.getElementById('nutCal').textContent=fmt(mt.cal);
+    if(document.getElementById('nutProtein')) document.getElementById('nutProtein').textContent=fmt(mt.protein)+'g';
+    if(document.getElementById('nutCarbs')) document.getElementById('nutCarbs').textContent=fmt(mt.carbs)+'g';
+    if(document.getElementById('nutFat')) document.getElementById('nutFat').textContent=fmt(mt.fat)+'g';
+    if(document.getElementById('nutCalBar')) document.getElementById('nutCalBar').style.width=Math.min(100,mt.cal/state.settings.calGoal*100)+'%';
+    if(document.getElementById('nutProteinBar')) document.getElementById('nutProteinBar').style.width=Math.min(100,mt.protein/state.settings.proteinGoal*100)+'%';
+
+    const list = document.getElementById('mealList');
+    if(!list) return;
+
+    list.innerHTML = todayMeals().map(m=>`
+      <div class="item">
+        <div class="item-head">
+          <div>
+            <b>${esc(m.type)}</b>
+            <div class="history-meta-line">
+              <span class="history-chip">${m.cal||0} kcal</span>
+              <span class="history-chip">P ${m.protein||0}g</span>
+              <span class="history-chip">K ${m.carbs||0}g</span>
+              <span class="history-chip">Y ${m.fat||0}g</span>
+            </div>
+            <div style="margin-top:8px">${esc(m.text||'')}</div>
+            ${m.updated ? `<div class="small">Güncellendi: ${esc(m.updated)}</div>` : ''}
+          </div>
+        </div>
+        <div class="history-actions">
+          <button class="btn-mini" onclick="editMeal('${m.id}')">Düzenle</button>
+          <button class="btn-mini danger" onclick="deleteMealClean('${m.id}')">Sil</button>
+        </div>
+      </div>
+    `).join('') || '<div class="empty">Bugün öğün girilmedi.</div>';
+  };
+
+  // keep old deleteMeal compatible
+  window.deleteMeal = window.deleteMealClean;
+
+  // ------------------ BOOKS ------------------
+  window.editBook = function(bid){
+    const book = findById(state.books, bid);
+    if(!book) return;
+
+    editingRef={type:'book',id:bid};
+    openEditModal('Kitap Kaydını Düzenle', `
+      <div class="form-grid">
+        ${inputHtml('editBookName','Kitap adı',book.name)}
+        ${inputHtml('editBookPages','Sayfa',book.pages,'number')}
+        ${textareaHtml('editBookLearn','1. Bugün ne öğrendim?',book.learn)}
+        ${textareaHtml('editBookApply','2. Hayatımda nereye uygulanır?',book.apply)}
+        ${textareaHtml('editBookChange','3. Yarın neyi değiştireceğim?',book.change)}
+      </div>
+      <div class="edit-actions">
+        <button class="btn" onclick="saveBookEdit()">Değişiklikleri Kaydet</button>
+        <button class="btn secondary" onclick="closeEditModal()">Vazgeç</button>
+      </div>
+    `);
+  };
+
+  window.saveBookEdit = function(){
+    const book = findById(state.books, editingRef.id);
+    if(!book) return closeEditModal();
+
+    book.name = document.getElementById('editBookName')?.value.trim() || book.name;
+    book.pages = Number(document.getElementById('editBookPages')?.value)||0;
+    book.learn = document.getElementById('editBookLearn')?.value.trim() || '';
+    book.apply = document.getElementById('editBookApply')?.value.trim() || '';
+    book.change = document.getElementById('editBookChange')?.value.trim() || '';
+    book.updated = today();
+
+    save();
+    closeEditModal();
+    renderAll();
+  };
+
+  window.deleteBookClean = function(bid){
+    if(!confirm('Bu kitap kaydı silinsin mi?')) return;
+    state.books = removeById(state.books, bid);
+    save();
+    renderAll();
+  };
+
+  window.renderBooks = function(){
+    const history = document.getElementById('bookHistory');
+    if(history){
+      history.innerHTML = [...state.books].reverse().map(b=>`
+        <div class="item">
+          <div class="item-head">
+            <div>
+              <b>${esc(b.name)}</b>
+              <div class="small">${b.date} • ${b.pages} sayfa${b.updated ? ' • güncellendi: '+esc(b.updated) : ''}</div>
+              <p><b>Öğrendim:</b> ${esc(b.learn||'—')}</p>
+              <p><b>Uygulama:</b> ${esc(b.apply||'—')}</p>
+              <p><b>Yarın:</b> ${esc(b.change||'—')}</p>
+            </div>
+          </div>
+          <div class="history-actions">
+            <button class="btn-mini" onclick="editBook('${b.id}')">Düzenle</button>
+            <button class="btn-mini danger" onclick="deleteBookClean('${b.id}')">Sil</button>
+          </div>
+        </div>
+      `).join('') || '<div class="empty">Kitap kaydı yok.</div>';
+    }
+
+    const principles = document.getElementById('principles');
+    if(principles){
+      principles.innerHTML = state.books
+        .filter(b=>b.apply||b.change)
+        .slice(-8)
+        .reverse()
+        .map(b=>`<div class="item"><b>${esc(b.name)}</b><div class="small">${esc(b.apply||b.change)}</div></div>`)
+        .join('') || '<div class="empty">Henüz prensip yok.</div>';
+    }
+  };
+
+  window.deleteBook = window.deleteBookClean;
+
+  // ------------------ WORKOUTS ------------------
+  window.editWorkout = function(wid){
+    const w = findById(state.workouts, wid);
+    if(!w) return;
+
+    editingRef={type:'workout',id:wid};
+
+    const items = (w.items||[]).map((it,i)=>`
+      <div class="workout-edit-exercise">
+        <div class="workout-edit-grid">
+          <div>
+            <label class="label">Hareket</label>
+            <input id="editWoName_${i}" class="input" value="${esc(it.name||'')}">
+          </div>
+          <div>
+            <label class="label">Kg</label>
+            <input id="editWoKg_${i}" class="input" type="number" value="${esc(it.kg||0)}">
+          </div>
+          <div>
+            <label class="label">Tekrar</label>
+            <input id="editWoRep_${i}" class="input" type="number" value="${esc(it.rep||0)}">
+          </div>
+          <div>
+            <label class="label">RIR / Not</label>
+            <input id="editWoRir_${i}" class="input" value="${esc(it.rir||'')}">
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    openEditModal('Antrenman Kaydını Düzenle', `
+      <div class="form-grid">
+        <div>
+          <label class="label">Gün</label>
+          <input id="editWorkoutDay" class="input" value="${esc(w.day||'')}">
+        </div>
+        <div>
+          <label class="label">Tarih</label>
+          <input id="editWorkoutDate" class="input" type="date" value="${esc(w.date||today())}">
+        </div>
+        ${textareaHtml('editWorkoutNote','Antrenman notu',w.note)}
+      </div>
+      <div style="margin-top:14px">${items || '<div class="empty">Hareket kaydı yok.</div>'}</div>
+      <div class="edit-actions">
+        <button class="btn" onclick="saveWorkoutEdit()">Değişiklikleri Kaydet</button>
+        <button class="btn secondary" onclick="closeEditModal()">Vazgeç</button>
+      </div>
+    `);
+  };
+
+  window.saveWorkoutEdit = function(){
+    const w = findById(state.workouts, editingRef.id);
+    if(!w) return closeEditModal();
+
+    w.day = document.getElementById('editWorkoutDay')?.value.trim() || w.day;
+    w.date = document.getElementById('editWorkoutDate')?.value || w.date;
+    w.note = document.getElementById('editWorkoutNote')?.value.trim() || '';
+
+    w.items = (w.items||[]).map((it,i)=>({
+      name:document.getElementById('editWoName_'+i)?.value.trim() || it.name,
+      kg:Number(document.getElementById('editWoKg_'+i)?.value)||0,
+      rep:Number(document.getElementById('editWoRep_'+i)?.value)||0,
+      rir:document.getElementById('editWoRir_'+i)?.value.trim() || ''
+    }));
+
+    w.updated = today();
+
+    save();
+    closeEditModal();
+    renderAll();
+  };
+
+  window.deleteWorkoutClean = function(wid){
+    if(!confirm('Bu antrenman kaydı silinsin mi?')) return;
+    state.workouts = removeById(state.workouts, wid);
+    save();
+    renderAll();
+  };
+
+  window.renderWorkoutHistory = function(){
+    const el = document.getElementById('workoutHistory');
+    if(!el) return;
+
+    const filter = document.getElementById('workoutHistoryDate')?.value || '';
+    const logs = [...state.workouts].reverse().filter(w=>!filter || w.date===filter);
+
+    el.innerHTML = logs.length ? logs.map(w=>`
+      <div class="workout-history-card">
+        <div class="item-head">
+          <div>
+            <b>${w.date} • ${esc(w.day||'')}</b>
+            ${w.note ? `<div class="small">${esc(w.note)}</div>` : ''}
+            ${w.updated ? `<div class="small">Güncellendi: ${esc(w.updated)}</div>` : ''}
+          </div>
+        </div>
+        <div style="margin-top:10px">
+          ${(w.items||[]).map(it=>`<div class="small">${esc(it.name)} — ${it.kg||0} kg • ${it.rep||0} tekrar ${it.rir?`• ${esc(it.rir)}`:''}</div>`).join('')}
+        </div>
+        <div class="history-actions">
+          <button class="btn-mini" onclick="editWorkout('${w.id}')">Düzenle</button>
+          <button class="btn-mini danger" onclick="deleteWorkoutClean('${w.id}')">Sil</button>
+        </div>
+      </div>
+    `).join('') : '<div class="empty">Antrenman kaydı yok.</div>';
+  };
+
+  window.deleteWorkout = window.deleteWorkoutClean;
+
+  // Ensure edit renderers refresh after global render.
+  const oldRenderAll = window.renderAll;
+  if(typeof oldRenderAll === 'function' && !oldRenderAll.__editHistoryPatched){
+    window.renderAll = function(){
+      oldRenderAll();
+      try{ renderNutrition(); }catch(e){}
+      try{ renderBooks(); }catch(e){}
+      try{ renderWorkoutHistory(); }catch(e){}
+    };
+    window.renderAll.__editHistoryPatched = true;
+    try{ renderAll = window.renderAll; }catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(()=>{ 
+      try{ renderNutrition(); }catch(e){}
+      try{ renderBooks(); }catch(e){}
+      try{ renderWorkoutHistory(); }catch(e){}
+    }, 250);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 SCHOOL MEMORY PLUS / ACADEMIC CRM =====
+   Adds academic CRM layer:
+   - teacher/term/exam date/priority/status
+   - course file references
+   - topic tracker with status
+   - next action summary
+   - richer academic prompt
+*/
+(function(){
+  function ensureAcademicCRM(){
+    state.academicCRM = state.academicCRM && typeof state.academicCRM === 'object' ? state.academicCRM : {};
+  }
+
+  function activeCourseId(){
+    return document.getElementById('schoolCourse')?.value || '';
+  }
+
+  function activeCourseName(){
+    const sel = document.getElementById('schoolCourse');
+    return sel && sel.selectedOptions && sel.selectedOptions[0] ? sel.selectedOptions[0].textContent.replace(' • özel','') : '';
+  }
+
+  function crmFor(courseId){
+    ensureAcademicCRM();
+    if(!state.academicCRM[courseId]){
+      state.academicCRM[courseId] = {
+        teacher:'',
+        term:'',
+        examDate:'',
+        priority:'Orta',
+        status:'Hiç başlamadım',
+        gradeGoal:'',
+        note:'',
+        files:[],
+        topics:[],
+        updated:''
+      };
+    }
+    return state.academicCRM[courseId];
+  }
+
+  function daysToExam(dateStr){
+    if(!dateStr) return null;
+    const todayDate = new Date(today()+'T00:00:00');
+    const exam = new Date(dateStr+'T00:00:00');
+    return Math.ceil((exam - todayDate)/(1000*60*60*24));
+  }
+
+  function crmRisk(crm){
+    const d = daysToExam(crm.examDate);
+    if(d === null) return {label:'Tarih yok', cls:'warn'};
+    if(d < 0) return {label:'Sınav geçti', cls:'ok'};
+    if(d <= 2) return {label:'Kritik', cls:'danger'};
+    if(d <= 7) return {label:'Yakın', cls:'warn'};
+    return {label:'Takipte', cls:'ok'};
+  }
+
+  function topicStats(crm){
+    const topics = crm.topics || [];
+    const total = topics.length;
+    const done = topics.filter(t=>t.status==='Tamam').length;
+    const weak = topics.filter(t=>t.status==='Zayıf').length;
+    const mid = topics.filter(t=>t.status==='Orta').length;
+    return {total,done,weak,mid,rate:total?done/total*100:0};
+  }
+
+  function nextAction(crm){
+    const course = activeCourseName();
+    const d = daysToExam(crm.examDate);
+    const stats = topicStats(crm);
+    const weakTopic = (crm.topics||[]).find(t=>t.status==='Zayıf') || (crm.topics||[]).find(t=>t.status==='Başlamadı');
+
+    if(d !== null && d <= 1 && d >= 0){
+      return `${course}: Sınav çok yakın. Bugün son 3 saat moduna geç: formül/yöntem, çıkmış soru ve zayıf konular.`;
+    }
+    if(weakTopic){
+      return `${course}: Önce "${weakTopic.name}" konusunu toparla. Bu dersin bir sonraki hamlesi bu.`;
+    }
+    if(stats.total && stats.rate < 70){
+      return `${course}: Konu tamamlanma oranı %${stats.rate.toLocaleString('tr-TR',{maximumFractionDigits:0})}. Bugün 1 konu + 1 soru tipi bitir.`;
+    }
+    if(crm.status === 'Hazır'){
+      return `${course}: Hazır görünüyorsun. Çıkmış soru / deneme çözümü ile standardı koru.`;
+    }
+    return `${course}: Ders CRM'i hazır. Bugün küçük ama ölçülebilir bir çalışma yap.`;
+  }
+
+  window.renderAcademicCRM = function(){
+    ensureAcademicCRM();
+    const cid = activeCourseId();
+    if(!cid) return;
+
+    const crm = crmFor(cid);
+
+    const setVal = (id,val)=>{const el=document.getElementById(id); if(el) el.value=val||''};
+    setVal('crmTeacher', crm.teacher);
+    setVal('crmTerm', crm.term);
+    setVal('crmExamDate', crm.examDate);
+    setVal('crmPriority', crm.priority || 'Orta');
+    setVal('crmStatus', crm.status || 'Hiç başlamadım');
+    setVal('crmGradeGoal', crm.gradeGoal);
+    setVal('crmNote', crm.note);
+
+    renderAcademicFiles();
+    renderAcademicTopics();
+
+    const box = document.getElementById('academicNextAction');
+    if(box){
+      const risk = crmRisk(crm);
+      const stats = topicStats(crm);
+      const d = daysToExam(crm.examDate);
+      box.innerHTML = `<b>${esc(activeCourseName())}</b><br>
+        ${esc(nextAction(crm))}
+        <div class="academic-crm-pills">
+          <span class="academic-pill ${risk.cls}">${risk.label}${d!==null && d>=0 ? ' • '+d+' gün' : ''}</span>
+          <span class="academic-pill">Durum: ${esc(crm.status || '—')}</span>
+          <span class="academic-pill">Öncelik: ${esc(crm.priority || '—')}</span>
+          <span class="academic-pill">Konu: ${stats.done}/${stats.total}</span>
+        </div>`;
+    }
+  };
+
+  window.saveAcademicCRM = function(){
+    const cid = activeCourseId();
+    if(!cid) return alert('Ders seç.');
+    const crm = crmFor(cid);
+
+    crm.teacher = document.getElementById('crmTeacher')?.value.trim() || '';
+    crm.term = document.getElementById('crmTerm')?.value.trim() || '';
+    crm.examDate = document.getElementById('crmExamDate')?.value || '';
+    crm.priority = document.getElementById('crmPriority')?.value || 'Orta';
+    crm.status = document.getElementById('crmStatus')?.value || 'Hiç başlamadım';
+    crm.gradeGoal = document.getElementById('crmGradeGoal')?.value.trim() || '';
+    crm.note = document.getElementById('crmNote')?.value.trim() || '';
+    crm.updated = today();
+
+    save();
+    renderAcademicCRM();
+    alert('Akademik CRM kaydedildi.');
+  };
+
+  window.addAcademicFile = function(){
+    const cid = activeCourseId();
+    if(!cid) return alert('Ders seç.');
+    const input = document.getElementById('crmFileInput');
+    const val = input?.value.trim();
+    if(!val) return;
+    const crm = crmFor(cid);
+    crm.files = crm.files || [];
+    crm.files.push({id:id(), name:val, date:today()});
+    input.value='';
+    save();
+    renderAcademicFiles();
+  };
+
+  window.deleteAcademicFile = function(fid){
+    const crm = crmFor(activeCourseId());
+    crm.files = (crm.files||[]).filter(f=>f.id!==fid);
+    save();
+    renderAcademicFiles();
+  };
+
+  window.renderAcademicFiles = function(){
+    const box = document.getElementById('crmFileList');
+    if(!box) return;
+    const crm = crmFor(activeCourseId());
+    const files = crm.files || [];
+    box.innerHTML = files.length ? files.map(f=>`
+      <div class="academic-file-item">
+        <div><b>${esc(f.name)}</b><div class="small">${esc(f.date||'')}</div></div>
+        <button class="btn-mini danger" onclick="deleteAcademicFile('${f.id}')">Sil</button>
+      </div>
+    `).join('') : '<div class="small">Dosya referansı yok.</div>';
+  };
+
+  window.addAcademicTopic = function(){
+    const cid = activeCourseId();
+    if(!cid) return alert('Ders seç.');
+    const input = document.getElementById('topicNameInput');
+    const val = input?.value.trim();
+    if(!val) return;
+
+    const crm = crmFor(cid);
+    crm.topics = crm.topics || [];
+    crm.topics.push({id:id(), name:val, status:'Başlamadı', note:'', updated:today()});
+    input.value='';
+    save();
+    renderAcademicTopics();
+    renderAcademicCRM();
+  };
+
+  window.updateAcademicTopic = function(tid, field, value){
+    const crm = crmFor(activeCourseId());
+    const topic = (crm.topics||[]).find(t=>t.id===tid);
+    if(!topic) return;
+    topic[field] = value;
+    topic.updated = today();
+    save();
+    renderAcademicTopics();
+    renderAcademicCRM();
+  };
+
+  window.deleteAcademicTopic = function(tid){
+    if(!confirm('Bu konu silinsin mi?')) return;
+    const crm = crmFor(activeCourseId());
+    crm.topics = (crm.topics||[]).filter(t=>t.id!==tid);
+    save();
+    renderAcademicTopics();
+    renderAcademicCRM();
+  };
+
+  window.renderAcademicTopics = function(){
+    const box = document.getElementById('academicTopicTable');
+    if(!box) return;
+    const crm = crmFor(activeCourseId());
+    const topics = crm.topics || [];
+
+    if(!topics.length){
+      box.innerHTML = '<div class="empty">Konu takibi yok. Bu derste çalışılacak konuları ekle.</div>';
+      return;
+    }
+
+    box.innerHTML = `<table class="topic-table">
+      <thead><tr><th>Konu</th><th>Durum</th><th>Not</th><th>Güncelleme</th><th></th></tr></thead>
+      <tbody>
+        ${topics.map(t=>`
+          <tr>
+            <td><b>${esc(t.name)}</b></td>
+            <td>
+              <select class="topic-status" onchange="updateAcademicTopic('${t.id}','status',this.value)">
+                ${['Başlamadı','Zayıf','Orta','Tamam'].map(x=>`<option ${t.status===x?'selected':''}>${x}</option>`).join('')}
+              </select>
+            </td>
+            <td><input class="input" value="${esc(t.note||'')}" onchange="updateAcademicTopic('${t.id}','note',this.value)" placeholder="Kısa not"></td>
+            <td class="small">${esc(t.updated||'—')}</td>
+            <td><button class="btn-mini danger" onclick="deleteAcademicTopic('${t.id}')">Sil</button></td>
+          </tr>
+        `).join('')}
+      </tbody>
+    </table>`;
+  };
+
+  window.copyAcademicPrompt = function(){
+    const cid = activeCourseId();
+    const crm = crmFor(cid);
+    const course = activeCourseName();
+    const data = {
+      ders:course,
+      hoca:crm.teacher,
+      donem:crm.term,
+      sinav_tarihi:crm.examDate,
+      kalan_gun:daysToExam(crm.examDate),
+      oncelik:crm.priority,
+      durum:crm.status,
+      gecme_hedefi:crm.gradeGoal,
+      not:crm.note,
+      dosyalar:crm.files||[],
+      konu_takibi:crm.topics||[],
+      sonraki_hamle:nextAction(crm)
+    };
+    const text = `THE STANDARD Akademik CRM verilerime göre akademik koç ol. Veriler: ${JSON.stringify(data,null,2)}. Bana bu ders için net çalışma stratejisi, öncelik sırası, zayıf konu müdahalesi, sınava kadar plan ve son 3 saat kurtarma modu hazırla.`;
+    navigator.clipboard.writeText(text).then(()=>alert('Akademik koç promptu kopyalandı.'));
+  };
+
+  // Enrich exam prompt with CRM.
+  const oldCopyExamPrompt = window.copyExamPrompt;
+  window.copyExamPrompt = function(){
+    const cid = activeCourseId();
+    const crm = crmFor(cid);
+    const data = {
+      ders:activeCourseName(),
+      sinav_turu:document.getElementById('examType')?.value || '',
+      kalan_sure:document.getElementById('examTime')?.value || '',
+      durumum:document.getElementById('examStatus')?.value || '',
+      academic_crm:crm,
+      sonraki_hamle:nextAction(crm)
+    };
+    const text = `THE STANDARD School Memory + Akademik CRM verilerime göre sınav koçu ol. Veriler: ${JSON.stringify(data,null,2)}. Bana sınav odaklı çalışma planı, muhtemel soru tipleri, konu öncelikleri ve son saat kurtarma modu hazırla.`;
+    navigator.clipboard.writeText(text).then(()=>alert('Sınav koçu promptu kopyalandı.'));
+  };
+
+  // Patch school render to refresh CRM when selected course changes.
+  const oldRenderSchool = window.renderSchool;
+  window.renderSchool = function(){
+    if(typeof oldRenderSchool === 'function') oldRenderSchool();
+    renderAcademicCRM();
+  };
+  try{ renderSchool = window.renderSchool; }catch(e){}
+
+  const oldRenderSchoolOptions = window.renderSchoolOptions;
+  window.renderSchoolOptions = function(){
+    if(typeof oldRenderSchoolOptions === 'function') oldRenderSchoolOptions();
+    setTimeout(renderAcademicCRM, 0);
+  };
+  try{ renderSchoolOptions = window.renderSchoolOptions; }catch(e){}
+
+  // Include academic CRM in default state and reports.
+  const oldDefault = window.defaultState;
+  if(typeof oldDefault === 'function'){
+    window.defaultState = function(){
+      const d = oldDefault();
+      d.academicCRM = d.academicCRM || {};
+      return d;
+    };
+    try{ defaultState = window.defaultState; }catch(e){}
+  }
+
+  const oldLoad = window.load;
+  if(typeof oldLoad === 'function'){
+    window.load = function(){
+      oldLoad();
+      ensureAcademicCRM();
+    };
+    try{ load = window.load; }catch(e){}
+  }
+
+  const oldRenderReports = window.renderReports;
+  if(typeof oldRenderReports === 'function'){
+    window.renderReports = function(){
+      oldRenderReports();
+      const el = document.getElementById('dataSummary');
+      if(el && state.academicCRM){
+        el.innerHTML += `<div class="item">Academic CRM ders kaydı: ${Object.keys(state.academicCRM).length}</div>`;
+      }
+    };
+    try{ renderReports = window.renderReports; }catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(()=>{ ensureAcademicCRM(); renderAcademicCRM(); }, 300);
+    setTimeout(()=>{ ensureAcademicCRM(); renderAcademicCRM(); }, 1000);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 ACADEMIC ALERTS + CLICKABLE REFERENCES =====
+   Adds:
+   - Dashboard academic urgency alerts for exams due in <= 3 days.
+   - Clickable URL references inside academic file/source list.
+*/
+(function(){
+  function ensureAcademicCRM(){
+    state.academicCRM = state.academicCRM && typeof state.academicCRM === 'object' ? state.academicCRM : {};
+  }
+
+  function daysTo(dateStr){
+    if(!dateStr) return null;
+    const a = new Date(today()+'T00:00:00');
+    const b = new Date(dateStr+'T00:00:00');
+    return Math.ceil((b-a)/(1000*60*60*24));
+  }
+
+  function courseNameById(cid){
+    try{
+      const all = typeof allCourses === 'function' ? allCourses() : [];
+      const found = all.find(c=>c.id===cid);
+      return found ? found.course : cid;
+    }catch(e){
+      return cid;
+    }
+  }
+
+  function academicAlerts(){
+    ensureAcademicCRM();
+    const out = [];
+    Object.entries(state.academicCRM || {}).forEach(([cid,crm])=>{
+      const d = daysTo(crm.examDate);
+      if(d === null) return;
+      if(d < 0) return;
+      if(d <= 3){
+        const cls = d <= 1 ? 'danger' : 'warn';
+        const title = `${courseNameById(cid)} sınavı ${d === 0 ? 'bugün' : d + ' gün içinde'}`;
+        const detail = `Durum: ${crm.status || '—'} • Öncelik: ${crm.priority || '—'}${crm.teacher ? ' • Hoca: '+crm.teacher : ''}`;
+        out.push({cid,cls,title,detail,days:d,date:crm.examDate});
+      }
+    });
+    return out.sort((a,b)=>a.days-b.days);
+  }
+
+  window.renderDashboardAcademicAlerts = function(){
+    const box = document.getElementById('dashboardAcademicAlerts');
+    if(!box) return;
+    const alerts = academicAlerts();
+
+    if(!alerts.length){
+      box.innerHTML = '';
+      return;
+    }
+
+    box.innerHTML = alerts.map(a=>`
+      <div class="academic-alert-card ${a.cls}">
+        <b>${esc(a.title)}</b>
+        <div>${esc(a.detail)}</div>
+        <span class="academic-alert-pill">Sınav tarihi: ${esc(a.date)}</span>
+      </div>
+    `).join('');
+  };
+
+  function linkify(text){
+    const raw = String(text || '');
+    const urlRegex = /(https?:\/\/[^\s<>"']+|www\.[^\s<>"']+)/gi;
+    return esc(raw).replace(urlRegex, function(match){
+      const href = match.startsWith('http') ? match : 'https://' + match;
+      return `<a class="ref-link" href="${href}" target="_blank" rel="noopener noreferrer">${match}</a>`;
+    });
+  }
+
+  window.copyAcademicRef = function(text){
+    navigator.clipboard.writeText(text).then(()=>alert('Referans kopyalandı.'));
+  };
+
+  // Override only file reference rendering to make URL references clickable.
+  window.renderAcademicFiles = function(){
+    const box = document.getElementById('crmFileList');
+    if(!box) return;
+    const crm = typeof crmFor === 'function' ? crmFor(activeCourseId()) : null;
+    const files = crm && Array.isArray(crm.files) ? crm.files : [];
+
+    box.innerHTML = files.length ? files.map(f=>`
+      <div class="academic-file-item">
+        <div>
+          <b>${linkify(f.name)}</b>
+          <div class="small">${esc(f.date || '')}</div>
+        </div>
+        <div class="row">
+          <button class="ref-copy-btn" onclick="copyAcademicRef('${esc(String(f.name||'')).replace(/'/g,'&#39;')}')">Kopyala</button>
+          <button class="btn-mini danger" onclick="deleteAcademicFile('${f.id}')">Sil</button>
+        </div>
+      </div>
+    `).join('') : '<div class="small">Dosya referansı yok.</div>';
+  };
+
+  // Enhance renderAcademicCRM by calling linkified file renderer after original.
+  const oldRenderAcademicCRM = window.renderAcademicCRM;
+  if(typeof oldRenderAcademicCRM === 'function'){
+    window.renderAcademicCRM = function(){
+      oldRenderAcademicCRM();
+      renderAcademicFiles();
+      renderDashboardAcademicAlerts();
+    };
+    try{ renderAcademicCRM = window.renderAcademicCRM; }catch(e){}
+  }
+
+  const oldRenderDashboard = window.renderDashboard;
+  if(typeof oldRenderDashboard === 'function'){
+    window.renderDashboard = function(){
+      oldRenderDashboard();
+      renderDashboardAcademicAlerts();
+    };
+    try{ renderDashboard = window.renderDashboard; }catch(e){}
+  }
+
+  const oldRenderAll = window.renderAll;
+  if(typeof oldRenderAll === 'function' && !oldRenderAll.__academicAlertsPatched){
+    window.renderAll = function(){
+      oldRenderAll();
+      renderDashboardAcademicAlerts();
+    };
+    window.renderAll.__academicAlertsPatched = true;
+    try{ renderAll = window.renderAll; }catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(()=>{ renderDashboardAcademicAlerts(); renderAcademicFiles(); }, 300);
+    setTimeout(()=>{ renderDashboardAcademicAlerts(); renderAcademicFiles(); }, 1000);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 FINAL LOCAL POLISH =====
+   Adds:
+   - system health panel
+   - dashboard critical local status
+   - data cleanup tools
+   - v6 readiness notes
+   - workout edit modal add/remove exercise
+*/
+(function(){
+  function byteSize(){
+    try{
+      const raw = localStorage.getItem(STORE) || '';
+      return new Blob([raw]).size;
+    }catch(e){ return 0; }
+  }
+  function prettyBytes(bytes){
+    if(bytes < 1024) return bytes + ' B';
+    if(bytes < 1024*1024) return (bytes/1024).toLocaleString('tr-TR',{maximumFractionDigits:1}) + ' KB';
+    return (bytes/1024/1024).toLocaleString('tr-TR',{maximumFractionDigits:2}) + ' MB';
+  }
+  function getBackupMeta(){
+    try{return JSON.parse(localStorage.getItem('the_standard_backup_meta') || '{}')}catch(e){return {}}
+  }
+  function daysSince(dateStr){
+    if(!dateStr) return null;
+    return Math.floor((new Date(today()+'T00:00:00') - new Date(dateStr+'T00:00:00'))/(1000*60*60*24));
+  }
+  function counts(){
+    return {
+      body:(state.bodyLogs||[]).length,
+      meals:(state.meals||[]).length,
+      books:(state.books||[]).length,
+      habits:(state.habits||[]).length,
+      workouts:(state.workouts||[]).length,
+      portfolio:(state.portfolioTx||[]).length,
+      dynamicSchool:(state.dynamicSchool||[]).length,
+      academicCRM:Object.keys(state.academicCRM||{}).length
+    };
+  }
+  function totalRecords(){
+    const c=counts();
+    return Object.values(c).reduce((a,b)=>a+(Number(b)||0),0);
+  }
+  function healthLevel(){
+    const meta=getBackupMeta();
+    const diff=daysSince(meta.lastBackupDate);
+    const bytes=byteSize();
+    if(diff===null || diff>14) return 'danger';
+    if(diff>7 || bytes>3*1024*1024) return 'warn';
+    return 'ok';
+  }
+  function healthLabel(lvl){
+    return lvl==='ok'?'Sağlıklı':lvl==='warn'?'Dikkat':'Riskli';
+  }
+
+  window.renderSystemHealth = function(){
+    const lvl=healthLevel(), meta=getBackupMeta(), diff=daysSince(meta.lastBackupDate), c=counts();
+    const html = `<div class="system-health-grid">
+      <div class="system-health-card ${lvl}"><b>${healthLabel(lvl)}</b><span>Sistem Durumu</span></div>
+      <div class="system-health-card"><b>${prettyBytes(byteSize())}</b><span>Veri Boyutu</span></div>
+      <div class="system-health-card"><b>${totalRecords()}</b><span>Toplam Kayıt</span></div>
+      <div class="system-health-card ${diff===null||diff>7?'warn':'ok'}"><b>${meta.lastBackupDate || '—'}</b><span>Son Yedek</span></div>
+    </div>
+    <div class="small">Body ${c.body} • Öğün ${c.meals} • Kitap ${c.books} • Antrenman ${c.workouts} • Portföy ${c.portfolio} • Ders ${c.dynamicSchool} • Academic CRM ${c.academicCRM}</div>`;
+    const panel=document.getElementById('systemHealthPanel');
+    if(panel) panel.innerHTML=html;
+
+    const dash=document.getElementById('dashboardSystemHealth');
+    if(dash){
+      const show = lvl!=='ok';
+      dash.innerHTML = show ? `<div class="academic-alert-card ${lvl==='danger'?'danger':'warn'}">
+        <b>Sistem Sağlığı: ${healthLabel(lvl)}</b>
+        <div>${diff===null?'Henüz yedek alınmamış.': 'Son yedek '+diff+' gün önce.'} Veri boyutu: ${prettyBytes(byteSize())}.</div>
+        <span class="academic-alert-pill">Ayarlar → Yedek & Stabilite</span>
+      </div>` : '';
+    }
+
+    const ready=document.getElementById('versionReadiness');
+    if(ready){
+      ready.innerHTML = `<b>THE STANDARD v6.1 Final Local Polish</b><br>
+      Yerel tek dosya mimarisi artık son polish seviyesinde. v6.1 için sıradaki büyük adım: Cloud Sync / Supabase-Firebase / cihazlar arası senkronizasyon. 
+      <br><br><b>v6.1'a geçmeden önce:</b> birkaç gün v6.1'u kullan, yedek al, portföy fiyat güncellemesini ve School CRM'i test et.`;
+    }
+  };
+
+  function validString(x){ return String(x||'').trim().length>0; }
+
+  window.cleanupEmptyRecords = function(){
+    const before = totalRecords();
+    state.meals = (state.meals||[]).filter(m => Number(m.cal)||Number(m.protein)||validString(m.text));
+    state.books = (state.books||[]).filter(b => validString(b.name)||Number(b.pages)||validString(b.learn)||validString(b.apply)||validString(b.change));
+    state.workouts = (state.workouts||[]).filter(w => validString(w.day)||validString(w.note)||(w.items||[]).some(i=>validString(i.name)||Number(i.kg)||Number(i.rep)||validString(i.rir)));
+    state.bodyLogs = (state.bodyLogs||[]).filter(b => Number(b.weight)||Number(b.steps)||Number(b.sleep)||Number(b.water)||validString(b.note));
+    state.portfolioTx = (state.portfolioTx||[]).filter(t => validString(t.name)&&Number(t.qty)!==0);
+    save();
+    const after = totalRecords();
+    const msg = before-after;
+    showCleanupResult(`${msg} boş/gereksiz kayıt temizlendi.`);
+    renderAll();
+  };
+
+  function uniqueById(arr){
+    const seen=new Set(), out=[]; let removed=0;
+    (arr||[]).forEach(x=>{
+      if(!x.id) x.id = id();
+      if(seen.has(x.id)){ removed++; return; }
+      seen.add(x.id); out.push(x);
+    });
+    return {out,removed};
+  }
+
+  window.cleanupDuplicateIds = function(){
+    let removed=0;
+    ['bodyLogs','workouts','meals','books','habits','portfolioTx','dynamicSchool'].forEach(k=>{
+      if(Array.isArray(state[k])){
+        const r=uniqueById(state[k]);
+        state[k]=r.out; removed+=r.removed;
+      }
+    });
+    save();
+    showCleanupResult(`${removed} duplicate ID temizlendi.`);
+    renderAll();
+  };
+
+  window.runPortfolioHygieneManual = function(){
+    const before=(state.portfolioTx||[]).length;
+    try{
+      if(typeof validateData === 'function') validateData();
+      if(typeof positions === 'function') positions();
+    }catch(e){}
+    state.currentPrices = state.currentPrices || {};
+    state.priceUpdatedAt = state.priceUpdatedAt || {};
+    const cleaned=[];
+    let moved=0;
+    (state.portfolioTx||[]).forEach(t=>{
+      if((Number(t.qty)||0)===0 && Number(t.price)){
+        const key=String(t.name||'').toUpperCase()+'|'+String(t.type||'BIST');
+        state.currentPrices[key]=Number(t.price);
+        state.priceUpdatedAt[key]=t.date||today();
+        moved++;
+      }else cleaned.push(t);
+    });
+    state.portfolioTx=cleaned;
+    save();
+    showCleanupResult(`Portföy hijyeni tamamlandı. ${moved} eski fiyat güncellemesi currentPrices içine taşındı.`);
+    renderAll();
+  };
+
+  window.runFullSystemCheck = function(){
+    const issues=[];
+    ['settings','habitLogs','profile'].forEach(k=>{ if(!state[k] || typeof state[k] !== 'object') issues.push(k+' eksik') });
+    ['bodyLogs','workouts','meals','books','habits','portfolioTx','dynamicSchool'].forEach(k=>{ if(!Array.isArray(state[k])) issues.push(k+' dizi değil') });
+    if(!state.currentPrices || typeof state.currentPrices!=='object') issues.push('currentPrices eksik');
+    if(!state.academicCRM || typeof state.academicCRM!=='object') issues.push('academicCRM eksik');
+    if(issues.length){
+      showCleanupResult('Kontrol sonucu: ' + issues.join(', '));
+    }else{
+      showCleanupResult('Kontrol sonucu: ana veri yapısı sağlam.');
+    }
+    renderSystemHealth();
+  };
+
+  function showCleanupResult(text){
+    const el=document.getElementById('systemCleanupResult');
+    if(el) el.innerHTML = `<div class="version-note">${esc(text)}</div>`;
+  }
+
+  // -------- Workout edit add/remove exercise refinement --------
+  window.addWorkoutEditExercise = function(){
+    const list=document.getElementById('workoutEditExerciseList');
+    if(!list) return;
+    const idx=list.querySelectorAll('.workout-edit-exercise').length;
+    const div=document.createElement('div');
+    div.className='workout-edit-exercise';
+    div.innerHTML = workoutEditExerciseHtml({name:'',kg:0,rep:0,rir:''}, idx);
+    list.appendChild(div);
+  };
+
+  window.removeWorkoutEditExercise = function(btn){
+    const box=btn.closest('.workout-edit-exercise');
+    if(box) box.remove();
+  };
+
+  function workoutEditExerciseHtml(it,i){
+    return `<div class="workout-edit-grid">
+      <div><label class="label">Hareket</label><input class="input editWoName" value="${esc(it.name||'')}"></div>
+      <div><label class="label">Kg</label><input class="input editWoKg" type="number" value="${esc(it.kg||0)}"></div>
+      <div><label class="label">Tekrar</label><input class="input editWoRep" type="number" value="${esc(it.rep||0)}"></div>
+      <div><label class="label">RIR / Not</label><input class="input editWoRir" value="${esc(it.rir||'')}"></div>
+    </div>
+    <button class="btn-mini danger remove-exercise" onclick="removeWorkoutEditExercise(this)">Hareketi Kaldır</button>`;
+  }
+
+  window.editWorkout = function(wid){
+    const w = (state.workouts||[]).find(x=>x.id===wid);
+    if(!w) return;
+    window.__editingWorkoutId = wid;
+
+    const items = (w.items||[]).map((it,i)=>`<div class="workout-edit-exercise">${workoutEditExerciseHtml(it,i)}</div>`).join('');
+
+    const body = `
+      <div class="form-grid">
+        <div><label class="label">Gün</label><input id="editWorkoutDay" class="input" value="${esc(w.day||'')}"></div>
+        <div><label class="label">Tarih</label><input id="editWorkoutDate" class="input" type="date" value="${esc(w.date||today())}"></div>
+        <div class="full"><label class="label">Antrenman notu</label><textarea id="editWorkoutNote" class="input">${esc(w.note||'')}</textarea></div>
+      </div>
+      <div id="workoutEditExerciseList" style="margin-top:14px">${items || ''}</div>
+      <div class="workout-edit-add">
+        <button class="btn secondary" onclick="addWorkoutEditExercise()">Hareket Ekle</button>
+      </div>
+      <div class="edit-actions">
+        <button class="btn" onclick="saveWorkoutEdit()">Değişiklikleri Kaydet</button>
+        <button class="btn secondary" onclick="closeEditModal()">Vazgeç</button>
+      </div>`;
+    document.getElementById('editModalTitle').textContent='Antrenman Kaydını Düzenle';
+    document.getElementById('editModalBody').innerHTML=body;
+    document.getElementById('editModal').classList.add('open');
+  };
+
+  window.saveWorkoutEdit = function(){
+    const wid=window.__editingWorkoutId;
+    const w=(state.workouts||[]).find(x=>x.id===wid);
+    if(!w) return closeEditModal();
+
+    w.day=document.getElementById('editWorkoutDay')?.value.trim()||w.day;
+    w.date=document.getElementById('editWorkoutDate')?.value||w.date;
+    w.note=document.getElementById('editWorkoutNote')?.value.trim()||'';
+    w.items=[...document.querySelectorAll('#workoutEditExerciseList .workout-edit-exercise')].map(box=>({
+      name:box.querySelector('.editWoName')?.value.trim()||'',
+      kg:Number(box.querySelector('.editWoKg')?.value)||0,
+      rep:Number(box.querySelector('.editWoRep')?.value)||0,
+      rir:box.querySelector('.editWoRir')?.value.trim()||''
+    })).filter(x=>x.name||x.kg||x.rep||x.rir);
+    w.updated=today();
+    save();
+    closeEditModal();
+    renderAll();
+  };
+
+  const oldRenderAll=window.renderAll;
+  if(typeof oldRenderAll==='function' && !oldRenderAll.__finalPolishPatched){
+    window.renderAll=function(){
+      oldRenderAll();
+      renderSystemHealth();
+    };
+    window.renderAll.__finalPolishPatched=true;
+    try{renderAll=window.renderAll}catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(renderSystemHealth,300);
+    setTimeout(renderSystemHealth,1000);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 CLOUD SYNC =====
+   Supabase-backed cloud sync layer.
+   Existing local app remains usable offline/local.
+*/
+(function(){
+  const CLOUD_CFG_KEY = 'the_standard_cloud_config_v1';
+  const CLOUD_META_KEY = 'the_standard_cloud_meta_v1';
+  let supa = null;
+  let cloudUser = null;
+
+  function cloudLog(msg){
+    const el=document.getElementById('cloudLog');
+    const line='['+new Date().toLocaleTimeString('tr-TR')+'] '+msg;
+    if(el) el.innerHTML = esc(line) + '<br>' + el.innerHTML;
+  }
+
+  function getCloudConfig(){
+    try{return JSON.parse(localStorage.getItem(CLOUD_CFG_KEY)||'{}')}catch(e){return {}}
+  }
+  function setCloudConfig(cfg){
+    localStorage.setItem(CLOUD_CFG_KEY, JSON.stringify(cfg||{}));
+  }
+  function getCloudMeta(){
+    try{return JSON.parse(localStorage.getItem(CLOUD_META_KEY)||'{}')}catch(e){return {}}
+  }
+  function setCloudMeta(meta){
+    localStorage.setItem(CLOUD_META_KEY, JSON.stringify(meta||{}));
+  }
+
+  function initClient(){
+    const cfg=getCloudConfig();
+    if(!cfg.url || !cfg.anon){
+      supa=null;
+      return null;
+    }
+    if(!window.supabase){
+      cloudLog('Supabase SDK yüklenemedi. İnternet bağlantısını kontrol et.');
+      return null;
+    }
+    try{
+      supa = window.supabase.createClient(cfg.url, cfg.anon);
+      return supa;
+    }catch(e){
+      cloudLog('Supabase client oluşturulamadı: '+e.message);
+      return null;
+    }
+  }
+
+  window.saveCloudConfig=function(){
+    const url=document.getElementById('cloudUrl')?.value.trim();
+    const anon=document.getElementById('cloudAnon')?.value.trim();
+    const email=document.getElementById('cloudEmail')?.value.trim();
+    const mode=document.getElementById('cloudMode')?.value || 'Manuel Sync';
+    if(!url || !anon){
+      alert('Supabase URL ve anon key gir.');
+      return;
+    }
+    setCloudConfig({url,anon,email,mode});
+    initClient();
+    renderCloudStatus();
+    cloudLog('Cloud ayarları kaydedildi.');
+  };
+
+  window.sendMagicLink=async function(){
+    const cfg=getCloudConfig();
+    const client=initClient();
+    const email=(document.getElementById('cloudEmail')?.value.trim()) || cfg.email;
+    if(!client) return alert('Önce Cloud ayarlarını kaydet.');
+    if(!email) return alert('Email gir.');
+    setCloudConfig({...cfg,email});
+    try{
+      const redirectTo = window.location.href.split('#')[0];
+      const {error}=await client.auth.signInWithOtp({email, options:{emailRedirectTo:redirectTo}});
+      if(error) throw error;
+      cloudLog('Giriş linki gönderildi: '+email);
+      alert('Giriş linki mail adresine gönderildi.');
+    }catch(e){
+      cloudLog('Giriş linki hatası: '+e.message);
+      alert('Giriş linki gönderilemedi: '+e.message);
+    }
+  };
+
+  window.checkCloudSession=async function(){
+    const client=initClient();
+    if(!client) return alert('Önce Cloud ayarlarını kaydet.');
+    try{
+      const {data,error}=await client.auth.getUser();
+      if(error) throw error;
+      cloudUser=data.user || null;
+      if(cloudUser){
+        cloudLog('Oturum aktif: '+cloudUser.email);
+      }else{
+        cloudLog('Oturum yok. Email giriş linki gönder.');
+      }
+      renderCloudStatus();
+    }catch(e){
+      cloudLog('Oturum kontrol hatası: '+e.message);
+      renderCloudStatus();
+    }
+  };
+
+  function cloudPayload(){
+    return {
+      app:'THE STANDARD',
+      version:'6.0',
+      updatedAt:new Date().toISOString(),
+      data:state
+    };
+  }
+
+  window.pushToCloud=async function(){
+    const client=initClient();
+    if(!client) return alert('Önce Cloud ayarlarını kaydet.');
+    try{
+      const {data:userData,error:userErr}=await client.auth.getUser();
+      if(userErr) throw userErr;
+      const user=userData.user;
+      if(!user) return alert('Önce email ile giriş yap.');
+
+      const payload=cloudPayload();
+      const {error}=await client.from('the_standard_profiles').upsert({
+        id:user.id,
+        email:user.email,
+        data:payload.data,
+        app_version:'6.0',
+        updated_at:new Date().toISOString()
+      }, {onConflict:'id'});
+      if(error) throw error;
+
+      setCloudMeta({lastPushAt:new Date().toISOString(), lastUser:user.email});
+      cloudLog('Buluta kaydedildi: '+user.email);
+      renderCloudStatus();
+      alert('Buluta kaydedildi.');
+    }catch(e){
+      cloudLog('Buluta kaydetme hatası: '+e.message);
+      alert('Buluta kaydedilemedi: '+e.message);
+    }
+  };
+
+  window.pullFromCloud=async function(){
+    const client=initClient();
+    if(!client) return alert('Önce Cloud ayarlarını kaydet.');
+    try{
+      const {data:userData,error:userErr}=await client.auth.getUser();
+      if(userErr) throw userErr;
+      const user=userData.user;
+      if(!user) return alert('Önce email ile giriş yap.');
+
+      const {data,error}=await client.from('the_standard_profiles').select('data,updated_at,email').eq('id',user.id).single();
+      if(error) throw error;
+      if(!data || !data.data) return alert('Bulutta kayıt yok.');
+
+      if(!confirm('Buluttaki veri bu cihazdaki verinin üstüne yazılacak. Devam edilsin mi?')) return;
+
+      localStorage.setItem('the_standard_pre_cloud_pull_snapshot', JSON.stringify({date:new Date().toISOString(), data:state}));
+      state=data.data;
+      save();
+      setCloudMeta({lastPullAt:new Date().toISOString(), lastUser:user.email, cloudUpdatedAt:data.updated_at});
+      if(typeof renderAll==='function') renderAll();
+      renderCloudStatus();
+      cloudLog('Buluttan veri yüklendi.');
+      alert('Buluttan veri yüklendi.');
+    }catch(e){
+      cloudLog('Buluttan yükleme hatası: '+e.message);
+      alert('Buluttan yüklenemedi: '+e.message);
+    }
+  };
+
+  window.signOutCloud=async function(){
+    const client=initClient();
+    if(!client) return;
+    try{
+      await client.auth.signOut();
+      cloudUser=null;
+      cloudLog('Cloud çıkış yapıldı.');
+      renderCloudStatus();
+    }catch(e){
+      cloudLog('Çıkış hatası: '+e.message);
+    }
+  };
+
+  window.renderCloudStatus=function(){
+    const cfg=getCloudConfig();
+    const meta=getCloudMeta();
+    const box=document.getElementById('cloudStatus');
+    if(document.getElementById('cloudUrl')) document.getElementById('cloudUrl').value=cfg.url||'';
+    if(document.getElementById('cloudAnon')) document.getElementById('cloudAnon').value=cfg.anon||'';
+    if(document.getElementById('cloudEmail')) document.getElementById('cloudEmail').value=cfg.email||'';
+    if(document.getElementById('cloudMode')) document.getElementById('cloudMode').value=cfg.mode||'Manuel Sync';
+
+    if(!box) return;
+    const configured = !!(cfg.url && cfg.anon);
+    const last = meta.lastPushAt || meta.lastPullAt || '';
+    const statusClass = configured ? 'warn' : 'danger';
+    const statusText = configured ? 'Yapılandırıldı' : 'Ayar Eksik';
+
+    box.innerHTML = `<div class="cloud-status-card">
+      <div class="cloud-status-title">Cloud Sync Durumu</div>
+      <div class="cloud-status-note">
+        ${configured ? 'Supabase bağlantı bilgileri kayıtlı. Oturum açıp buluta kaydedebilirsin.' : 'Supabase URL ve anon key girilmedi.'}
+        ${last ? '<br>Son cloud işlem: '+esc(new Date(last).toLocaleString('tr-TR')) : ''}
+      </div>
+      <span class="cloud-pill ${statusClass}">${statusText}</span>
+    </div>`;
+  };
+
+  const oldRenderAll=window.renderAll;
+  if(typeof oldRenderAll==='function' && !oldRenderAll.__cloudSyncPatched){
+    window.renderAll=function(){
+      oldRenderAll();
+      renderCloudStatus();
+    };
+    window.renderAll.__cloudSyncPatched=true;
+    try{renderAll=window.renderAll}catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(()=>{initClient(); renderCloudStatus();}, 300);
+    setTimeout(()=>{checkCloudSession().catch(()=>{});}, 1100);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v6.1 PWA / APP MODE ===== */
+(function(){
+  window.addEventListener('load', function(){
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(function(reg){ console.log('THE STANDARD service worker registered', reg.scope); })
+        .catch(function(err){ console.warn('THE STANDARD service worker failed', err); });
+    }
+  });
+
+  window.isStandaloneMode = function(){
+    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.body.classList.toggle('pwa-standalone', isStandaloneMode());
   });
 })();
 </script>
