@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>THE STANDARD v4.3 Clean Core</title>
+<title>THE STANDARD v4.4 Clean Core</title>
 <style>
 :root{
   --bg:#050505;
@@ -152,7 +152,7 @@ textarea{min-height:92px;resize:vertical}
   h1{font-size:36px}
 }
 
-/* ===== v4.3 Daily Task + Workout History + Profile Crop Fix ===== */
+/* ===== v4.4 Daily Task + Workout History + Profile Crop Fix ===== */
 .daily-task-input{display:grid;grid-template-columns:1fr auto;gap:10px;margin-bottom:12px}
 .history-filter{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end;margin:14px 0}
 .workout-history-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(0,0,0,.18);margin-bottom:10px}
@@ -163,7 +163,7 @@ textarea{min-height:92px;resize:vertical}
 .task-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);border-radius:999px;padding:5px 9px;font-size:11px;color:#bbb;margin-top:6px}
 
 
-/* ===== v4.3 Profile crop exact preview/application fix ===== */
+/* ===== v4.4 Profile crop exact preview/application fix ===== */
 #avatarBox.ts-bg-avatar,
 .profile-preview.ts-bg-preview{
   background-repeat:no-repeat;
@@ -172,6 +172,266 @@ textarea{min-height:92px;resize:vertical}
 #avatarBox.ts-bg-avatar img,
 .profile-preview.ts-bg-preview img{
   display:none!important;
+}
+
+
+/* ===== THE STANDARD v4.4 MOBILE LAYOUT FIX ===== */
+@media(max-width:900px){
+  body{
+    overflow-x:hidden;
+    background-size:auto,auto,34px 34px,34px 34px,auto;
+  }
+
+  .app{
+    display:block;
+    max-width:100%;
+    min-height:100vh;
+  }
+
+  .sidebar{
+    position:relative;
+    height:auto;
+    max-height:none;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+    padding:14px 14px 10px;
+    overflow:visible;
+    background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+  }
+
+  .brand-kicker{
+    font-size:9px;
+    margin-bottom:7px;
+    letter-spacing:.22em;
+  }
+
+  .logo{
+    font-size:24px;
+    margin-bottom:5px;
+  }
+
+  .subtitle{
+    font-size:11px;
+    margin-bottom:10px;
+  }
+
+  .operator{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:center;
+    gap:10px;
+    padding:11px;
+    border-radius:17px;
+    margin-bottom:10px;
+  }
+
+  .op-head{
+    grid-column:1 / -1;
+  }
+
+  .op-label{
+    font-size:9px;
+  }
+
+  .op-name{
+    font-size:14px;
+  }
+
+  .avatar{
+    width:52px;
+    height:52px;
+  }
+
+  .op-actions{
+    display:none;
+  }
+
+  .op-stats{
+    grid-column:1 / -1;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-top:6px;
+  }
+
+  .op-stat{
+    padding:9px 10px;
+    border-radius:13px;
+  }
+
+  .op-stat b{
+    font-size:18px;
+  }
+
+  .op-stat span{
+    font-size:9px;
+  }
+
+  .nav{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:4px 2px 9px;
+    margin-top:8px;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .nav::-webkit-scrollbar{
+    display:none;
+  }
+
+  .nav button{
+    flex:0 0 auto;
+    width:auto;
+    min-width:88px;
+    justify-content:center;
+    padding:10px 12px;
+    border-radius:999px;
+    gap:7px;
+    font-size:13px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+  }
+
+  .nav button svg{
+    width:17px;
+    height:17px;
+  }
+
+  .nav button.active{
+    box-shadow:none;
+    background:rgba(201,141,61,.18);
+    border-color:rgba(201,141,61,.45);
+    color:#fff;
+  }
+
+  .sidebar-foot{
+    display:none;
+  }
+
+  .main{
+    padding:18px 14px 48px;
+  }
+
+  .topbar{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:16px;
+  }
+
+  h1{
+    font-size:34px;
+    letter-spacing:-.065em;
+  }
+
+  .page-sub{
+    font-size:13px;
+    margin-top:5px;
+  }
+
+  .date-pill{
+    white-space:nowrap;
+    padding:8px 12px;
+    font-size:11px;
+    margin-top:2px;
+  }
+
+  .grid.two,
+  .grid.three,
+  .grid.four{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+
+  .metric{
+    min-height:auto;
+    padding:15px 16px;
+    border-radius:17px;
+  }
+
+  .metric b{
+    font-size:30px;
+  }
+
+  .metric span{
+    font-size:12px;
+  }
+
+  .card{
+    padding:16px;
+    border-radius:20px;
+  }
+
+  .section-title{
+    font-size:11px;
+    margin-bottom:13px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+    gap:11px;
+  }
+
+  .input,select,textarea{
+    padding:12px 13px;
+    border-radius:13px;
+    font-size:14px;
+  }
+
+  .btn{
+    width:100%;
+    padding:13px 16px;
+  }
+
+  .row .btn,
+  .row .btn-mini{
+    width:auto;
+  }
+
+  .table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+
+  .splash-title{
+    font-size:38px;
+    letter-spacing:.055em;
+  }
+
+  .splash-sub{
+    font-size:10px;
+    letter-spacing:.22em;
+  }
+}
+
+@media(max-width:430px){
+  .main{
+    padding-left:12px;
+    padding-right:12px;
+  }
+
+  h1{
+    font-size:31px;
+  }
+
+  .date-pill{
+    font-size:10px;
+    padding:7px 10px;
+  }
+
+  .nav button{
+    min-width:82px;
+    font-size:12px;
+    padding:9px 10px;
+  }
+
+  .metric b{
+    font-size:28px;
+  }
 }
 
 </style>
@@ -210,7 +470,7 @@ textarea{min-height:92px;resize:vertical}
     </div>
 
     <nav class="nav" id="nav"></nav>
-    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v4.3</div>
+    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v4.4</div>
   </aside>
 
   <main class="main">
@@ -770,7 +1030,7 @@ window.addEventListener('DOMContentLoaded',init);
 </script>
 
 <script>
-/* ===== THE STANDARD v4.3 PATCH ===== */
+/* ===== THE STANDARD v4.4 PATCH ===== */
 (function(){
   const oldDefault = window.defaultState;
   window.defaultState = function(){
@@ -985,7 +1245,7 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v4.3 PROFILE PICKER FIX ONLY ===== */
+/* ===== THE STANDARD v4.4 PROFILE PICKER FIX ONLY ===== */
 (function(){
   // Allows selecting the same photo twice by clearing input before click.
   window.choosePhoto = function(){
@@ -1079,7 +1339,7 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v4.3 PROFILE CROP EXACT FIX =====
+/* ===== THE STANDARD v4.4 PROFILE CROP EXACT FIX =====
    Uses background-size/background-position on both preview and avatar.
    This makes the modal preview and final avatar use the exact same crop logic.
 */
