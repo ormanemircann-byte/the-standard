@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>THE STANDARD v4.6 Clean Core</title>
+<title>THE STANDARD v4.7 Clean Core</title>
 <style>
 :root{
   --bg:#050505;
@@ -152,7 +152,7 @@ textarea{min-height:92px;resize:vertical}
   h1{font-size:36px}
 }
 
-/* ===== v4.6 Daily Task + Workout History + Profile Crop Fix ===== */
+/* ===== v4.7 Daily Task + Workout History + Profile Crop Fix ===== */
 .daily-task-input{display:grid;grid-template-columns:1fr auto;gap:10px;margin-bottom:12px}
 .history-filter{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end;margin:14px 0}
 .workout-history-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(0,0,0,.18);margin-bottom:10px}
@@ -163,7 +163,7 @@ textarea{min-height:92px;resize:vertical}
 .task-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);border-radius:999px;padding:5px 9px;font-size:11px;color:#bbb;margin-top:6px}
 
 
-/* ===== v4.6 Profile crop exact preview/application fix ===== */
+/* ===== v4.7 Profile crop exact preview/application fix ===== */
 #avatarBox.ts-bg-avatar,
 .profile-preview.ts-bg-preview{
   background-repeat:no-repeat;
@@ -175,7 +175,7 @@ textarea{min-height:92px;resize:vertical}
 }
 
 
-/* ===== THE STANDARD v4.6 — TRUE MOBILE APP LAYOUT =====
+/* ===== THE STANDARD v4.7 — TRUE MOBILE APP LAYOUT =====
    Desktop remains unchanged.
    Mobile becomes a real app layout: compact top header + bottom nav + full-width content.
 */
@@ -510,6 +510,42 @@ textarea{min-height:92px;resize:vertical}
   }
 }
 
+
+/* ===== THE STANDARD v4.7 PERFORMANCE FIX ===== */
+html, body, button, input, select, textarea{
+  touch-action:manipulation;
+  -webkit-tap-highlight-color:transparent;
+}
+
+button{
+  transition:transform .08s ease, opacity .08s ease, background .12s ease!important;
+}
+
+button:active{
+  transform:scale(.985);
+  opacity:.88;
+}
+
+@media(max-width:900px){
+  .nav{
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    background:rgba(13,13,13,.97)!important;
+  }
+
+  .card,.metric,.operator{
+    box-shadow:none!important;
+  }
+
+  .splash{
+    transition:opacity .22s ease,visibility .22s ease!important;
+  }
+
+  .grid{
+    gap:11px!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -546,7 +582,7 @@ textarea{min-height:92px;resize:vertical}
     </div>
 
     <nav class="nav" id="nav"></nav>
-    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v4.6</div>
+    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v4.7</div>
   </aside>
 
   <main class="main">
@@ -1106,7 +1142,7 @@ window.addEventListener('DOMContentLoaded',init);
 </script>
 
 <script>
-/* ===== THE STANDARD v4.6 PATCH ===== */
+/* ===== THE STANDARD v4.7 PATCH ===== */
 (function(){
   const oldDefault = window.defaultState;
   window.defaultState = function(){
@@ -1321,7 +1357,7 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v4.6 PROFILE PICKER FIX ONLY ===== */
+/* ===== THE STANDARD v4.7 PROFILE PICKER FIX ONLY ===== */
 (function(){
   // Allows selecting the same photo twice by clearing input before click.
   window.choosePhoto = function(){
@@ -1415,7 +1451,7 @@ window.addEventListener('DOMContentLoaded',init);
 
 
 <script>
-/* ===== THE STANDARD v4.6 PROFILE CROP EXACT FIX =====
+/* ===== THE STANDARD v4.7 PROFILE CROP EXACT FIX =====
    Uses background-size/background-position on both preview and avatar.
    This makes the modal preview and final avatar use the exact same crop logic.
 */
@@ -1516,6 +1552,150 @@ window.addEventListener('DOMContentLoaded',init);
   document.addEventListener('DOMContentLoaded', function(){
     setTimeout(applyProfile, 100);
     setTimeout(applyProfile, 500);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== THE STANDARD v4.7 — PERFORMANCE PATCH ONLY =====
+   Keeps v4.7 logic, reduces full redraw lag.
+*/
+(function(){
+  const FAST = { last:0 };
+
+  function safe(fn){
+    try{ if(typeof fn === 'function') fn(); }catch(e){ console.warn('TS render skipped', e); }
+  }
+
+  function renderCommonFast(){
+    safe(applyProfile);
+    try{
+      if($('datePill')) $('datePill').textContent=new Date().toLocaleDateString('tr-TR',{weekday:'long',day:'numeric',month:'long'});
+      if($('operatorName')) $('operatorName').textContent=state.settings.name;
+      if($('sideHeight')) $('sideHeight').textContent=state.settings.height;
+      if($('sideStartWeight')) $('sideStartWeight').textContent=state.settings.startWeight;
+      // Dashboard top numbers are cheap and useful to keep current.
+      if(typeof todaySteps === 'function' && $('dashSteps')) $('dashSteps').textContent=fmt(todaySteps());
+      if(typeof todayPages === 'function' && $('dashPages')) $('dashPages').textContent=fmt(todayPages());
+      if(typeof latestBody === 'function' && $('dashWeight')){
+        const lb=latestBody(); $('dashWeight').textContent=lb?fmt(lb.weight,1):'—';
+      }
+      if(typeof portfolioTotals === 'function' && $('dashPortfolio')){
+        const pt=portfolioTotals();
+        $('dashPortfolio').textContent=tl(pt.pl);
+        $('dashPortfolio').className=pt.pl>=0?'pos':'neg';
+      }
+    }catch(e){}
+  }
+
+  function renderActiveFast(){
+    renderCommonFast();
+    try{
+      switch(active){
+        case 'dashboard':
+          safe(renderDashboard);
+          break;
+        case 'body':
+          safe(renderBody);
+          safe(renderWorkoutHistory);
+          break;
+        case 'nutrition':
+          safe(renderNutrition);
+          break;
+        case 'books':
+          safe(renderBooks);
+          break;
+        case 'habits':
+          safe(renderHabits);
+          break;
+        case 'portfolio':
+          safe(renderPortfolio);
+          break;
+        case 'school':
+          safe(renderSchool);
+          break;
+        case 'reports':
+          safe(renderReports);
+          break;
+        case 'settings':
+          break;
+        default:
+          safe(renderDashboard);
+      }
+    }catch(e){ console.warn('active render error', e); }
+  }
+
+  // Replace heavy renderAll.
+  window.renderAll = function(){
+    renderActiveFast();
+  };
+  try{ renderAll = window.renderAll; }catch(e){}
+
+  // Replace show with a lighter version.
+  window.show = function(id){
+    active=id;
+    document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+    const screen=document.getElementById(id);
+    if(screen) screen.classList.add('active');
+
+    document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));
+    const nav=document.getElementById('nav-'+id);
+    if(nav) nav.classList.add('active');
+
+    const m=(screens||[]).find(x=>x[0]===id);
+    if(m){
+      if($('pageTitle')) $('pageTitle').textContent=m[1];
+      if($('pageSub')) $('pageSub').textContent=m[2];
+    }
+
+    requestAnimationFrame(renderActiveFast);
+  };
+  try{ show = window.show; }catch(e){}
+
+  // Make save lightweight. It only writes localStorage; render functions decide when to redraw.
+  const oldSave = window.save || save;
+  window.save = function(){
+    localStorage.setItem(STORE, JSON.stringify(state));
+  };
+  try{ save = window.save; }catch(e){}
+
+  // Patch common actions to feel immediate by rendering only active screen after saving.
+  function afterAction(){
+    requestAnimationFrame(renderActiveFast);
+  }
+
+  function wrap(name){
+    try{
+      const old = window[name] || eval(name);
+      if(typeof old !== 'function') return;
+      window[name] = function(){
+        const res = old.apply(this, arguments);
+        afterAction();
+        return res;
+      };
+      try{ eval(name + ' = window["'+name+'"]'); }catch(e){}
+    }catch(e){}
+  }
+
+  [
+    'addMeal','deleteMeal','addBook','deleteBook','saveBody','deleteBody','editBody',
+    'saveWorkout','deleteWorkout','addPortfolioTx','deletePortfolioPosition',
+    'toggleHabit','addHabit','deleteHabit','saveBodySettings','saveNutritionSettings',
+    'saveProfileSettings','clearPhoto','savePhoto','addDailyTask','toggleDailyTask','deleteDailyTask'
+  ].forEach(wrap);
+
+  // Hide splash faster.
+  document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){
+      const sp=document.getElementById('splash');
+      if(sp) sp.classList.add('hide');
+    }, 450);
+  });
+
+  // First render once, no repeated heavy renders.
+  window.addEventListener('load', function(){
+    requestAnimationFrame(renderActiveFast);
   });
 })();
 </script>
