@@ -1,10 +1,48 @@
 <!doctype html>
 <html lang="tr">
 <head>
+  <!-- THE STANDARD v8.0 SINGLE FILE EDITION: GitHub için sadece bu dosyayı index.html olarak kullan. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>THE STANDARD v7.2.1 Clean Core</title>
-<style>
+<title>THE STANDARD v8.0 Single.1 Clean Core</title>
+
+
+
+<meta name="application-name" content="THE STANDARD">
+<meta name="apple-mobile-web-app-title" content="THE STANDARD">
+
+  <!-- THE STANDARD v8.0 Single Single File Edition -->
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#0B0B0D">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+
+  <style>
+/* THE STANDARD v8.0 Single — Theme Tokens */
+:root{
+  --app-version:"8.0";
+  --bg:#0B0B0D;
+  --surface:#141416;
+  --surface-2:#1C1C1E;
+  --text:#F5F5F7;
+  --muted:#A1A1A6;
+  --muted-2:#6E6E73;
+  --line:rgba(255,255,255,.10);
+  --line2:rgba(255,255,255,.14);
+  --amber:#D6A04B;
+  --green:#30D158;
+  --red:#FF453A;
+  --blue:#0A84FF;
+  --radius-xl:28px;
+  --radius-lg:22px;
+  --radius-md:16px;
+}
+
+</style>
+  <style>
+/* THE STANDARD v8.0 Single — Base Layout extracted from v7.9 */
+
 :root{
   --bg:#050505;
   --panel:#11100f;
@@ -152,7 +190,7 @@ textarea{min-height:92px;resize:vertical}
   h1{font-size:36px}
 }
 
-/* ===== v7.2 Daily Task + Workout History + Profile Crop Fix ===== */
+/* ===== v8.0 Daily Task + Workout History + Profile Crop Fix ===== */
 .daily-task-input{display:grid;grid-template-columns:1fr auto;gap:10px;margin-bottom:12px}
 .history-filter{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end;margin:14px 0}
 .workout-history-card{border:1px solid var(--line);border-radius:16px;padding:14px;background:rgba(0,0,0,.18);margin-bottom:10px}
@@ -163,7 +201,7 @@ textarea{min-height:92px;resize:vertical}
 .task-badge{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line2);border-radius:999px;padding:5px 9px;font-size:11px;color:#bbb;margin-top:6px}
 
 
-/* ===== v7.2 Profile crop exact preview/application fix ===== */
+/* ===== v8.0 Profile crop exact preview/application fix ===== */
 #avatarBox.ts-bg-avatar,
 .profile-preview.ts-bg-preview{
   background-repeat:no-repeat;
@@ -175,7 +213,7 @@ textarea{min-height:92px;resize:vertical}
 }
 
 
-/* ===== THE STANDARD v7.2.1 — TRUE MOBILE APP LAYOUT =====
+/* ===== THE STANDARD v8.0 Single.1 — TRUE MOBILE APP LAYOUT =====
    Desktop remains unchanged.
    Mobile becomes a real app layout: compact top header + bottom nav + full-width content.
 */
@@ -511,8 +549,8 @@ textarea{min-height:92px;resize:vertical}
 }
 
 
-/* ===== THE STANDARD v7.2.1 STABLE REFRESH FIX =====
-   Based on v7.2 working logic.
+/* ===== THE STANDARD v8.0 Single.1 STABLE REFRESH FIX =====
+   Based on v8.0 working logic.
    Keeps full render behavior so actions appear immediately.
    Only light mobile touch/CSS performance improvements.
 */
@@ -542,7 +580,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2.1 NO PHOTO STABLE =====
+/* ===== THE STANDARD v8.0 Single.1 NO PHOTO STABLE =====
    Profile image upload/crop removed for stability on mobile Safari.
 */
 .op-actions{display:none!important}
@@ -554,7 +592,7 @@ button:active{
 #avatarInitials{display:block!important}
 
 
-/* ===== THE STANDARD v7.2.1 BACKUP & STABILITY ===== */
+/* ===== THE STANDARD v8.0 Single.1 BACKUP & STABILITY ===== */
 .backup-status-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(201,141,61,.08),rgba(255,255,255,.018));border-radius:18px;padding:16px;margin-bottom:14px}
 .backup-status-main{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
 .backup-status-title{font-weight:950;font-size:16px;margin-bottom:5px}.backup-status-note{color:var(--muted);font-size:13px;line-height:1.45}
@@ -566,7 +604,7 @@ button:active{
 @media(max-width:900px){.backup-status-main{display:block}.backup-status-pill{margin-top:10px}.backup-mini-grid{grid-template-columns:1fr}.backup-actions .btn{width:100%}}
 
 
-/* ===== THE STANDARD v7.2.1 HABIT STREAK SYSTEM ===== */
+/* ===== THE STANDARD v8.0 Single.1 HABIT STREAK SYSTEM ===== */
 .habit-streak-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}
 .habit-streak-card{border:1px solid var(--line);background:rgba(0,0,0,.22);border-radius:16px;padding:14px}
 .habit-streak-card b{display:block;font-size:24px;letter-spacing:-.04em}
@@ -582,7 +620,7 @@ button:active{
 @media(max-width:900px){.habit-streak-grid{grid-template-columns:1fr 1fr}.habit-month-table{display:block;overflow-x:auto;white-space:nowrap}}
 
 
-/* ===== THE STANDARD v7.2.1 PORTFOLIO PRICE UPDATE MODE ===== */
+/* ===== THE STANDARD v8.0 Single.1 PORTFOLIO PRICE UPDATE MODE ===== */
 .price-update-grid{
   display:grid;
   gap:10px;
@@ -642,7 +680,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2.1 DYNAMIC SCHOOL MEMORY ===== */
+/* ===== THE STANDARD v8.0 Single.1 DYNAMIC SCHOOL MEMORY ===== */
 .school-builder-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -713,7 +751,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2.1 PORTFOLIO DATA HYGIENE ===== */
+/* ===== THE STANDARD v8.0 Single.1 PORTFOLIO DATA HYGIENE ===== */
 .portfolio-hygiene-card{
   border:1px solid rgba(46,233,131,.22);
   background:rgba(46,233,131,.055);
@@ -755,14 +793,18 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2.1 EDIT HISTORY ===== */
+/* ===== THE STANDARD v8.0 Single.1 EDIT HISTORY ===== */
 .edit-modal{
   position:fixed;
   inset:0;
   display:none;
   align-items:center;
   justify-content:center;
-  padding:18px;
+  padding:
+</style>
+  <style>
+/* THE STANDARD v8.0 Single — Components extracted from v7.9 */
+18px;
   background:rgba(0,0,0,.72);
   z-index:999999;
 }
@@ -845,7 +887,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2.1 SCHOOL MEMORY PLUS / ACADEMIC CRM ===== */
+/* ===== THE STANDARD v8.0 Single.1 SCHOOL MEMORY PLUS / ACADEMIC CRM ===== */
 .academic-crm-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -946,7 +988,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2.1 ACADEMIC ALERTS + CLICKABLE REFERENCES ===== */
+/* ===== THE STANDARD v8.0 Single.1 ACADEMIC ALERTS + CLICKABLE REFERENCES ===== */
 .academic-alerts-box{
   display:grid;
   gap:10px;
@@ -1009,7 +1051,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2.1 FINAL LOCAL POLISH ===== */
+/* ===== THE STANDARD v8.0 Single.1 FINAL LOCAL POLISH ===== */
 .system-health-grid{
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
@@ -1084,7 +1126,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2.1 CLOUD SYNC ===== */
+/* ===== THE STANDARD v8.0 Single.1 CLOUD SYNC ===== */
 .cloud-status-card{
   border:1px solid var(--line);
   background:linear-gradient(145deg,rgba(125,183,255,.08),rgba(255,255,255,.018));
@@ -1155,7 +1197,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2 USAGE QUALITY / AUTOMATION ===== */
+/* ===== THE STANDARD v8.0 Single USAGE QUALITY / AUTOMATION ===== */
 .automation-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:13px;margin-bottom:16px}
 .automation-card{border:1px solid var(--line);background:rgba(0,0,0,.20);border-radius:18px;padding:16px}
 .automation-card.critical{border-color:rgba(255,107,107,.34);background:rgba(255,107,107,.075)}
@@ -1178,7 +1220,7 @@ button:active{
 @media(max-width:900px){.automation-grid{grid-template-columns:1fr}.quick-entry-grid{grid-template-columns:1fr 1fr}.automation-actions .btn{width:100%}.reminder-item{display:block}}
 
 
-/* ===== THE STANDARD v7.2 AI PROMPT CENTER ===== */
+/* ===== THE STANDARD v8.0 Single AI PROMPT CENTER ===== */
 .prompt-center-grid{
   display:grid;
   grid-template-columns:.9fr 1.1fr;
@@ -1252,7 +1294,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2 REPORTS & ANALYTICS PLUS ===== */
+/* ===== THE STANDARD v8.0 Single REPORTS & ANALYTICS PLUS ===== */
 .analytics-grid{
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
@@ -1362,7 +1404,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2 CONTROL & CUSTOMIZATION ===== */
+/* ===== THE STANDARD v8.0 Single CONTROL & CUSTOMIZATION ===== */
 .control-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -1483,7 +1525,7 @@ button:active{
 }
 
 
-/* ===== THE STANDARD v7.2 UX STABILITY & MOBILE POLISH ===== */
+/* ===== THE STANDARD v8.0 Single UX STABILITY & MOBILE POLISH ===== */
 body.compact-mode .card{padding:14px!important;border-radius:17px!important}
 body.compact-mode .metric{padding:13px!important;min-height:auto!important}
 body.compact-mode .metric b{font-size:26px!important}
@@ -1592,7 +1634,7 @@ body.compact-mode .input,body.compact-mode select,body.compact-mode textarea{pad
 }
 
 
-/* ===== THE STANDARD v7.2 REVIEW & PLANNING SYSTEM ===== */
+/* ===== THE STANDARD v8.0 Single REVIEW & PLANNING SYSTEM ===== */
 .planning-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -1702,7 +1744,7 @@ body.compact-mode .input,body.compact-mode select,body.compact-mode textarea{pad
 }
 
 
-/* ===== THE STANDARD v7.2 DATA INTELLIGENCE & AUTO INSIGHTS ===== */
+/* ===== THE STANDARD v8.0 Single DATA INTELLIGENCE & AUTO INSIGHTS ===== */
 .insight-grid{
   display:grid;
   grid-template-columns:1.1fr .9fr;
@@ -1826,7 +1868,7 @@ body.compact-mode .input,body.compact-mode select,body.compact-mode textarea{pad
 }
 
 
-/* ===== THE STANDARD v7.2 EXECUTION MODE / COMMAND SESSIONS ===== */
+/* ===== THE STANDARD v8.0 Single EXECUTION MODE / COMMAND SESSIONS ===== */
 .execution-hero{
   border:1px solid rgba(201,141,61,.36);
   background:linear-gradient(135deg,rgba(201,141,61,.13),rgba(0,0,0,.24));
@@ -1967,7 +2009,7 @@ body.compact-mode .input,body.compact-mode select,body.compact-mode textarea{pad
 }
 
 
-/* ===== THE STANDARD v7.2 STABLE RELEASE / FEEDBACK LAB ===== */
+/* ===== THE STANDARD v8.0 Single STABLE RELEASE / FEEDBACK LAB ===== */
 .release-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -2099,7 +2141,7 @@ body.compact-mode .input,body.compact-mode select,body.compact-mode textarea{pad
 }
 
 
-/* ===== THE STANDARD v7.2 UX SIMPLIFICATION & NAVIGATION RESET ===== */
+/* ===== THE STANDARD v8.0 Single UX SIMPLIFICATION & NAVIGATION RESET ===== */
 :root{--nav-w:286px}
 body.nav-open{overflow:hidden}
 .nav-toggle{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);left:14px;z-index:1000002;width:44px;height:44px;border-radius:14px;border:1px solid var(--line2);background:rgba(8,8,8,.86);color:#f2efe9;display:none;align-items:center;justify-content:center;backdrop-filter:blur(18px);box-shadow:0 14px 44px rgba(0,0,0,.35)}
@@ -2132,7 +2174,7 @@ body.simplified-mode .card{box-shadow:none!important}
 @media(max-width:900px){.nav-toggle{display:flex}body{padding-top:calc(env(safe-area-inset-top,0px) + 54px)!important}.sidebar,aside nav,.rail,.side,nav.primary-nav{display:none!important}.clean-dashboard-grid{grid-template-columns:1fr}.dashboard-simplified .quick-actions-grid{grid-template-columns:1fr 1fr}.screen{padding-left:12px!important;padding-right:12px!important}.card{border-radius:18px!important}}
 
 
-/* ===== THE STANDARD v7.2 TRUE MOBILE APP SHELL ===== */
+/* ===== THE STANDARD v8.0 Single TRUE MOBILE APP SHELL ===== */
 :root{
   --mobile-pad:14px;
   --bottom-nav-h:74px;
@@ -2405,19 +2447,1660 @@ body.mobile-app-mode{
   }
 }
 
-</style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#050505">
-<meta name="application-name" content="THE STANDARD">
-<meta name="apple-mobile-web-app-title" content="THE STANDARD">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="apple-touch-icon" href="icon-192.png">
+/* ===== THE STANDARD v8.0 Single APPLE-LIKE MINIMAL UI ===== */
+:root{
+  --bg:#0B0B0D!important;
+  --surface:#141416!important;
+  --surface-2:#1C1C1E!important;
+  --surface-soft:rgba(255,255,255,.045)!important;
+  --text:#F5F5F7!important;
+  --muted:#A1A1A6!important;
+  --muted-2:#6E6E73!important;
+  --line:rgba(255,255,255,.10)!important;
+  --line2:rgba(255,255,255,.14)!important;
+  --amber:#D6A04B!important;
+  --green:#30D158!important;
+  --red:#FF453A!important;
+  --blue:#0A84FF!important;
+  --radius-xl:28px;
+  --radius-lg:22px;
+  --radius-md:16px;
+  --shadow-soft:0 18px 48px rgba(0,0,0,.24);
+}
+html,body{
+  background:radial-gradient(circle at 50% -20%,rgba(255,255,255,.08),transparent 34%),#0B0B0D!important;
+  color:var(--text)!important;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:geometricPrecision;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Inter,Arial,sans-serif!important;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 22% 6%,rgba(214,160,75,.10),transparent 24%),
+    radial-gradient(circle at 95% 12%,rgba(10,132,255,.06),transparent 26%);
+  z-index:-1;
+}
+.card,
+.automation-card,
+.insight-card,
+.clean-card,
+.mobile-home-card,
+.release-banner,
+execution-hero,
+.goal-item,
+.session-history-item,
+.feedback-item,
+.week-plan-item,
+.analytics-card,
+.plan-card,
+.execution-stat,
+.diagnostic-card,
+.system-health-card,
+.prompt-template,
+.analytics-item,
+.plan-progress-row,
+.reason-box,
+control-card{
+  background:rgba(28,28,30,.72)!important;
+  border:1px solid rgba(255,255,255,.095)!important;
+  border-radius:var(--radius-lg)!important;
+  box-shadow:none!important;
+  backdrop-filter:blur(18px);
+}
+.card{
+  padding:18px!important;
+}
+.mobile-app-mode .card{
+  padding:16px!important;
+  border-radius:22px!important;
+  margin-bottom:12px!important;
+}
+.section-title,
+.automation-title,
+.insight-title{
+  color:var(--muted)!important;
+  font-size:11px!important;
+  font-weight:700!important;
+  letter-spacing:.09em!important;
+  text-transform:uppercase!important;
+}
+h1,h2,h3,.clean-hero b,.mobile-home-card b,.execution-hero b,.release-banner b{
+  letter-spacing:-.04em!important;
+  font-weight:760!important;
+}
+.clean-hero,
+.mobile-home-card.primary,
+.execution-hero,
+.release-banner,
+.priority-banner,
+focus-dashboard-card{
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.028))!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+  border-radius:28px!important;
+  box-shadow:var(--shadow-soft)!important;
+}
+.mobile-home-card.primary b,
+.clean-hero b{
+  font-size:25px!important;
+  line-height:1.06!important;
+}
+.mobile-home-card.primary .small,
+.clean-hero .small{
+  color:#D1D1D6!important;
+  font-size:14px!important;
+}
+.mobile-mini,
+.metric,
+.quick-action-btn,
+.drawer-nav-btn,
+.bottom-nav button,
+.true-mobile-menu-btn,
+.true-mobile-action-btn,
+.drawer-close,
+.btn-mini,
+.goal-pill,
+.session-tag,
+.insight-pill,
+.feedback-tag,
+.health-pill,
+.cloud-pill{
+  transition:transform .14s ease, background .14s ease, border-color .14s ease, opacity .14s ease;
+}
+.quick-action-btn:active,
+.bottom-nav button:active,
+.drawer-nav-btn:active,
+.btn:active,
+.btn-mini:active{
+  transform:scale(.985);
+}
+.mobile-mini,
+.quick-action-btn{
+  background:rgba(255,255,255,.045)!important;
+  border:1px solid rgba(255,255,255,.085)!important;
+  border-radius:20px!important;
+}
+.mobile-mini b{
+  font-weight:760!important;
+  font-size:24px!important;
+}
+.mobile-mini span{
+  color:var(--muted)!important;
+  font-weight:650!important;
+  letter-spacing:.055em!important;
+}
+.quick-action-btn{
+  text-align:left!important;
+  min-height:78px!important;
+}
+.quick-action-btn b{
+  font-weight:740!important;
+  font-size:14px!important;
+}
+.quick-action-btn span{
+  color:var(--muted)!important;
+}
+.btn,
+button.btn{
+  background:#F5F5F7!important;
+  color:#0B0B0D!important;
+  border:0!important;
+  border-radius:999px!important;
+  font-weight:760!important;
+  box-shadow:none!important;
+}
+.btn.secondary,
+button.btn.secondary{
+  background:rgba(255,255,255,.08)!important;
+  color:#F5F5F7!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+}
+.btn.danger,
+button.btn.danger,
+.btn-mini.danger{
+  background:rgba(255,69,58,.13)!important;
+  color:#FFB4AE!important;
+  border:1px solid rgba(255,69,58,.25)!important;
+}
+.btn-mini{
+  border-radius:999px!important;
+  background:rgba(255,255,255,.08)!important;
+  color:#F5F5F7!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+}
+.input,
+select,
+textarea{
+  background:rgba(255,255,255,.055)!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  color:#F5F5F7!important;
+  border-radius:16px!important;
+  box-shadow:none!important;
+  outline:none!important;
+}
+.input:focus,
+select:focus,
+textarea:focus{
+  border-color:rgba(10,132,255,.55)!important;
+  box-shadow:0 0 0 4px rgba(10,132,255,.14)!important;
+}
+.label{
+  color:var(--muted)!important;
+  font-weight:680!important;
+  letter-spacing:.045em!important;
+}
+.true-mobile-topbar{
+  background:rgba(11,11,13,.78)!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+  backdrop-filter:blur(24px)!important;
+}
+.true-mobile-brand b{
+  font-weight:760!important;
+  letter-spacing:.07em!important;
+}
+.true-mobile-brand span{
+  color:var(--muted)!important;
+}
+.true-mobile-menu-btn,
+.true-mobile-action-btn{
+  background:rgba(255,255,255,.065)!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  border-radius:50%!important;
+}
+.bottom-nav{
+  height:calc(78px + env(safe-area-inset-bottom,0px))!important;
+  background:rgba(17,17,19,.82)!important;
+  border-top:1px solid rgba(255,255,255,.10)!important;
+  backdrop-filter:blur(28px)!important;
+  padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px))!important;
+}
+.bottom-nav button{
+  border-radius:18px!important;
+  color:#8E8E93!important;
+  font-size:10px!important;
+}
+.bottom-nav button.active{
+  color:#F5F5F7!important;
+  background:rgba(255,255,255,.08)!important;
+}
+.bottom-nav button.active svg{
+  color:#D6A04B!important;
+}
+.mobile-drawer{
+  background:rgba(20,20,22,.94)!important;
+  border-right:1px solid rgba(255,255,255,.10)!important;
+  backdrop-filter:blur(28px)!important;
+}
+.drawer-section{
+  color:#8E8E93!important;
+  font-size:10px!important;
+  letter-spacing:.10em!important;
+}
+.drawer-nav-btn{
+  border-radius:16px!important;
+  color:#D1D1D6!important;
+  padding:12px 11px!important;
+}
+.drawer-nav-btn.active{
+  background:rgba(255,255,255,.08)!important;
+  border-color:rgba(255,255,255,.10)!important;
+  color:#F5F5F7!important;
+}
+.drawer-nav-btn.active svg{
+  color:#D6A04B!important;
+}
+.drawer-nav-btn small{
+  color:#8E8E93!important;
+}
+.nav-backdrop{
+  backdrop-filter:blur(5px);
+}
+.insight-card.good,
+.analytics-card.good,
+.plan-card.good,
+.diagnostic-card.good{
+  border-color:rgba(48,209,88,.22)!important;
+  background:rgba(48,209,88,.07)!important;
+}
+.insight-card.warn,
+.analytics-card.warn,
+.plan-card.warn{
+  border-color:rgba(214,160,75,.25)!important;
+  background:rgba(214,160,75,.075)!important;
+}
+.insight-card.bad,
+.analytics-card.bad,
+.plan-card.bad{
+  border-color:rgba(255,69,58,.24)!important;
+  background:rgba(255,69,58,.075)!important;
+}
+.insight-pill,
+.goal-pill,
+.session-tag,
+.feedback-tag,
+.health-pill,
+.cloud-pill,
+.session-status-pill{
+  border-radius:999px!important;
+  background:rgba(255,255,255,.07)!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  color:#D1D1D6!important;
+}
+.analytics-bar,
+.plan-progress,
+.session-progress,
+.goal-progress{
+  background:rgba(255,255,255,.08)!important;
+  height:7px!important;
+}
+.analytics-bar i,
+.plan-progress i,
+.session-progress i,
+.goal-progress i{
+  background:linear-gradient(90deg,#D6A04B,#FFD08A)!important;
+}
+.empty-pro,
+.execution-empty{
+  background:rgba(255,255,255,.035)!important;
+  border:1px dashed rgba(255,255,255,.14)!important;
+  border-radius:20px!important;
+  color:#D1D1D6!important;
+}
+.week-day{
+  background:rgba(255,255,255,.045)!important;
+  border:1px solid rgba(255,255,255,.085)!important;
+  border-radius:16px!important;
+}
+.week-dot.on{
+  background:#D6A04B!important;
+  box-shadow:0 0 10px rgba(21
+</style>
+  <style>
+/* THE STANDARD v8.0 Single — Mobile App Shell extracted from v7.9 */
+4,160,75,.45)!important;
+}
+.table,
+.analytics-table,
+.trend-table{
+  border-radius:18px!important;
+  overflow:hidden!important;
+}
+.analytics-table th,
+.analytics-table td,
+.trend-table th,
+.trend-table td{
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+}
+.mobile-home{
+  gap:12px!important;
+}
+.mobile-home-mini-grid{
+  gap:10px!important;
+}
+.mobile-app-mode .screen{
+  padding-left:16px!important;
+  padding-right:16px!important;
+}
+.mobile-app-mode .quick-actions-grid{
+  gap:10px!important;
+}
+.mobile-app-mode h1{
+  font-weight:760!important;
+}
+@media(max-width:900px){
+  .mobile-app-mode .card{
+    background:rgba(28,28,30,.68)!important;
+  }
+  .mobile-home-card.primary{
+    padding:18px!important;
+  }
+  .mobile-home-card.primary b{
+    font-size:27px!important;
+  }
+}
+
+
+/* ===== THE STANDARD v8.0 Single DAILY USE REFINEMENT ===== */
+:root{
+  --fab-size:58px;
+}
+.today-flow{
+  display:grid;
+  gap:12px;
+  margin-bottom:14px;
+}
+.today-command{
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.028));
+  border-radius:30px;
+  padding:20px;
+  line-height:1.45;
+}
+.today-command .eyebrow{
+  color:var(--muted);
+  font-size:11px;
+  font-weight:750;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.today-command b{
+  display:block;
+  font-size:28px;
+  font-weight:780;
+  letter-spacing:-.045em;
+  line-height:1.06;
+  margin-bottom:7px;
+}
+.today-command .small{
+  color:#D1D1D6;
+  font-size:14px;
+  line-height:1.45;
+}
+.today-primary-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.today-tile{
+  border:1px solid rgba(255,255,255,.095);
+  background:rgba(255,255,255,.045);
+  border-radius:22px;
+  padding:15px;
+  min-height:96px;
+  line-height:1.35;
+}
+.today-tile b{
+  display:block;
+  font-size:17px;
+  font-weight:760;
+  margin-bottom:5px;
+}
+.today-tile .small{
+  color:var(--muted);
+  line-height:1.4;
+}
+.today-tile.warning{
+  border-color:rgba(214,160,75,.25);
+  background:rgba(214,160,75,.07);
+}
+.today-tile.danger{
+  border-color:rgba(255,69,58,.25);
+  background:rgba(255,69,58,.08);
+}
+.daily-guide{
+  display:grid;
+  gap:8px;
+}
+.daily-guide-step{
+  display:flex;
+  gap:11px;
+  align-items:flex-start;
+  border:1px solid rgba(255,255,255,.085);
+  background:rgba(255,255,255,.04);
+  border-radius:18px;
+  padding:12px;
+}
+.daily-guide-step i{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:rgba(214,160,75,.16);
+  color:#FFD08A;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-style:normal;
+  font-weight:800;
+  font-size:12px;
+  flex:0 0 auto;
+}
+.daily-guide-step b{
+  display:block;
+  font-size:14px;
+  margin-bottom:2px;
+}
+.daily-guide-step span{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.35;
+}
+.quick-fab{
+  position:fixed;
+  left:50%;
+  bottom:calc(env(safe-area-inset-bottom,0px) + 18px);
+  transform:translateX(-50%);
+  width:var(--fab-size);
+  height:var(--fab-size);
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.18);
+  background:#F5F5F7;
+  color:#0B0B0D;
+  z-index:100001;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  line-height:1;
+  font-weight:500;
+  box-shadow:0 16px 45px rgba(0,0,0,.35);
+}
+.mobile-app-mode .quick-fab{
+  display:flex;
+}
+.quick-sheet-backdrop{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.50);
+  backdrop-filter:blur(4px);
+  z-index:100002;
+  display:none;
+}
+.quick-sheet{
+  position:fixed;
+  left:10px;
+  right:10px;
+  bottom:calc(env(safe-area-inset-bottom,0px) + 10px);
+  z-index:100003;
+  background:rgba(28,28,30,.96);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:30px;
+  padding:12px;
+  transform:translateY(120%);
+  transition:.22s ease;
+  box-shadow:0 25px 80px rgba(0,0,0,.55);
+  backdrop-filter:blur(26px);
+}
+body.quick-sheet-open .quick-sheet-backdrop{
+  display:block;
+}
+body.quick-sheet-open .quick-sheet{
+  transform:translateY(0);
+}
+.quick-sheet-handle{
+  width:42px;
+  height:5px;
+  border-radius:999px;
+  background:rgba(255,255,255,.22);
+  margin:2px auto 12px;
+}
+.quick-sheet-title{
+  padding:0 8px 10px;
+}
+.quick-sheet-title b{
+  display:block;
+  font-size:20px;
+  letter-spacing:-.03em;
+}
+.quick-sheet-title span{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:3px;
+}
+.quick-sheet-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+.quick-sheet-action{
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.055);
+  color:#F5F5F7;
+  border-radius:20px;
+  padding:14px 12px;
+  min-height:72px;
+  text-align:left;
+}
+.quick-sheet-action b{
+  display:block;
+  font-size:14px;
+  margin-bottom:4px;
+}
+.quick-sheet-action span{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.3;
+}
+.module-visibility-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+.module-toggle{
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.045);
+  border-radius:18px;
+  padding:12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.module-toggle input{
+  width:18px;
+  height:18px;
+  accent-color:#D6A04B;
+}
+.module-toggle b{
+  display:block;
+  font-size:13px;
+}
+.module-toggle span{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:2px;
+}
+body.hide-ai [data-go="ai"],
+body.hide-reports [data-go="reports"],
+body.hide-feedback [data-go="feedback"],
+body.hide-school [data-go="school"],
+body.hide-portfolio [data-go="portfolio"],
+body.hide-goals [data-go="goals"],
+body.hide-books [data-go="books"],
+body.hide-habits [data-go="habits"],
+body.hide-workout [data-go="workout"],
+body.hide-nutrition [data-go="nutrition"],
+body.hide-intelligence [data-go="intelligence"]{
+  display:none!important;
+}
+body.daily-simple #cleanDashboard,
+body.daily-simple #dashboardSystemHealth,
+body.daily-simple #dashboardReleaseStatus,
+body.daily-simple #dashboardAutoInsight,
+body.daily-simple #dashboardBrokenThing,
+body.daily-simple #autoInsightList,
+body.daily-simple .automation-grid{
+  display:none!important;
+}
+body.daily-simple #mobileHome{
+  display:none!important;
+}
+@media(max-width:900px){
+  .today-primary-grid{grid-template-columns:1fr}
+  .quick-fab{bottom:calc(env(safe-area-inset-bottom,0px) + 22px)}
+  .bottom-nav{padding-left:10px!important;padding-right:10px!important}
+  .bottom-nav button:nth-child(3){
+    opacity:.38;
+    pointer-events:none;
+  }
+  .module-visibility-grid{grid-template-columns:1fr}
+}
+@media(min-width:901px){
+  .quick-fab,.quick-sheet,.quick-sheet-backdrop{display:none!important}
+}
+
+
+/* ===== THE STANDARD v8.0 Single DATA SAFETY & PRODUCT POLISH ===== */
+.safety-hero{
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.028));
+  border-radius:30px;
+  padding:20px;
+  line-height:1.45;
+  margin-bottom:14px;
+}
+.safety-hero b{
+  display:block;
+  font-size:26px;
+  letter-spacing:-.045em;
+  line-height:1.08;
+  margin-bottom:7px;
+}
+.safety-hero .small{
+  color:#D1D1D6;
+}
+.safety-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+.safety-card{
+  border:1px solid rgba(255,255,255,.095);
+  background:rgba(255,255,255,.045);
+  border-radius:22px;
+  padding:15px;
+  line-height:1.35;
+}
+.safety-card b{
+  display:block;
+  font-size:22px;
+  font-weight:760;
+  letter-spacing:-.04em;
+}
+.safety-card span{
+  display:block;
+  color:var(--muted);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-top:4px;
+}
+.safety-card.good{border-color:rgba(48,209,88,.22);background:rgba(48,209,88,.07)}
+.safety-card.warn{border-color:rgba(214,160,75,.25);background:rgba(214,160,75,.075)}
+.safety-card.bad{border-color:rgba(255,69,58,.24);background:rgba(255,69,58,.075)}
+.safety-list{
+  display:grid;
+  gap:10px;
+}
+.safety-item{
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.04);
+  border-radius:20px;
+  padding:14px;
+  line-height:1.45;
+}
+.safety-item b{
+  display:block;
+  margin-bottom:5px;
+}
+.safety-pill{
+  display:inline-flex;
+  border-radius:999px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.10);
+  color:#D1D1D6;
+  padding:5px 9px;
+  font-size:11px;
+  font-weight:850;
+  margin-top:8px;
+}
+.safety-pill.good{color:#BFF7D6;border-color:rgba(48,209,88,.25);background:rgba(48,209,88,.07)}
+.safety-pill.warn{color:#FFD08A;border-color:rgba(214,160,75,.25);background:rgba(214,160,75,.075)}
+.safety-pill.bad{color:#FFB4AE;border-color:rgba(255,69,58,.24);background:rgba(255,69,58,.075)}
+.system-product-card{
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(28,28,30,.72);
+  border-radius:26px;
+  padding:18px;
+  line-height:1.5;
+}
+.system-product-card b{
+  display:block;
+  font-size:20px;
+  letter-spacing:-.035em;
+  margin-bottom:6px;
+}
+.cleanup-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.cleanup-option{
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.04);
+  border-radius:18px;
+  padding:12px;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+}
+.cleanup-option input{
+  width:18px;
+  height:18px;
+  accent-color:#D6A04B;
+  margin-top:2px;
+}
+.cleanup-option b{
+  display:block;
+  font-size:13px;
+}
+.cleanup-option span{
+  display:block;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:3px;
+  line-height:1.35;
+}
+.safe-import-box{
+  border:1px dashed rgba(255,255,255,.16);
+  background:rgba(255,255,255,.035);
+  border-radius:22px;
+  padding:16px;
+  line-height:1.45;
+}
+.safe-import-box input[type=file]{
+  width:100%;
+  margin-top:10px;
+}
+.product-status-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+@media(max-width:900px){
+  .safety-grid{grid-template-columns:1fr 1fr}
+  .cleanup-grid{grid-template-columns:1fr}
+  .product-status-row{grid-template-columns:1fr}
+}
+
+
+/* ===== THE STANDARD v8.0 Single INFORMATION ARCHITECTURE RESET ===== */
+.ia-hub{
+  display:grid;
+  gap:12px;
+  margin-bottom:16px;
+}
+.ia-hero{
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.028));
+  border-radius:30px;
+  padding:20px;
+  line-height:1.45;
+}
+.ia-hero .eyebrow{
+  color:var(--muted);
+  font-size:11px;
+  font-weight:760;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.ia-hero b{
+  display:block;
+  font-size:28px;
+  font-weight:780;
+  letter-spacing:-.045em;
+  line-height:1.06;
+  margin-bottom:7px;
+}
+.ia-hero .small{
+  color:#D1D1D6;
+}
+.ia-section-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.ia-module-card{
+  border:1px solid rgba(255,255,255,.095);
+  background:rgba(255,255,255,.045);
+  border-radius:24px;
+  padding:16px;
+  line-height:1.4;
+  min-height:112px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:12px;
+}
+.ia-module-card b{
+  display:block;
+  font-size:17px;
+  font-weight:760;
+  margin-bottom:4px;
+}
+.ia-module-card .small{
+  color:var(--muted);
+  line-height:1.35;
+}
+.ia-module-actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.ia-chip-btn{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.07);
+  color:#F5F5F7;
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:12px;
+  font-weight:760;
+}
+.ia-main-shell{
+  display:none;
+}
+.ia-main-shell.active{
+  display:block;
+}
+.ia-bottom-nav{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:100010;
+  height:calc(78px + env(safe-area-inset-bottom,0px));
+  padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));
+  background:rgba(17,17,19,.86);
+  border-top:1px solid rgba(255,255,255,.10);
+  backdrop-filter:blur(28px);
+  display:none;
+  grid-template-columns:repeat(5,1fr);
+  gap:6px;
+}
+.mobile-app-mode .ia-bottom-nav{
+  display:grid;
+}
+.ia-bottom-nav button{
+  border:0;
+  background:transparent;
+  color:#8E8E93;
+  border-radius:18px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  font-size:10px;
+  font-weight:850;
+}
+.ia-bottom-nav button.active{
+  color:#F5F5F7;
+  background:rgba(255,255,255,.08);
+}
+.ia-bottom-nav button.active svg{
+  color:#D6A04B;
+}
+.ia-bottom-nav svg{
+  width:20px;
+  height:20px;
+  stroke:currentColor;
+  stroke-width:2;
+}
+.mobile-app-mode #bottomNav{
+  display:none!important;
+}
+.ia-drawer-section{
+  margin:16px 0 8px;
+  color:#8E8E93;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.10em;
+  font-weight:760;
+}
+.ia-drawer-btn{
+  width:100%;
+  border:1px solid transparent;
+  background:transparent;
+  color:#D1D1D6;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:12px 11px;
+  border-radius:16px;
+  font-weight:760;
+  text-align:left;
+}
+.ia-drawer-btn.active{
+  background:rgba(255,255,255,.08);
+  border-color:rgba(255,255,255,.10);
+  color:#F5F5F7;
+}
+.ia-drawer-btn svg{
+  width:19px;
+  height:19px;
+  stroke:currentColor;
+  stroke-width:2;
+  flex:0 0 auto;
+}
+.ia-drawer-btn small{
+  display:block;
+  color:#8E8E93;
+  font-size:10px;
+  font-weight:650;
+  margin-top:2px;
+}
+.ia-subnav{
+  display:flex;
+  overflow:auto;
+  gap:8px;
+  padding:2px 0 12px;
+  scrollbar-width:none;
+}
+.ia-subnav::-webkit-scrollbar{display:none}
+.ia-subnav button{
+  white-space:nowrap;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.055);
+  color:#D1D1D6;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:12px;
+  font-weight:760;
+}
+.ia-subnav button.active{
+  background:#F5F5F7;
+  color:#0B0B0D;
+}
+body.ia-mode .screen{
+  display:none!important;
+}
+body.ia-mode .screen.active{
+  display:block!important;
+}
+body.ia-mode .mobile-home,
+body.ia-mode #mobileHome,
+body.ia-mode #cleanDashboard,
+body.ia-mode #todayFlow{
+  display:none!important;
+}
+body.ia-mode .drawer-nav-btn{
+  display:none!important;
+}
+body.ia-mode #drawerNav{
+  display:block!important;
+}
+body.ia-mode .quick-fab{
+  display:flex!important;
+}
+.ia-hidden-legacy{
+  display:none!important;
+}
+@media(max-width:900px){
+  .ia-section-grid{grid-template-columns:1fr}
+  .ia-module-card{min-height:98px}
+  .ia-hero b{font-size:27px}
+}
+@media(min-width:901px){
+  .ia-bottom-nav{
+    display:none!important;
+  }
+}
+
+
+/* ===== THE STANDARD v8.0 Single FINAL UX CLEANUP ===== */
+:root{
+  --final-pad:16px;
+}
+body.final-ux{
+  background:#0B0B0D!important;
+}
+.final-ux .screen{
+  padding-left:var(--final-pad)!important;
+  padding-right:var(--final-pad)!important;
+}
+.final-ux .ia-hero,
+.final-ux .today-command,
+.final-ux .safety-hero,
+.final-ux .clean-hero,
+.final-ux .mobile-home-card.primary{
+  border-radius:32px!important;
+  padding:22px!important;
+}
+.final-ux .ia-hero b,
+.final-ux .today-command b{
+  font-size:29px!important;
+  line-height:1.04!important;
+}
+.final-ux .ia-section-grid{
+  gap:11px!important;
+}
+.final-ux .ia-module-card{
+  border-radius:26px!important;
+  min-height:102px!important;
+  padding:16px!important;
+}
+.final-ux .ia-module-card .ia-module-actions{
+  margin-top:2px;
+}
+.final-ux .ia-chip-btn{
+  padding:8px 12px!important;
+  font-size:12px!important;
+}
+.final-ux .card{
+  border-radius:24px!important;
+}
+.final-ux .section-title{
+  margin-bottom:11px!important;
+}
+.final-ux .bottom-nav,
+.final-ux .ia-bottom-nav{
+  height:calc(76px + env(safe-area-inset-bottom,0px))!important;
+}
+.final-ux .ia-bottom-nav button{
+  font-size:10px!important;
+}
+.final-ux .true-mobile-topbar{
+  padding-bottom:9px!important;
+}
+.final-ux-clean-note{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.045);
+  border-radius:22px;
+  padding:14px;
+  color:#D1D1D6;
+  line-height:1.45;
+  margin-bottom:12px;
+}
+.final-ux-clean-note b{
+  color:#F5F5F7;
+  display:block;
+  margin-bottom:4px;
+}
+.final-action-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.final-action{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.055);
+  color:#F5F5F7;
+  border-radius:22px;
+  padding:14px;
+  text-align:left;
+  min-height:78px;
+}
+.final-action b{
+  display:block;
+  font-size:15px;
+  margin-bottom:4px;
+}
+.final-action span{
+  display:block;
+  color:#A1A1A6;
+  font-size:12px;
+  line-height:1.3;
+}
+.final-ux body,
+.final-ux .small{
+  line-height:1.42!important;
+}
+body.final-ux .legacy-noise,
+body.final-ux #dashboardPriorityPanel,
+body.final-ux #dashboardWeeklyPlan,
+body.final-ux #dashboardFocusSummary,
+body.final-ux #dashboardReleaseStatus,
+body.final-ux #dashboardAutoInsight,
+body.final-ux #dashboardBrokenThing,
+body.final-ux #autoInsightList,
+body.final-ux #quickActions,
+body.final-ux #weekActivityStrip,
+body.final-ux #dailyFlow,
+body.final-ux #smartReminders,
+body.final-ux .automation-grid,
+body.final-ux #cleanDashboard,
+body.final-ux #mobileHome,
+body.final-ux #todayFlow{
+  display:none!important;
+}
+body.final-ux .screen#dashboard > .card:not(.final-keep),
+body.final-ux .screen#dashboard > .grid:not(.final-keep),
+body.final-ux .screen#dashboard > .analytics-two:not(.final-keep){
+  display:none!important;
+}
+.final-today{
+  display:none;
+  gap:12px;
+  margin-bottom:14px;
+}
+body.final-ux #finalToday{
+  display:grid;
+}
+.final-today-hero{
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.028));
+  border-radius:32px;
+  padding:22px;
+  line-height:1.42;
+}
+.final-today-hero .eyebrow{
+  color:#A1A1A6;
+  font-size:11px;
+  font-weight:760;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.final-today-hero b{
+  display:block;
+  font-size:30px;
+  line-height:1.04;
+  letter-spacing:-.045em;
+  margin-bottom:8px;
+}
+.final-today-hero .small{
+  color:#D1D1D6;
+}
+.final-today-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.final-today-card{
+  border:1px solid rgba(255,255,255,.095);
+  background:rgba(255,255,255,.045);
+  border-radius:24px;
+  padding:15px;
+  line-height:1.35;
+  min-height:94px;
+}
+.final-today-card b{
+  display:block;
+  font-size:16px;
+  margin-bottom:5px;
+}
+.final-today-card .small{
+  color:#A1A1A6;
+}
+.final-today-card.warning{
+  border-color:rgba(214,160,75,.25);
+  background:rgba(214,160,75,.075);
+}
+.final-today-card.bad{
+  border-color:rgba(255,69,58,.24);
+  background:rgba(255,69,58,.075);
+}
+.final-quick{
+  border:1px solid rgba(255,255,255,.095);
+  background:rgba(28,28,30,.72);
+  border-radius:28px;
+  padding:14px;
+}
+.final-quick .section-title{
+  padding-left:3px;
+}
+.final-quick-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+.final-quick-btn{
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.055);
+  color:#F5F5F7;
+  border-radius:20px;
+  padding:12px 8px;
+  min-height:66px;
+  font-size:12px;
+  font-weight:760;
+}
+.final-quick-btn span{
+  display:block;
+  color:#A1A1A6;
+  font-size:10px;
+  margin-top:3px;
+}
+.final-ux .drawer-section:nth-of-type(n+2){
+  margin-top:18px!important;
+}
+.final-ux .drawer-nav-btn,
+.final-ux .ia-drawer-btn{
+  min-height:48px!important;
+}
+.final-ux .drawer-nav-btn small,
+.final-ux .ia-drawer-btn small{
+  display:none!important;
+}
+body.final-ux.hide-advanced-system [data-ia-detail="advanced"],
+body.final-ux.hide-advanced-system .system-advanced-card{
+  display:none!important;
+}
+@media(max-width:900px){
+  .final-today-grid{grid-template-columns:1fr}
+  .final-quick-grid{grid-template-columns:1fr 1fr}
+  .final-action-row{grid-template-columns:1fr}
+  .final-ux .ia-module-card{min-height:92px!important}
+}
+
+
+/* ===== THE STANDARD v8.0 Single ONBOARDING & PERSONAL SETUP ===== */
+.onboarding-overlay{
+  position:fixed;
+  inset:0;
+  z-index:200000;
+  background:radial-gradient(circle at 50% -10%,rgba(255,255,255,.08),transparent 36%),#0B0B0D;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+body.onboarding-open{
+  overflow:hidden;
+}
+body.onboarding-open .onboarding-overlay{
+  display:flex;
+}
+.onboarding-shell{
+  width:min(560px,100%);
+  max-height:min(820px,92vh);
+  overflow:auto;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(28,28,30,.84);
+  backdrop-filter:blur(28px);
+  border-radius:34px;
+  padding:20px;
+  box-shadow:0 30px 90px rgba(0,0,0,.55);
+}
+.onboarding-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:16px;
+}
+.onboarding-brand b{
+  display:block;
+  letter-spacing:.08em;
+  font-size:13px;
+}
+.onboarding-brand span{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:3px;
+}
+.onboarding-progress{
+  height:6px;
+  background:rgba(255,255,255,.08);
+  border-radius:999px;
+  overflow:hidden;
+  margin:8px 0 20px;
+}
+.onboarding-progress i{
+  display:block;
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#D6A04B,#FFD08A);
+  border-radius:999px;
+  transition:.18s ease;
+}
+.onboarding-step{
+  display:none;
+}
+.onboarding-step.active{
+  display:block;
+}
+.onboarding-step h2{
+  font-size:31px;
+  line-height:1.05;
+  letter-spacing:-.05em;
+  margin:0 0 8px;
+}
+.onboarding-step p{
+  margin:0 0 18px;
+  color:#D1D1D6;
+  line-height:1.45;
+}
+.onboarding-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.onboarding-grid .full{
+  grid-column:1/-1;
+}
+.onboarding-choice-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:12px;
+}
+.onboarding-choice{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.045);
+  border-radius:22px;
+  padding:14px;
+  text-align:left;
+  color:#F5F5F7;
+  min-height:92px;
+}
+.onboarding-choice.active{
+  border-color:rgba(214,160,75,.42);
+  background:rgba(214,160,75,.10);
+}
+.onboarding-choice b{
+  display:block;
+  font-size:15px;
+  margin-bottom:4px;
+}
+.onboarding-choice span{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.35;
+}
+.onboarding-actions{
+  display:flex;
+  gap:10px;
+  margin-top:18px;
+}
+.onboarding-actions .btn{
+  flex:1;
+}
+.setup-card{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+  border-radius:24px;
+  padding:16px;
+  line-height:1.45;
+}
+.setup-card b{
+  display:block;
+  font-size:17px;
+  margin-bottom:5px;
+}
+.setup-summary-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.setup-summary-item{
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.045);
+  border-radius:18px;
+  padding:12px;
+}
+.setup-summary-item b{
+  display:block;
+  font-size:18px;
+}
+.setup-summary-item span{
+  color:var(--muted);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.profile-identity-card{
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.028));
+  border-radius:28px;
+  padding:18px;
+  line-height:1.45;
+}
+.profile-identity-card b{
+  display:block;
+  font-size:22px;
+  letter-spacing:-.04em;
+}
+.profile-identity-card .small{
+  color:#D1D1D6;
+}
+@media(max-width:900px){
+  .onboarding-shell{
+    border-radius:30px;
+    padding:18px;
+    max-height:94vh;
+  }
+  .onboarding-grid,
+  .onboarding-choice-grid,
+  .setup-summary-grid{
+    grid-template-columns:1fr;
+  }
+  .onboarding-step h2{
+    font-size:29px;
+  }
+}
+
+
+/* ===== THE STANDARD v8.0 Single DATA MODEL STABILIZATION ===== */
+.schema-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+}
+.schema-card{
+  border:1px solid rgba(255,255,255,.095);
+  background:rgba(255,255,255,.045);
+  border-radius:22px;
+  padding:15px;
+  line-height:1.35;
+}
+.schema-card b{
+  display:block;
+  font-size:21px;
+  letter-spacing:-.04em;
+}
+.schema-card span{
+  display:block;
+  color:var(--muted);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-top:4px;
+}
+.schema-card.good{border-color:rgba(48,209,88,.22);background:rgba(48,209,88,.07)}
+.schema-card.warn{border-color:rgba(214,160,75,.25);background:rgba(214,160,75,.075)}
+.schema-card.bad{border-color:rgba(255,69,58,.24);background:rgba(255,69,58,.075)}
+.schema-list{
+  display:grid;
+  gap:10px;
+}
+.schema-item{
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.04);
+  border-radius:20px;
+  padding:14px;
+  line-height:1.45;
+}
+.schema-item b{display:block;margin-bottom:5px}
+.schema-pill{
+  display:inline-flex;
+  border-radius:999px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.10);
+  color:#D1D1D6;
+  padding:5px 9px;
+  font-size:11px;
+  font-weight:850;
+  margin-top:8px;
+}
+.schema-pill.good{color:#BFF7D6;border-color:rgba(48,209,88,.25);background:rgba(48,209,88,.07)}
+.schema-pill.warn{color:#FFD08A;border-color:rgba(214,160,75,.25);background:rgba(214,160,75,.075)}
+.schema-pill.bad{color:#FFB4AE;border-color:rgba(255,69,58,.24);background:rgba(255,69,58,.075)}
+.schema-output{
+  width:100%;
+  min-height:260px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+  font-size:12px;
+  line-height:1.55;
+}
+.schema-table{
+  width:100%;
+  border-collapse:collapse;
+}
+.schema-table th,.schema-table td{
+  border-bottom:1px solid rgba(255,255,255,.08);
+  padding:10px 8px;
+  text-align:left;
+  font-size:13px;
+}
+.schema-table th{
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.migration-log{
+  border:1px dashed rgba(255,255,255,.16);
+  background:rgba(255,255,255,.035);
+  border-radius:22px;
+  padding:14px;
+  line-height:1.45;
+  color:#D1D1D6;
+}
+@media(max-width:900px){
+  .schema-grid{grid-template-columns:1fr 1fr}
+  .schema-table{display:block;overflow-x:auto;white-space:nowrap}
+}
+
+
+</style>
+  <style>
+/* THE STANDARD v8.0 Single — Clean Rebuild Overrides */
+body::after{
+  content:"v8.0";
+  position:fixed;
+  right:10px;
+  bottom:calc(env(safe-area-inset-bottom,0px) + 84px);
+  z-index:9;
+  color:rgba(255,255,255,.22);
+  font-size:10px;
+  letter-spacing:.08em;
+  pointer-events:none;
+}
+.v8-architecture-badge{
+  display:inline-flex;
+  border:1px solid rgba(48,209,88,.22);
+  background:rgba(48,209,88,.07);
+  color:#BFF7D6;
+  border-radius:999px;
+  padding:5px 9px;
+  font-size:11px;
+  font-weight:850;
+}
+
+</style>
 
 </head>
 <body>
+<div class="onboarding-overlay" id="onboardingOverlay">
+  <div class="onboarding-shell">
+    <div class="onboarding-top">
+      <div class="onboarding-brand">
+        <b>THE STANDARD</b>
+        <span>Kişisel kurulum</span>
+      </div>
+      <button class="btn-mini" onclick="skipOnboarding()">Geç</button>
+    </div>
+    <div class="onboarding-progress"><i id="onboardingProgress"></i></div>
+
+    <div class="onboarding-step active" data-step="0">
+      <h2>Kendi işletim sistemini kur.</h2>
+      <p>Bu kurulum uygulamanın günlük komutlarını, hedeflerini ve görünür modüllerini sana göre ayarlar.</p>
+      <div class="setup-card">
+        <b>5 dakikalık kurulum</b>
+        <div class="small">Profil → standartlar → öncelik → hedefler → görünüm.</div>
+      </div>
+    </div>
+
+    <div class="onboarding-step" data-step="1">
+      <h2>Profil</h2>
+      <p>Uygulama sana isminle ve ana hedefinle hitap etsin.</p>
+      <div class="onboarding-grid">
+        <div><label class="label">Ad</label><input id="setupName" class="input" placeholder="Emircan"></div>
+        <div><label class="label">Bu yılın mottosu</label><input id="setupMotto" class="input" placeholder="Standardı düşürme."></div>
+        <div class="full"><label class="label">Ana hedef</label><input id="setupMainGoal" class="input" placeholder="Kilo ver, okulu toparla, portföyü büyüt..."></div>
+      </div>
+    </div>
+
+    <div class="onboarding-step" data-step="2">
+      <h2>Günlük standartların</h2>
+      <p>Bugün ekranındaki komutlar bu değerlere göre çalışır.</p>
+      <div class="onboarding-grid">
+        <div><label class="label">Adım hedefi</label><input id="setupStepGoal" class="input" type="number" placeholder="7000"></div>
+        <div><label class="label">Kitap sayfa hedefi</label><input id="setupBookGoal" class="input" type="number" placeholder="20"></div>
+        <div><label class="label">Protein hedefi / g</label><input id="setupProteinGoal" class="input" type="number" placeholder="160"></div>
+        <div><label class="label">Kalori hedefi</label><input id="setupCalGoal" class="input" type="number" placeholder="2200"></div>
+        <div><label class="label">Başlangıç kilo</label><input id="setupStartWeight" class="input" type="number" step="0.1" placeholder="113"></div>
+        <div><label class="label">Hedef kilo</label><input id="setupTargetWeight" class="input" type="number" step="0.1" placeholder="100"></div>
+      </div>
+    </div>
+
+    <div class="onboarding-step" data-step="3">
+      <h2>Öncelik alanın</h2>
+      <p>Uygulama ilk komutu hangi alana göre sertleştirsin?</p>
+      <div class="onboarding-choice-grid" id="setupPriorityChoices">
+        <button class="onboarding-choice" data-priority="Body" onclick="selectSetupPriority('Body')"><b>Body</b><span>Kilo, adım, protein, uyku.</span></button>
+        <button class="onboarding-choice" data-priority="Okul" onclick="selectSetupPriority('Okul')"><b>Okul</b><span>Ders, sınav, yaz okulu, CRM.</span></button>
+        <button class="onboarding-choice" data-priority="Para" onclick="selectSetupPriority('Para')"><b>Para</b><span>Portföy, harcama, yatırım disiplini.</span></button>
+        <button class="onboarding-choice" data-priority="Disiplin" onclick="selectSetupPriority('Disiplin')"><b>Disiplin</b><span>Alışkanlık, kitap, icraat.</span></button>
+      </div>
+    </div>
+
+    <div class="onboarding-step" data-step="4">
+      <h2>Görünen modüller</h2>
+      <p>Günlük kullanmadıklarını gizleyelim. İstersen sonradan Ayarlar’dan açarsın.</p>
+      <div class="onboarding-choice-grid" id="setupModuleChoices">
+        <button class="onboarding-choice active" data-module="body" onclick="toggleSetupModule('body')"><b>Body</b><span>Ana modül.</span></button>
+        <button class="onboarding-choice active" data-module="execution" onclick="toggleSetupModule('execution')"><b>İcraat</b><span>Command Session.</span></button>
+        <button class="onboarding-choice active" data-module="planning" onclick="toggleSetupModule('planning')"><b>Plan</b><span>Kilit görev.</span></button>
+        <button class="onboarding-choice active" data-module="portfolio" onclick="toggleSetupModule('portfolio')"><b>Portföy</b><span>Para takibi.</span></button>
+        <button class="onboarding-choice active" data-module="school" onclick="toggleSetupModule('school')"><b>Okul</b><span>Akademik CRM.</span></button>
+        <button class="onboarding-choice" data-module="advanced" onclick="toggleSetupModule('advanced')"><b>Gelişmiş</b><span>AI, rapor, feedback.</span></button>
+      </div>
+    </div>
+
+    <div class="onboarding-step" data-step="5">
+      <h2>Hazır.</h2>
+      <p>Kurulumdan sonra uygulama 5 ana bölümle sade çalışacak. Günlük akışın: Bugün → İcraat → Günü kapat.</p>
+      <div id="setupSummary" class="setup-summary-grid"></div>
+    </div>
+
+    <div class="onboarding-actions">
+      <button class="btn secondary" onclick="prevOnboardingStep()">Geri</button>
+      <button class="btn" id="onboardingNextBtn" onclick="nextOnboardingStep()">Devam</button>
+    </div>
+  </div>
+</div>
+
+<nav class="ia-bottom-nav" id="iaBottomNav">
+  <button data-ia="today" onclick="showIA('today')"><svg fill="none" viewBox="0 0 24 24"><path d="M3 11 12 3l9 8"/><path d="M5 10v10h14V10"/></svg><span>Bugün</span></button>
+  <button data-ia="execute" onclick="showIA('execute')"><svg fill="none" viewBox="0 0 24 24"><path d="M13 2 3 14h8l-1 8 11-14h-8l0-6Z"/></svg><span>İcraat</span></button>
+  <button data-ia="growth" onclick="showIA('growth')"><svg fill="none" viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M7 7h10"/><path d="M9 14h6"/></svg><span>Gelişim</span></button>
+  <button data-ia="work" onclick="showIA('work')"><svg fill="none" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-7"/></svg><span>Para/Okul</span></button>
+  <button data-ia="system" onclick="showIA('system')"><svg fill="none" viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M4 12h2"/><path d="M18 12h2"/></svg><span>Sistem</span></button>
+</nav>
+
 <div class="true-mobile-topbar">
   <button class="true-mobile-menu-btn" onclick="toggleDrawer(true)" aria-label="Menüyü aç">
     <svg fill="none" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
@@ -2444,7 +4127,7 @@ body.mobile-app-mode{
 <div class="nav-backdrop" onclick="toggleDrawer(false)"></div>
 <aside class="mobile-drawer" id="mobileDrawer">
   <div class="drawer-head">
-    <div class="drawer-brand"><b>THE STANDARD</b><span>v7.2 Navigation Reset</span></div>
+    <div class="drawer-brand"><b>THE STANDARD</b><span>v8.0 Navigation Reset</span></div>
     <button class="drawer-close" onclick="toggleDrawer(false)">×</button>
   </div>
   <div id="drawerNav"></div>
@@ -2483,7 +4166,7 @@ body.mobile-app-mode{
     </div>
 
     <nav class="nav" id="nav"></nav>
-    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v7.2.1</div>
+    <div class="sidebar-foot">NO API • LOCALSTORAGE • THE STANDARD v8.0 Single.1</div>
   </aside>
 
   <main class="main">
@@ -2496,6 +4179,111 @@ body.mobile-app-mode{
     </div>
 
     <section id="dashboard" class="screen active">
+
+      <div id="finalToday" class="final-today">
+        <div class="final-today-hero">
+          <div class="eyebrow">Bugün</div>
+          <b id="finalCommand">Komut hazırlanıyor.</b>
+          <div id="finalCommandSub" class="small">Günlük akış sadeleştiriliyor.</div>
+        </div>
+        <div class="final-today-grid">
+          <div id="finalKeyCard" class="final-today-card">
+            <b>Kilit Görev</b>
+            <div id="finalKey" class="small">Henüz kilit görev yok.</div>
+          </div>
+          <div id="finalBodyCard" class="final-today-card">
+            <b>Body</b>
+            <div id="finalBody" class="small">Body durumu hazırlanıyor.</div>
+          </div>
+          <div id="finalFocusCard" class="final-today-card">
+            <b>İcraat</b>
+            <div id="finalFocus" class="small">Focus özeti hazırlanıyor.</div>
+          </div>
+          <div id="finalBrokenCard" class="final-today-card">
+            <b>Risk</b>
+            <div id="finalBroken" class="small">Kontrol ediliyor.</div>
+          </div>
+        </div>
+        <div class="final-quick final-keep">
+          <div class="section-title">Hızlı Aksiyon</div>
+          <div class="final-quick-grid">
+            <button class="final-quick-btn" onclick="quickSheetAction('steps')">Adım<span>+ kayıt</span></button>
+            <button class="final-quick-btn" onclick="quickSheetAction('book')">Sayfa<span>+ kitap</span></button>
+            <button class="final-quick-btn" onclick="quickSheetAction('protein')">Protein<span>+ öğün</span></button>
+            <button class="final-quick-btn" onclick="show('execution')">Seans<span>başlat</span></button>
+          </div>
+        </div>
+        <div class="final-action-row">
+          <button class="final-action" onclick="showIA('execute')"><b>İcraata geç</b><span>Command Session, plan ve kilit görev.</span></button>
+          <button class="final-action" onclick="showIA('growth')"><b>Gelişimi aç</b><span>Body, beslenme, kitap, alışkanlık.</span></button>
+        </div>
+      </div>
+
+
+      <div id="iaToday" class="ia-main-shell active">
+        <div class="ia-hub">
+          <div class="ia-hero">
+            <div class="eyebrow">Bugün</div>
+            <b id="iaTodayCommand">Komut hazırlanıyor.</b>
+            <div id="iaTodaySub" class="small">Bugün ne yapacağını sade şekilde gösterir.</div>
+          </div>
+          <div class="ia-section-grid">
+            <div class="ia-module-card">
+              <div><b>Kilit Görev</b><div id="iaTodayKey" class="small">Henüz kilit görev yok.</div></div>
+              <div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('planning')">Planla</button></div>
+            </div>
+            <div class="ia-module-card">
+              <div><b>Body Check-in</b><div id="iaTodayBody" class="small">Body durumu hazırlanıyor.</div></div>
+              <div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('body')">Body Aç</button><button class="ia-chip-btn" onclick="quickSheetAction('steps')">+ Adım</button></div>
+            </div>
+            <div class="ia-module-card">
+              <div><b>İcraat</b><div id="iaTodayExecution" class="small">Focus özeti hazırlanıyor.</div></div>
+              <div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('execution')">Seans Başlat</button></div>
+            </div>
+            <div class="ia-module-card">
+              <div><b>Bugün Bozulan Şey</b><div id="iaTodayBroken" class="small">Kontrol ediliyor.</div></div>
+              <div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('intelligence')">İçgörü</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="todayFlow" class="today-flow">
+        <div class="today-command">
+          <div class="eyebrow">Bugün</div>
+          <b id="todayMainCommand">Komut hazırlanıyor.</b>
+          <div id="todayMainSub" class="small">Bugünün en net hamlesi burada görünecek.</div>
+        </div>
+        <div class="today-primary-grid">
+          <div class="today-tile" id="todayKeyTile">
+            <b>Kilit Görev</b>
+            <div id="todayKeyTaskMini" class="small">Henüz kilit görev yok.</div>
+          </div>
+          <div class="today-tile" id="todayBrokenTile">
+            <b>Bozulan Şey</b>
+            <div id="todayBrokenMini" class="small">Kontrol ediliyor.</div>
+          </div>
+          <div class="today-tile" id="todayFocusTile">
+            <b>İcraat</b>
+            <div id="todayFocusMini" class="small">Bugünkü focus süresi hazırlanıyor.</div>
+          </div>
+          <div class="today-tile" id="todayBodyTile">
+            <b>Body</b>
+            <div id="todayBodyMini" class="small">Body durumu hazırlanıyor.</div>
+          </div>
+        </div>
+        <div class="card" id="dailyGuideCard">
+          <div class="section-title">Günlük Kullanım Akışı</div>
+          <div class="daily-guide">
+            <div class="daily-guide-step"><i>1</i><div><b>Komuta bak</b><span>Bugün hangi alan bozuluyor, onu gör.</span></div></div>
+            <div class="daily-guide-step"><i>2</i><div><b>Body check-in gir</b><span>Adım, kilo, su veya enerji kaydı yap.</span></div></div>
+            <div class="daily-guide-step"><i>3</i><div><b>Kilit görevi belirle</b><span>Bugünün tek ana icraatını yaz.</span></div></div>
+            <div class="daily-guide-step"><i>4</i><div><b>Command Session başlat</b><span>Planı değil, icraatı kaydet.</span></div></div>
+          </div>
+        </div>
+      </div>
+
 
       <div id="mobileHome" class="mobile-home">
         <div class="mobile-home-card primary">
@@ -3422,7 +5210,7 @@ body.mobile-app-mode{
     <section id="feedback" class="screen">
       <div class="release-grid">
         <div class="release-banner">
-          <b>THE STANDARD v7.2 Stable Release</b>
+          <b>THE STANDARD v8.0 Single Stable Release</b>
           Bu sürüm artık “ekleme” değil, gerçek kullanım ve test sürümü. Birkaç gün kullan, nerede takıldığını, hangi sekmenin işe yaradığını ve hangi alanın gereksiz kaldığını buraya kaydet.
           <br><span class="health-pill ok">Release Candidate</span>
         </div>
@@ -3502,6 +5290,195 @@ body.mobile-app-mode{
       </div>
     </section>
 
+
+    <section id="safety" class="screen">
+      <div class="safety-hero">
+        <b>Veri Güvenliği</b>
+        <div class="small">THE STANDARD yerel modda güçlüdür ama veri güvenliği senin düzenli yedek almana bağlıdır. Bu ekran verinin risk durumunu gösterir.</div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">Veri Sağlığı</div>
+        <div id="dataHealthGrid" class="safety-grid"></div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px">
+        <div class="card">
+          <div class="section-title">Güvenli Yedek</div>
+          <div id="safeBackupStatus" class="system-product-card">Yedek durumu hazırlanıyor.</div>
+          <div class="automation-actions">
+            <button class="btn" onclick="safeBackup()">Güvenli Yedek Al</button>
+            <button class="btn secondary" onclick="createSnapshot('v8.0 manuel snapshot')">Sadece Snapshot</button>
+            <button class="btn secondary" onclick="exportData()">Sadece JSON Export</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="section-title">Güvenli İçe Aktarma</div>
+          <div class="safe-import-box">
+            <b>Restore öncesi kontrol</b>
+            <div class="small">Dosyayı seçince üstüne yazmadan önce içeriğini ve kayıt sayılarını analiz eder. Geri yüklemeden önce otomatik snapshot alınır.</div>
+            <input id="safeImportFile" type="file" accept=".json,application/json" onchange="inspectSafeImport(event)">
+          </div>
+          <div id="safeImportPreview" class="safety-list" style="margin-top:12px"></div>
+        </div>
+      </div>
+
+      <div class="grid two" style="margin-top:14px">
+        <div class="card">
+          <div class="section-title">Veri Temizliği</div>
+          <div id="cleanupOptions" class="cleanup-grid"></div>
+          <div class="automation-actions">
+            <button class="btn secondary" onclick="previewCleanup()">Temizliği Önizle</button>
+            <button class="btn danger" onclick="runCleanup()">Seçili Temizliği Yap</button>
+          </div>
+          <div id="cleanupPreview" class="safety-list" style="margin-top:12px"></div>
+        </div>
+        <div class="card">
+          <div class="section-title">Ürün Durumu</div>
+          <div id="productStatus" class="product-status-row"></div>
+          <div class="automation-actions">
+            <button class="btn secondary" onclick="copyProductReport()">Ürün Raporunu Kopyala</button>
+            <button class="btn secondary" onclick="downloadSafetyJSON()">Safety JSON İndir</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="ia_execute" class="screen">
+      <div class="ia-hub">
+        <div class="ia-hero"><div class="eyebrow">İcraat</div><b>Planı değil, seansı yönet.</b><div class="small">Command Session, haftalık plan ve günlük kilit görev burada.</div></div>
+        <div class="ia-subnav"><button onclick="show('execution')">Command Session</button><button onclick="show('planning')">Plan</button><button onclick="show('dashboard')">Bugün</button></div>
+        <div class="ia-section-grid">
+          <div class="ia-module-card"><div><b>Command Session</b><div class="small">Odak seansı başlat, tamamla veya geçmişe bak.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('execution')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Haftalık Plan</b><div class="small">Plan vs gerçekleşen, review ve gelecek hafta komutu.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('planning')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Kilit Görev</b><div class="small">Bugünün tek ana hamlesini belirle.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('planning')">Ekle</button></div></div>
+          <div class="ia-module-card"><div><b>Focus Promptu</b><div class="small">İcraat verisini ChatGPT analizine çevir.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('execution')">Prompt</button></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ia_growth" class="screen">
+      <div class="ia-hub">
+        <div class="ia-hero"><div class="eyebrow">Gelişim</div><b>Body, alışkanlık ve kişisel gelişim.</b><div class="small">Günlük standardını yükselten modüller burada toplandı.</div></div>
+        <div class="ia-section-grid">
+          <div class="ia-module-card"><div><b>Body</b><div class="small">Kilo, adım, su, uyku, enerji.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('body')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Beslenme</b><div class="small">Kalori, protein, öğün ve makro.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('nutrition')">Aç</button><button class="ia-chip-btn" onclick="quickSheetAction('protein')">+ Protein</button></div></div>
+          <div class="ia-module-card"><div><b>Antrenman</b><div class="small">Set, kg, tekrar ve RIR takibi.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('workout')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Kitap</b><div class="small">Sayfa, not ve okuma zinciri.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('books')">Aç</button><button class="ia-chip-btn" onclick="quickSheetAction('book')">+ Sayfa</button></div></div>
+          <div class="ia-module-card"><div><b>Alışkanlık</b><div class="small">Fix günlük standardın.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('habits')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Hedefler</b><div class="small">Büyük hedefler ve ilerleme takibi.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('goals')">Aç</button></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ia_work" class="screen">
+      <div class="ia-hub">
+        <div class="ia-hero"><div class="eyebrow">Para & Okul</div><b>Ciddi işleri tek yerde yönet.</b><div class="small">Portföy, okul CRM, School Memory ve akademik plan burada.</div></div>
+        <div class="ia-section-grid">
+          <div class="ia-module-card"><div><b>Portföy</b><div class="small">Varlıklar, fiyatlar, Kar/Zarar.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('portfolio')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Okul CRM</b><div class="small">Ders, sınav, konu ve risk takibi.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('school')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Haftalık Plan</b><div class="small">Okul/iş/para hamlesini haftaya bağla.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('planning')">Plan</button></div></div>
+          <div class="ia-module-card"><div><b>Analiz</b><div class="small">Para ve okul tarafını raporla.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('reports')">Rapor</button></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ia_system" class="screen">
+      <div class="ia-hub">
+        <div class="ia-hero"><div class="eyebrow">Sistem</div><b>Gelişmiş araçlar arka planda.</b><div class="small">AI, rapor, güvenlik, feedback, ayarlar ve cloud burada durur; günlük ekranı şişirmez.</div></div>
+        <div class="ia-section-grid">
+          <div class="ia-module-card"><div><b>AI Merkezi</b><div class="small">Verilerini prompta çevir.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('ai')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Rapor</b><div class="small">Skor kartları ve analizler.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('reports')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>İçgörü</b><div class="small">Kural motoru ve otomatik uyarılar.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('intelligence')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Güvenlik</b><div class="small">Yedek, restore, veri sağlığı.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('safety')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Feedback</b><div class="small">Hata ve öneri kaydı.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('feedback')">Aç</button></div></div>
+          <div class="ia-module-card"><div><b>Ayarlar</b><div class="small">Görünüm, cloud, modül gizleme.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('settings')">Aç</button></div></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="setup" class="screen">
+      <div class="ia-hub">
+        <div class="ia-hero">
+          <div class="eyebrow">Kişisel Kurulum</div>
+          <b>Standartlarını buradan yönet.</b>
+          <div class="small">Profil, ana hedef, günlük standartlar ve öncelik alanı.</div>
+        </div>
+        <div class="profile-identity-card">
+          <b id="profileIdentityName">THE STANDARD</b>
+          <div id="profileIdentitySub" class="small">Profil bilgisi hazırlanıyor.</div>
+        </div>
+        <div class="card">
+          <div class="section-title">Profil & Standartlar</div>
+          <div class="onboarding-grid">
+            <div><label class="label">Ad</label><input id="profileNameInput" class="input"></div>
+            <div><label class="label">Motto</label><input id="profileMottoInput" class="input"></div>
+            <div class="full"><label class="label">Ana hedef</label><input id="profileMainGoalInput" class="input"></div>
+            <div><label class="label">Adım hedefi</label><input id="profileStepGoalInput" class="input" type="number"></div>
+            <div><label class="label">Kitap hedefi</label><input id="profileBookGoalInput" class="input" type="number"></div>
+            <div><label class="label">Protein hedefi</label><input id="profileProteinGoalInput" class="input" type="number"></div>
+            <div><label class="label">Hedef kilo</label><input id="profileTargetWeightInput" class="input" type="number" step="0.1"></div>
+            <div class="full"><label class="label">Öncelik</label><select id="profilePriorityInput" class="input"><option>Body</option><option>Okul</option><option>Para</option><option>Disiplin</option><option>Genel</option></select></div>
+          </div>
+          <div class="automation-actions">
+            <button class="btn" onclick="savePersonalSetup()">Kaydet</button>
+            <button class="btn secondary" onclick="openOnboarding(true)">Kurulumu Yeniden Aç</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="schema" class="screen">
+      <div class="ia-hub">
+        <div class="ia-hero">
+          <div class="eyebrow">Data Model</div>
+          <b>Veri yapısını sabitle.</b>
+          <div class="small">Şema kontrolü, migration, bozuk veri onarımı ve sürüm uyumluluğu.</div>
+        </div>
+
+        <div class="card">
+          <div class="section-title">Model Sağlığı</div>
+          <div id="schemaHealthGrid" class="schema-grid"></div>
+        </div>
+
+        <div class="grid two" style="margin-top:14px">
+          <div class="card">
+            <div class="section-title">Şema Kontrolü</div>
+            <div id="schemaIssues" class="schema-list"></div>
+            <div class="automation-actions">
+              <button class="btn" onclick="runSchemaRepair()">Otomatik Onar</button>
+              <button class="btn secondary" onclick="runSchemaCheck()">Tekrar Kontrol Et</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="section-title">Migration Durumu</div>
+            <div id="migrationStatus" class="migration-log">Migration kontrolü hazırlanıyor.</div>
+            <div class="automation-actions">
+              <button class="btn secondary" onclick="runDataMigrations()">Migration Çalıştır</button>
+              <button class="btn secondary" onclick="createSnapshot('v8.0 schema snapshot')">Snapshot Al</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="section-title">Modül Veri Tablosu</div>
+          <div id="schemaModuleTable"></div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <div class="section-title">Data Model Raporu</div>
+          <textarea id="schemaReportOutput" class="input schema-output"></textarea>
+          <div class="automation-actions">
+            <button class="btn" onclick="copySchemaReport()">Raporu Kopyala</button>
+            <button class="btn secondary" onclick="downloadSchemaJSON()">Schema JSON İndir</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
 <section id="settings" class="screen">
       <div class="card" style="margin-bottom:16px">
         <div class="section-title">Sistem Sağlığı</div>
@@ -3532,7 +5509,7 @@ body.mobile-app-mode{
       </div>
 
       <div class="card" style="margin-bottom:16px">
-        <div class="section-title">Sürüm / v7.2 Hazırlık</div>
+        <div class="section-title">Sürüm / v8.0 Hazırlık</div>
         <div id="versionReadiness" class="version-note"></div>
       </div>
 
@@ -3583,6 +5560,91 @@ body.mobile-app-mode{
 
 
       <div class="card" style="margin-bottom:16px">
+        <div class="section-title">Final UX</div>
+        <div class="form-grid">
+          <div>
+            <label class="label">Ana ekran sadeliği</label>
+            <select id="finalUXMode" class="input">
+              <option>Final Sade</option>
+              <option>Detaylı</option>
+            </select>
+          </div>
+          <div>
+            <label class="label">Sistem gelişmiş kartları</label>
+            <select id="finalAdvancedMode" class="input">
+              <option>Gizli</option>
+              <option>Göster</option>
+            </select>
+          </div>
+        </div>
+        <div class="automation-actions">
+          <button class="btn" onclick="saveFinalUXSettings()">Final UX Kaydet</button>
+          <button class="btn secondary" onclick="applyFinalUX()">Uygula</button>
+        </div>
+        <div class="final-ux-clean-note" style="margin-top:12px"><b>v8.0 Final Cleanup</b>Ana ekran artık tek karar ekranı gibi çalışır. Günlük kullanımda rapor/AI/güvenlik gibi şeyler arkada kalır.</div>
+      </div>
+
+<div class="card" style="margin-bottom:16px">
+        <div class="section-title">Bilgi Mimarisi</div>
+        <div class="form-grid">
+          <div>
+            <label class="label">Ana Navigasyon</label>
+            <select id="iaModeSetting" class="input">
+              <option>5 Bölüm</option>
+              <option>Eski Sekmeler</option>
+            </select>
+          </div>
+          <div>
+            <label class="label">Günlük Ana Ekran</label>
+            <select id="iaTodayModeSetting" class="input">
+              <option>Bugün Odaklı</option>
+              <option>Gelişmiş Dashboard</option>
+            </select>
+          </div>
+        </div>
+        <div class="automation-actions">
+          <button class="btn" onclick="saveIASettings()">Mimari Ayarlarını Kaydet</button>
+          <button class="btn secondary" onclick="applyIA()">Uygula</button>
+        </div>
+        <div class="cloud-muted-panel" style="margin-top:12px">v8.0: Uygulama artık 17 sekme değil, 5 ana bölüm mantığıyla çalışır. Modüller silinmedi; sadece doğru bölümlerin içine taşındı.</div>
+      </div>
+
+<div class="card" style="margin-bottom:16px">
+        <div class="section-title">Görünen Modüller</div>
+        <div id="moduleVisibilityGrid" class="module-visibility-grid"></div>
+        <div class="automation-actions" style="margin-top:12px">
+          <button class="btn" onclick="saveModuleVisibility()">Modül Görünürlüğünü Kaydet</button>
+          <button class="btn secondary" onclick="resetModuleVisibility()">Hepsini Göster</button>
+        </div>
+        <div class="cloud-muted-panel" style="margin-top:12px">Modüller silinmez; sadece menüden gizlenir. Karmaşayı azaltmak için günlük kullanmadıklarını kapat.</div>
+      </div>
+
+<div class="card" style="margin-bottom:16px">
+        <div class="section-title">Görsel Stil</div>
+        <div class="form-grid">
+          <div>
+            <label class="label">Arayüz Dili</label>
+            <select id="appleMinimalMode" class="input">
+              <option>Minimal Premium</option>
+              <option>Klasik THE STANDARD</option>
+            </select>
+          </div>
+          <div>
+            <label class="label">Kart Yoğunluğu</label>
+            <select id="appleCardDensity" class="input">
+              <option>Ferah</option>
+              <option>Kompakt</option>
+            </select>
+          </div>
+        </div>
+        <div class="automation-actions">
+          <button class="btn" onclick="saveAppleUISettings()">Görsel Ayarları Kaydet</button>
+          <button class="btn secondary" onclick="applyAppleUI()">Uygula</button>
+        </div>
+        <div class="cloud-muted-panel" style="margin-top:12px">v8.0 görsel dili: daha az çizgi, daha çok boşluk, sade kartlar, yuvarlak formlar ve mobilde doğal uygulama hissi.</div>
+      </div>
+
+<div class="card" style="margin-bottom:16px">
         <div class="section-title">Mobil App Shell</div>
         <div class="form-grid">
           <div>
@@ -3617,7 +5679,7 @@ body.mobile-app-mode{
           <button class="btn" onclick="saveNavUXSettings()">Navigasyon Ayarlarını Kaydet</button>
           <button class="btn secondary" onclick="applyNavUX()">Uygula</button>
         </div>
-        <div class="mobile-polish-note" style="margin-top:12px">v7.2 sade mod: günlük kullanımda sadece kritik komutlar görünür; gelişmiş raporlar kendi sekmelerinde kalır.</div>
+        <div class="mobile-polish-note" style="margin-top:12px">v8.0 sade mod: günlük kullanımda sadece kritik komutlar görünür; gelişmiş raporlar kendi sekmelerinde kalır.</div>
       </div>
 
 <div class="card" style="margin-bottom:16px">
@@ -3647,7 +5709,7 @@ body.mobile-app-mode{
           <button class="btn" onclick="saveUXSettings()">Mobil Kullanım Ayarlarını Kaydet</button>
           <button class="btn secondary" onclick="applyUXSettings()">Görünümü Uygula</button>
         </div>
-        <div class="mobile-polish-note" style="margin-top:12px">v7.2 mobil kullanım için optimize edildi: kompakt mod, hızlı aksiyonlar, 7 gün şeridi ve form korumaları aktif.</div>
+        <div class="mobile-polish-note" style="margin-top:12px">v8.0 mobil kullanım için optimize edildi: kompakt mod, hızlı aksiyonlar, 7 gün şeridi ve form korumaları aktif.</div>
       </div>
 
 <div class="card" style="margin-bottom:16px">
@@ -3743,7 +5805,157 @@ body.mobile-app-mode{
 </div>
 <input id="photoFile" type="file" accept="image/*" style="display:none">
 
-<script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="editModal" class="edit-modal" onclick="if(event.target.id==='editModal')closeEditModal()">
+  <div class="edit-modal-card">
+    <div id="editModalTitle" class="edit-modal-title">Kaydı Düzenle</div>
+    <div id="editModalBody"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="systemToast" class="system-toast"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="quick-fab" onclick="toggleQuickSheet(true)" aria-label="Hızlı kayıt">+</button>
+<div class="quick-sheet-backdrop" onclick="toggleQuickSheet(false)"></div>
+<div class="quick-sheet">
+  <div class="quick-sheet-handle"></div>
+  <div class="quick-sheet-title">
+    <b>Hızlı Kayıt</b>
+    <span>Bugün için en sık kullanılan aksiyonlar.</span>
+  </div>
+  <div class="quick-sheet-grid">
+    <button class="quick-sheet-action" onclick="quickSheetAction('steps')"><b>+ Adım</b><span>Hızlı adım ekle</span></button>
+    <button class="quick-sheet-action" onclick="quickSheetAction('book')"><b>+ Sayfa</b><span>Kitap standardı</span></button>
+    <button class="quick-sheet-action" onclick="quickSheetAction('protein')"><b>+ Protein</b><span>Öğün kaydı</span></button>
+    <button class="quick-sheet-action" onclick="quickSheetAction('water')"><b>+ Su</b><span>0.5L ekle</span></button>
+    <button class="quick-sheet-action" onclick="quickSheetAction('session')"><b>Seans</b><span>Command Session</span></button>
+    <button class="quick-sheet-action" onclick="quickSheetAction('key')"><b>Kilit Görev</b><span>Bugünün ana işi</span></button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+// THE STANDARD v8.0 Single — Config
+window.THE_STANDARD_VERSION = '8.0';
+window.THE_STANDARD_BUILD = 'clean-rebuild';
+window.THE_STANDARD_ARCHITECTURE = {
+  version: '8.0',
+  mode: 'modularized-from-v7.9',
+  modules: ['core-state','storage','ui','dashboard','execution','growth','work-school','system','schema']
+};
+
+</script>
+  <script>
+// THE STANDARD v8.0 Single — Legacy App Runtime
+// Preserves v7.9 functionality while moving runtime out of index.html.
+// Next rebuild step can split this file into module-specific controllers.
+
+
+
+
 const STORE='the_standard_v4_clean_core';
 const LEGACY='the_standard_state_v1';
 const screens=[
@@ -4015,10 +6227,10 @@ function applyProfile(){if(state.profile.image){$('avatarImg').src=state.profile
 function exportData(){const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='the-standard-backup-'+today()+'.json'; a.click()}
 function importData(e){const f=e.target.files[0]; if(!f)return; const r=new FileReader(); r.onload=ev=>{try{state=JSON.parse(ev.target.result); save(); renderAll(); alert('Veriler yüklendi')}catch(err){alert('Dosya okunamadı')}}; r.readAsText(f)}
 window.addEventListener('DOMContentLoaded',init);
-</script>
 
-<script>
-/* ===== THE STANDARD v7.2.1 PATCH ===== */
+
+
+/* ===== THE STANDARD v8.0 Single.1 PATCH ===== */
 (function(){
   const oldDefault = window.defaultState;
   window.defaultState = function(){
@@ -4229,11 +6441,10 @@ window.addEventListener('DOMContentLoaded',init);
     }, 100);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 PROFILE PICKER FIX ONLY ===== */
+
+/* ===== THE STANDARD v8.0 Single.1 PROFILE PICKER FIX ONLY ===== */
 (function(){
   // Allows selecting the same photo twice by clearing input before click.
   window.choosePhoto = function(){
@@ -4323,11 +6534,10 @@ window.addEventListener('DOMContentLoaded',init);
     }, 150);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 PROFILE CROP EXACT FIX =====
+
+/* ===== THE STANDARD v8.0 Single.1 PROFILE CROP EXACT FIX =====
    Uses background-size/background-position on both preview and avatar.
    This makes the modal preview and final avatar use the exact same crop logic.
 */
@@ -4430,12 +6640,11 @@ window.addEventListener('DOMContentLoaded',init);
     setTimeout(applyProfile, 500);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 SMALL STABILITY PATCH =====
-   No renderAll override. Keeps v7.2 immediate UI updates.
+
+/* ===== THE STANDARD v8.0 Single.1 SMALL STABILITY PATCH =====
+   No renderAll override. Keeps v8.0 immediate UI updates.
 */
 (function(){
   document.addEventListener('DOMContentLoaded', function(){
@@ -4445,11 +6654,10 @@ window.addEventListener('DOMContentLoaded',init);
     }, 650);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 — REMOVE PROFILE PHOTO ENGINE =====
+
+/* ===== THE STANDARD v8.0 Single.1 — REMOVE PROFILE PHOTO ENGINE =====
    Reason: base64 image in localStorage + mobile Safari causes delayed renders.
    Keeps all other modules intact.
 */
@@ -4511,11 +6719,10 @@ window.addEventListener('DOMContentLoaded',init);
     setTimeout(clearProfileEngine, 150);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 BACKUP & STABILITY ===== */
+
+/* ===== THE STANDARD v8.0 Single.1 BACKUP & STABILITY ===== */
 (function(){
   const TS_BACKUP_VERSION = '5.1';
   const BACKUP_INTERVAL_DAYS = 7;
@@ -4540,11 +6747,10 @@ window.addEventListener('DOMContentLoaded',init);
   const oldRenderAll=window.renderAll;if(typeof oldRenderAll==='function'&&!oldRenderAll.__backupPatched){window.renderAll=function(){oldRenderAll();renderBackupStatus()};window.renderAll.__backupPatched=true;try{renderAll=window.renderAll}catch(e){}}
   document.addEventListener('DOMContentLoaded',function(){setTimeout(renderBackupStatus,150);setTimeout(renderBackupStatus,800)});window.addEventListener('load',renderBackupStatus);
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 HABIT STREAK SYSTEM ===== */
+
+/* ===== THE STANDARD v8.0 Single.1 HABIT STREAK SYSTEM ===== */
 (function(){
   function dstr(d){return d.toISOString().slice(0,10)}
   function addDays(day,n){const d=new Date(day+'T00:00:00');d.setDate(d.getDate()+n);return dstr(d)}
@@ -4608,11 +6814,10 @@ window.addEventListener('DOMContentLoaded',init);
   });
   document.addEventListener('DOMContentLoaded',()=>setTimeout(()=>{try{renderHabitStreakStats();renderTodayHabits()}catch(e){}},200));
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 PORTFOLIO PRICE UPDATE MODE =====
+
+/* ===== THE STANDARD v8.0 Single.1 PORTFOLIO PRICE UPDATE MODE =====
    Adds a fast manual price update panel.
    Keeps portfolio transaction logic unchanged.
 */
@@ -4804,11 +7009,10 @@ window.addEventListener('DOMContentLoaded',init);
     setTimeout(renderPriceUpdateMode, 900);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 DYNAMIC SCHOOL MEMORY =====
+
+/* ===== THE STANDARD v8.0 Single.1 DYNAMIC SCHOOL MEMORY =====
    Adds user-editable course memory on top of built-in schoolMemory.
 */
 (function(){
@@ -5050,11 +7254,10 @@ window.addEventListener('DOMContentLoaded',init);
     }, 250);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 PORTFOLIO DATA HYGIENE =====
+
+/* ===== THE STANDARD v8.0 Single.1 PORTFOLIO DATA HYGIENE =====
    New structure:
    - portfolioTx: only real buy/sell transactions with qty != 0.
    - currentPrices: latest manual/current prices keyed by NAME|TYPE.
@@ -5394,19 +7597,10 @@ window.addEventListener('DOMContentLoaded',init);
     setTimeout(()=>{ ensurePortfolioHygiene(); renderPriceUpdateMode(); }, 900);
   });
 })();
-</script>
 
 
-<div id="editModal" class="edit-modal" onclick="if(event.target.id==='editModal')closeEditModal()">
-  <div class="edit-modal-card">
-    <div id="editModalTitle" class="edit-modal-title">Kaydı Düzenle</div>
-    <div id="editModalBody"></div>
-  </div>
-</div>
 
-
-<script>
-/* ===== THE STANDARD v7.2.1 EDIT HISTORY =====
+/* ===== THE STANDARD v8.0 Single.1 EDIT HISTORY =====
    Adds edit flows for:
    - Nutrition / meals
    - Books
@@ -5757,11 +7951,10 @@ window.addEventListener('DOMContentLoaded',init);
     }, 250);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 SCHOOL MEMORY PLUS / ACADEMIC CRM =====
+
+/* ===== THE STANDARD v8.0 Single.1 SCHOOL MEMORY PLUS / ACADEMIC CRM =====
    Adds academic CRM layer:
    - teacher/term/exam date/priority/status
    - course file references
@@ -6094,11 +8287,10 @@ window.addEventListener('DOMContentLoaded',init);
     setTimeout(()=>{ ensureAcademicCRM(); renderAcademicCRM(); }, 1000);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 ACADEMIC ALERTS + CLICKABLE REFERENCES =====
+
+/* ===== THE STANDARD v8.0 Single.1 ACADEMIC ALERTS + CLICKABLE REFERENCES =====
    Adds:
    - Dashboard academic urgency alerts for exams due in <= 3 days.
    - Clickable URL references inside academic file/source list.
@@ -6230,11 +8422,10 @@ window.addEventListener('DOMContentLoaded',init);
     setTimeout(()=>{ renderDashboardAcademicAlerts(); renderAcademicFiles(); }, 1000);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 FINAL LOCAL POLISH =====
+
+/* ===== THE STANDARD v8.0 Single.1 FINAL LOCAL POLISH =====
    Adds:
    - system health panel
    - dashboard critical local status
@@ -6313,9 +8504,9 @@ window.addEventListener('DOMContentLoaded',init);
 
     const ready=document.getElementById('versionReadiness');
     if(ready){
-      ready.innerHTML = `<b>THE STANDARD v7.2.1 Final Local Polish</b><br>
-      Yerel tek dosya mimarisi artık son polish seviyesinde. v7.2 için sıradaki büyük adım: Cloud Sync / Supabase-Firebase / cihazlar arası senkronizasyon. 
-      <br><br><b>v7.2'a geçmeden önce:</b> birkaç gün v7.2'u kullan, yedek al, portföy fiyat güncellemesini ve School CRM'i test et.`;
+      ready.innerHTML = `<b>THE STANDARD v8.0 Single.1 Final Local Polish</b><br>
+      Yerel tek dosya mimarisi artık son polish seviyesinde. v8.0 için sıradaki büyük adım: Cloud Sync / Supabase-Firebase / cihazlar arası senkronizasyon. 
+      <br><br><b>v8.0'a geçmeden önce:</b> birkaç gün v8.0'u kullan, yedek al, portföy fiyat güncellemesini ve School CRM'i test et.`;
     }
   };
 
@@ -6488,11 +8679,10 @@ window.addEventListener('DOMContentLoaded',init);
     setTimeout(renderSystemHealth,1000);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 CLOUD SYNC =====
+
+/* ===== THE STANDARD v8.0 Single.1 CLOUD SYNC =====
    Supabase-backed cloud sync layer.
    Existing local app remains usable offline/local.
 */
@@ -6713,11 +8903,10 @@ window.addEventListener('DOMContentLoaded',init);
     setTimeout(()=>{checkCloudSession().catch(()=>{});}, 1100);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2.1 PWA / APP MODE ===== */
+
+/* ===== THE STANDARD v8.0 Single.1 PWA / APP MODE ===== */
 (function(){
   window.addEventListener('load', function(){
     if('serviceWorker' in navigator){
@@ -6735,12 +8924,10 @@ window.addEventListener('DOMContentLoaded',init);
     document.body.classList.toggle('pwa-standalone', isStandaloneMode());
   });
 })();
-</script>
 
-<div id="systemToast" class="system-toast"></div>
 
-<script>
-/* ===== THE STANDARD v7.2 USAGE QUALITY / AUTOMATION ===== */
+
+/* ===== THE STANDARD v8.0 Single USAGE QUALITY / AUTOMATION ===== */
 (function(){
   const AUTO_KEY='the_standard_automation_settings_v1';
   function autoSettings(){try{return Object.assign({morningTime:'06:30',eveningTime:'22:30',backupDays:7,cloudReminder:'Açık'},JSON.parse(localStorage.getItem(AUTO_KEY)||'{}'))}catch(e){return {morningTime:'06:30',eveningTime:'22:30',backupDays:7,cloudReminder:'Açık'}}}
@@ -6806,11 +8993,10 @@ window.addEventListener('DOMContentLoaded',init);
   const old=window.renderAll;if(typeof old==='function'&&!old.__automationPatched){window.renderAll=function(){old();renderSmartAutomation()};window.renderAll.__automationPatched=true;try{renderAll=window.renderAll}catch(e){}}
   document.addEventListener('DOMContentLoaded',function(){setTimeout(renderSmartAutomation,350);setTimeout(renderSmartAutomation,1200)});
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 AI PROMPT CENTER ===== */
+
+/* ===== THE STANDARD v8.0 Single AI PROMPT CENTER ===== */
 (function(){
   let selectedPromptTemplate = 'daily_command';
 
@@ -7059,11 +9245,10 @@ ${payload}`;
     setTimeout(renderPromptCenter, 1200);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 REPORTS & ANALYTICS PLUS ===== */
+
+/* ===== THE STANDARD v8.0 Single REPORTS & ANALYTICS PLUS ===== */
 (function(){
   function selectedAnalyticsScope(){
     return document.getElementById('analyticsScope')?.value || 'Bugün';
@@ -7325,11 +9510,10 @@ ${nextMove(d)}`;
     setTimeout(renderReports, 1300);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 CONTROL & CUSTOMIZATION ===== */
+
+/* ===== THE STANDARD v8.0 Single CONTROL & CUSTOMIZATION ===== */
 (function(){
   let editingGoalId = null;
 
@@ -7645,11 +9829,10 @@ ${nextMove(d)}`;
     setTimeout(()=>{ ensureControlState(); renderStandardSettings(); renderGoals(); renderCloudAwareness(); renderSnapshots(); renderDashboardPriority(); }, 1400);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 UX STABILITY & MOBILE POLISH ===== */
+
+/* ===== THE STANDARD v8.0 Single UX STABILITY & MOBILE POLISH ===== */
 (function(){
   const UX_KEY = 'the_standard_ux_settings_v1';
 
@@ -7870,11 +10053,10 @@ ${nextMove(d)}`;
     setTimeout(()=>{ applyUXSettings(); renderQuickActions(); renderWeekActivityStrip(); improveEmptyStates(); wrapValidation(); }, 1400);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 REVIEW & PLANNING SYSTEM ===== */
+
+/* ===== THE STANDARD v8.0 Single REVIEW & PLANNING SYSTEM ===== */
 (function(){
   function ensurePlanning(){
     state.weeklyPlans = Array.isArray(state.weeklyPlans) ? state.weeklyPlans : [];
@@ -8126,11 +10308,10 @@ ${a.overall>=75?'Aynı omurgayı koru, okul/body tarafında bir çıta yükselt.
     setTimeout(()=>{ensurePlanning();renderPlanning()},1500);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 DATA INTELLIGENCE & AUTO INSIGHTS ===== */
+
+/* ===== THE STANDARD v8.0 Single DATA INTELLIGENCE & AUTO INSIGHTS ===== */
 (function(){
   function d(date){return new Date(date+'T00:00:00')}
   function addDays(date,n){const x=d(date);x.setDate(x.getDate()+n);return x.toISOString().slice(0,10)}
@@ -8396,11 +10577,10 @@ ${JSON.stringify(data,null,2)}`;
     setTimeout(renderIntelligence,1600);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 EXECUTION MODE / COMMAND SESSIONS ===== */
+
+/* ===== THE STANDARD v8.0 Single EXECUTION MODE / COMMAND SESSIONS ===== */
 (function(){
   let sessionTimer = null;
 
@@ -8765,11 +10945,10 @@ ${JSON.stringify(data,null,2)}`;
     setTimeout(()=>{ensureExecution();renderExecution();}, 1700);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 STABLE RELEASE / FEEDBACK LAB ===== */
+
+/* ===== THE STANDARD v8.0 Single STABLE RELEASE / FEEDBACK LAB ===== */
 (function(){
   const QA_DEFAULTS = [
     ['dashboard','Dashboard açılıyor mu?','Bugünün komutu, içgörü, hızlı aksiyonlar ve focus özeti görünüyor mu?'],
@@ -8866,7 +11045,7 @@ ${JSON.stringify(data,null,2)}`;
     ensureFeedbackState();
     const counts=recordCounts();
     const checked=QA_DEFAULTS.filter(x=>state.qaChecklist[x[0]]).length;
-    return `THE STANDARD v7.2 TEST RAPORU
+    return `THE STANDARD v8.0 Single TEST RAPORU
 
 Sistem:
 - App mode: ${pwaStatus()}
@@ -8902,7 +11081,7 @@ Bu test raporuna göre uygulamadaki hataları, UX sorunlarını ve gereksiz mod�
     if(diag){
       const counts=recordCounts();
       diag.innerHTML=`
-        <div class="diagnostic-card"><b>v7.2</b><span>Sürüm</span></div>
+        <div class="diagnostic-card"><b>v8.0</b><span>Sürüm</span></div>
         <div class="diagnostic-card"><b>${prettyBytes(byteSize())}</b><span>Veri Boyutu</span></div>
         <div class="diagnostic-card"><b>${pwaStatus()}</b><span>PWA</span></div>
         <div class="diagnostic-card"><b>${counts.feedback}</b><span>Feedback</span></div>`;
@@ -8943,7 +11122,7 @@ Bu test raporuna göre uygulamadaki hataları, UX sorunlarını ve gereksiz mod�
 
     const rel=document.getElementById('releaseNotes');
     if(rel){
-      rel.innerHTML=`<b>v7.2 Kullanım Test Sürümü</b><br>
+      rel.innerHTML=`<b>v8.0 Kullanım Test Sürümü</b><br>
       Bu sürümde amaç yeni özellik şişirmek değil; gerçek kullanımda hangi akışlar iyi, hangileri gereksiz, hangileri hatalı bunu görmek.
       <br><br><b>Test etmen gerekenler:</b> Dashboard, hızlı aksiyonlar, portföy, body, okul CRM, Command Session, AI Merkezi, Cloud ve PWA.`;
     }
@@ -8954,7 +11133,7 @@ Bu test raporuna göre uygulamadaki hataları, UX sorunlarını ve gereksiz mod�
     const dash=document.getElementById('dashboardReleaseStatus');
     if(dash){
       const checked=QA_DEFAULTS.filter(x=>state.qaChecklist[x[0]]).length;
-      dash.innerHTML=`<div class="focus-dashboard-card"><b>v7.2 Test Modu</b>Checklist: ${checked}/${QA_DEFAULTS.length} • Feedback: ${(state.feedbackItems||[]).length}. Birkaç gün kullan, şikayetlerini Feedback sekmesine yaz.</div>`;
+      dash.innerHTML=`<div class="focus-dashboard-card"><b>v8.0 Test Modu</b>Checklist: ${checked}/${QA_DEFAULTS.length} • Feedback: ${(state.feedbackItems||[]).length}. Birkaç gün kullan, şikayetlerini Feedback sekmesine yaz.</div>`;
     }
   };
 
@@ -8983,18 +11162,18 @@ Bu test raporuna göre uygulamadaki hataları, UX sorunlarını ve gereksiz mod�
     setTimeout(renderFeedbackLab,1800);
   });
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 UX SIMPLIFICATION & NAVIGATION RESET ===== */
+
+/* ===== THE STANDARD v8.0 Single UX SIMPLIFICATION & NAVIGATION RESET ===== */
 (function(){
   const NAV_KEY='the_standard_nav_ux_v1';
   const NAV_GROUPS=[
     ['ANA',[['dashboard','Dashboard','Bugünün komutu'],['execution','İcraat','Command Session'],['planning','Plan','Haftalık plan'],['intelligence','İçgörü','Otomatik analiz']]],
     ['KİŞİSEL',[['body','Body','Kilo/adım/su/uyku'],['nutrition','Beslenme','Kalori/protein'],['workout','Antrenman','Set/kg/RIR'],['books','Kitap','Okuma notları'],['habits','Alışkanlık','Fix standard']]],
     ['AKADEMİK / PARA',[['school','Okul','School Memory CRM'],['portfolio','Portföy','Varlık/Kar-Zarar'],['goals','Hedefler','Büyük hedefler']]],
-    ['SİSTEM',[['ai','AI Merkezi','Prompt üretici'],['reports','Rapor','Analizler'],['feedback','Feedback','Test/şikayet'],['settings','Ayar','Sistem']]]
+    ['SİSTEM',[['ai','AI Merkezi','Prompt üretici'],['reports','Rapor','Analizler'],['feedback','Feedback','Test/şikayet'],['safety','Güvenlik','Yedek, restore ve veri sağlığı.','<svg fill="none" viewBox="0 0 24 24"><path d="M12 21s7-4.4 7-11V5l-7-3-7 3v5c0 6.6 7 11 7 11Z"/><path d="m9 12 2 2 4-5"/></svg>'],
+      ['settings','Ayar','Sistem']]]
   ];
   function navSettings(){try{return Object.assign({dashboardMode:'Sade',navMode:'Sol Drawer'},JSON.parse(localStorage.getItem(NAV_KEY)||'{}'))}catch(e){return {dashboardMode:'Sade',navMode:'Sol Drawer'}}}
   function setNavSettings(v){localStorage.setItem(NAV_KEY,JSON.stringify(v||{}))}
@@ -9070,11 +11249,10 @@ Bu test raporuna göre uygulamadaki hataları, UX sorunlarını ve gereksiz mod�
   document.addEventListener('keydown',e=>{if(e.key==='Escape')toggleDrawer(false)});
   document.addEventListener('DOMContentLoaded',function(){setTimeout(()=>{applyNavUX();renderDrawer();renderCleanDashboard()},500);setTimeout(()=>{applyNavUX();renderDrawer();renderCleanDashboard()},1700)});
 })();
-</script>
 
 
-<script>
-/* ===== THE STANDARD v7.2 TRUE MOBILE APP SHELL / CLOUD QUIET ===== */
+
+/* ===== THE STANDARD v8.0 Single TRUE MOBILE APP SHELL / CLOUD QUIET ===== */
 (function(){
   const MOBILE_KEY='the_standard_mobile_shell_v1';
 
@@ -9178,6 +11356,1278 @@ Bu test raporuna göre uygulamadaki hataları, UX sorunlarını ve gereksiz mod�
     setTimeout(()=>{applyMobileShell();renderMobileHome();renderBottomNav();updateMobileTopbar()},1800);
   });
 })();
+
+
+
+/* ===== THE STANDARD v8.0 Single APPLE-LIKE MINIMAL UI ===== */
+(function(){
+  const APPLE_UI_KEY='the_standard_apple_like_ui_v1';
+
+  function uiSettings(){
+    try{return Object.assign({mode:'Minimal Premium',density:'Ferah'},JSON.parse(localStorage.getItem(APPLE_UI_KEY)||'{}'))}catch(e){return {mode:'Minimal Premium',density:'Ferah'}}
+  }
+  function setUISettings(v){localStorage.setItem(APPLE_UI_KEY,JSON.stringify(v||{}))}
+
+  window.applyAppleUI=function(){
+    const cfg=uiSettings();
+    document.body.classList.toggle('apple-minimal-ui',cfg.mode==='Minimal Premium');
+    document.body.classList.toggle('apple-compact-cards',cfg.density==='Kompakt');
+
+    if(document.getElementById('appleMinimalMode'))document.getElementById('appleMinimalMode').value=cfg.mode;
+    if(document.getElementById('appleCardDensity'))document.getElementById('appleCardDensity').value=cfg.density;
+
+    // Reduce noisy copy on mobile by shortening some generated labels.
+    if(document.body.classList.contains('apple-minimal-ui')){
+      const brand=document.querySelector('.true-mobile-brand span');
+      if(brand && !brand.dataset.appleShortened){
+        brand.dataset.appleShortened='1';
+      }
+    }
+  };
+
+  window.saveAppleUISettings=function(){
+    const cfg={
+      mode:document.getElementById('appleMinimalMode')?.value||'Minimal Premium',
+      density:document.getElementById('appleCardDensity')?.value||'Ferah'
+    };
+    setUISettings(cfg);
+    applyAppleUI();
+    if(typeof toast==='function')toast('Görsel stil kaydedildi.');
+  };
+
+  // Default to minimal premium.
+  if(!localStorage.getItem(APPLE_UI_KEY)){
+    setUISettings({mode:'Minimal Premium',density:'Ferah'});
+  }
+
+  const oldRenderAll=window.renderAll;
+  if(typeof oldRenderAll==='function'&&!oldRenderAll.__appleUIPatched){
+    window.renderAll=function(){
+      oldRenderAll();
+      try{applyAppleUI()}catch(e){}
+    };
+    window.renderAll.__appleUIPatched=true;
+    try{renderAll=window.renderAll}catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded',function(){
+    setTimeout(applyAppleUI,300);
+    setTimeout(applyAppleUI,1300);
+  });
+})();
+
+
+
+/* ===== THE STANDARD v8.0 Single DAILY USE REFINEMENT ===== */
+(function(){
+  const VIS_KEY='the_standard_module_visibility_v1';
+  const DAILY_KEY='the_standard_daily_refinement_v1';
+  const MODULES=[
+    ['nutrition','Beslenme','Öğün/makro'],
+    ['workout','Antrenman','Spor kaydı'],
+    ['books','Kitap','Okuma'],
+    ['habits','Alışkanlık','Fix görevler'],
+    ['school','Okul','Akademik CRM'],
+    ['portfolio','Portföy','Finans'],
+    ['goals','Hedefler','Büyük hedefler'],
+    ['intelligence','İçgörü','Otomatik analiz'],
+    ['ai','AI Merkezi','Promptlar'],
+    ['reports','Rapor','Analiz'],
+    ['feedback','Feedback','Test notları']
+  ];
+  function vis(){
+    try{return Object.assign({},JSON.parse(localStorage.getItem(VIS_KEY)||'{}'))}catch(e){return {}}
+  }
+  function setVis(v){localStorage.setItem(VIS_KEY,JSON.stringify(v||{}))}
+  function dailyCfg(){
+    try{return Object.assign({simple:true,guide:true},JSON.parse(localStorage.getItem(DAILY_KEY)||'{}'))}catch(e){return {simple:true,guide:true}}
+  }
+  function setDailyCfg(v){localStorage.setItem(DAILY_KEY,JSON.stringify(v||{}))}
+  function todayBody(){
+    return (state.bodyLogs||[]).find(x=>x.date===today())||null;
+  }
+  function todayFocus(){
+    try{return (state.sessions||[]).filter(s=>s.date===today()).reduce((a,s)=>a+(Number(s.actualMinutes)||0),0)}catch(e){return 0}
+  }
+  function todayKey(){
+    return state.keyTasks?.[today()]||null;
+  }
+  function todayPages(){
+    try{return (state.books||[]).filter(x=>x.date===today()).reduce((a,b)=>a+(Number(b.pages)||0),0)}catch(e){return 0}
+  }
+  function todayProtein(){
+    try{return (state.meals||[]).filter(x=>x.date===today()).reduce((a,b)=>a+(Number(b.protein)||0),0)}catch(e){return 0}
+  }
+  function text(id,f='—'){
+    return (document.getElementById(id)?.innerText||document.getElementById(id)?.textContent||f).trim();
+  }
+
+  window.toggleQuickSheet=function(open){
+    document.body.classList.toggle('quick-sheet-open',!!open);
+  };
+  window.quickSheetAction=function(type){
+    toggleQuickSheet(false);
+    if(type==='session'){ show('execution'); return; }
+    if(type==='key'){ show('planning'); setTimeout(()=>document.getElementById('keyTaskText')?.focus(),250); return; }
+    if(typeof quickAction==='function'){ quickAction(type); return; }
+    if(type==='steps'||type==='water'){ show('body'); return; }
+    if(type==='book'){ show('books'); return; }
+    if(type==='protein'){ show('nutrition'); return; }
+  };
+
+  window.renderTodayFlow=function(){
+    const b=todayBody();
+    const kt=todayKey();
+    const focus=todayFocus();
+    const steps=Number(b?.steps)||0;
+    const stepGoal=Number(state.settings?.stepGoal)||7000;
+    const pages=todayPages();
+    const protein=todayProtein();
+    const broken=text('brokenThingMain','Kontrol ediliyor.');
+    const brokenSub=text('brokenThingSub','');
+
+    let command='Bugün önce omurgayı tamamla.';
+    let sub='Body check-in, kilit görev ve bir Command Session.';
+    if(!b){command='Body check-in gir.'; sub='Veri yoksa sistem seni doğru yönetemez.';}
+    else if(steps<stepGoal){command='Adım standardını kurtar.'; sub=`${steps}/${stepGoal} adım. Önce yürüyüş.`;}
+    else if(!kt){command='Bugünün kilit görevini belirle.'; sub='Tek ana hamle yoksa gün dağılır.';}
+    else if(!kt.done){command='Kilit görevi bitir.'; sub=kt.text||'Planı icraata çevir.';}
+    else if(!focus){command='Command Session başlat.'; sub='Bugünü sadece kayıtla değil icraatla kapat.';}
+    else {command='Omurga sağlam. Ek hamle koy.'; sub='Bugün standardı korudun, şimdi çıtayı yükselt.';}
+
+    const set=(id,val)=>{const el=document.getElementById(id); if(el)el.textContent=val};
+    set('todayMainCommand',command);
+    set('todayMainSub',sub);
+    set('todayKeyTaskMini',kt ? ((kt.done?'✓ ':'')+(kt.text||'Kilit görev var')) : 'Plan sekmesinden bugünün tek ana işini yaz.');
+    set('todayBrokenMini',broken+(brokenSub&&brokenSub!=='—'?' — '+brokenSub:''));
+    set('todayFocusMini',focus?`${focus} dk odak kaydı var.`:'Henüz focus yok. İcraat sekmesinden seans başlat.');
+    set('todayBodyMini',b?`${steps} adım • ${pages} sayfa • ${protein}g protein`:'Body check-in eksik.');
+
+    document.getElementById('todayKeyTile')?.classList.toggle('warning',!!kt&&!kt.done);
+    document.getElementById('todayBrokenTile')?.classList.toggle('danger',broken && !broken.includes('yok') && !broken.includes('Kontrol'));
+    document.getElementById('todayFocusTile')?.classList.toggle('warning',!focus);
+    document.getElementById('todayBodyTile')?.classList.toggle('warning',!b || steps<stepGoal);
+  };
+
+  window.renderModuleVisibility=function(){
+    const cfg=vis();
+    const box=document.getElementById('moduleVisibilityGrid');
+    if(box){
+      box.innerHTML=MODULES.map(([id,label,desc])=>{
+        const checked=cfg[id]!==false;
+        return `<label class="module-toggle"><input type="checkbox" data-module="${id}" ${checked?'checked':''}><div><b>${label}</b><span>${desc}</span></div></label>`;
+      }).join('');
+    }
+    applyModuleVisibility();
+  };
+  window.saveModuleVisibility=function(){
+    const next={};
+    document.querySelectorAll('#moduleVisibilityGrid input[data-module]').forEach(inp=>next[inp.dataset.module]=!!inp.checked);
+    setVis(next);
+    applyModuleVisibility();
+    if(typeof renderDrawer==='function') renderDrawer();
+    if(typeof toast==='function') toast('Modül görünürlüğü kaydedildi.');
+  };
+  window.resetModuleVisibility=function(){
+    setVis({});
+    renderModuleVisibility();
+    if(typeof renderDrawer==='function') renderDrawer();
+  };
+  window.applyModuleVisibility=function(){
+    const cfg=vis();
+    MODULES.forEach(([id])=>document.body.classList.toggle('hide-'+id,cfg[id]===false));
+    document.body.classList.add('daily-simple');
+    const guide=document.getElementById('dailyGuideCard');
+    if(guide) guide.style.display=dailyCfg().guide?'block':'none';
+  };
+
+  // Patch drawer rendering after it is created, to add data-go attributes for CSS hiding.
+  const oldRenderDrawer=window.renderDrawer;
+  if(typeof oldRenderDrawer==='function'&&!oldRenderDrawer.__dailyRefinePatched){
+    window.renderDrawer=function(){
+      oldRenderDrawer();
+      document.querySelectorAll('.drawer-nav-btn').forEach(btn=>{
+        const onclick=btn.getAttribute('onclick')||'';
+        const m=onclick.match(/show\('([^']+)'\)/);
+        if(m) btn.setAttribute('data-go',m[1]);
+      });
+      applyModuleVisibility();
+    };
+    window.renderDrawer.__dailyRefinePatched=true;
+    try{renderDrawer=window.renderDrawer}catch(e){}
+  }
+
+  const oldShow=window.show;
+  if(typeof oldShow==='function'&&!oldShow.__dailyRefineShowPatched){
+    window.show=function(id){
+      oldShow(id);
+      setTimeout(()=>{renderTodayFlow();applyModuleVisibility();},40);
+    };
+    window.show.__dailyRefineShowPatched=true;
+    try{show=window.show}catch(e){}
+  }
+
+  const oldRenderAll=window.renderAll;
+  if(typeof oldRenderAll==='function'&&!oldRenderAll.__dailyRefinePatched){
+    window.renderAll=function(){
+      oldRenderAll();
+      try{renderTodayFlow()}catch(e){}
+      try{renderModuleVisibility()}catch(e){}
+      try{applyModuleVisibility()}catch(e){}
+    };
+    window.renderAll.__dailyRefinePatched=true;
+    try{renderAll=window.renderAll}catch(e){}
+  }
+
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') toggleQuickSheet(false);
+  });
+  document.addEventListener('DOMContentLoaded',function(){
+    setTimeout(()=>{renderTodayFlow();renderModuleVisibility();applyModuleVisibility()},700);
+    setTimeout(()=>{renderTodayFlow();renderModuleVisibility();applyModuleVisibility()},1900);
+  });
+})();
+
+
+
+/* ===== THE STANDARD v8.0 Single DATA SAFETY & PRODUCT POLISH ===== */
+(function(){
+  let pendingImportData = null;
+  const CLEANUP_OPTIONS=[
+    ['oldFeedback','Eski feedback kayıtları','Son 30 kayıt dışındakileri temizler.'],
+    ['oldSessions','Eski command session arşivi','Son 100 seans dışındakileri temizler.'],
+    ['oldSnapshots','Eski snapshotlar','Son 5 snapshot dışındakileri tutmaz.'],
+    ['emptyMeals','Boş öğün kayıtları','Kalori/protein/metin olmayan öğünleri siler.'],
+    ['emptyBooks','Boş kitap kayıtları','Sayfa ve not olmayan kayıtları siler.'],
+    ['oldPromptHistory','Eski prompt geçmişi','Son 20 prompt dışındakileri temizler.']
+  ];
+
+  function byteSize(){
+    try{return new Blob([localStorage.getItem(STORE)||'']).size}catch(e){return 0}
+  }
+  function prettyBytes(bytes){
+    if(bytes<1024) return bytes+' B';
+    if(bytes<1024*1024) return (bytes/1024).toLocaleString('tr-TR',{maximumFractionDigits:1})+' KB';
+    return (bytes/1024/1024).toLocaleString('tr-TR',{maximumFractionDigits:2})+' MB';
+  }
+  function daysSinceISO(iso){
+    if(!iso) return null;
+    try{return Math.floor((new Date()-new Date(iso))/(1000*60*60*24))}catch(e){return null}
+  }
+  function backupMeta(){
+    try{return JSON.parse(localStorage.getItem('the_standard_backup_meta')||'{}')}catch(e){return {}}
+  }
+  function cloudMeta(){
+    try{return JSON.parse(localStorage.getItem('the_standard_cloud_meta_v1')||'{}')}catch(e){return {}}
+  }
+  function countsOf(obj){
+    obj=obj||state;
+    return {
+      body:(obj.bodyLogs||[]).length,
+      meals:(obj.meals||[]).length,
+      books:(obj.books||[]).length,
+      workouts:(obj.workouts||[]).length,
+      portfolio:(obj.portfolioTx||[]).length,
+      sessions:(obj.sessions||[]).length,
+      goals:(obj.goals||[]).length,
+      snapshots:(obj.snapshots||[]).length,
+      feedback:(obj.feedbackItems||[]).length,
+      prompts:(obj.promptHistory||[]).length
+    };
+  }
+  function riskLevel(){
+    const bm=backupMeta();
+    const cm=cloudMeta();
+    const backupAge = bm.lastBackupDate ? Math.floor((new Date(today()+'T00:00:00')-new Date(bm.lastBackupDate+'T00:00:00'))/(1000*60*60*24)) : null;
+    const cloudAge = daysSinceISO(cm.lastPushAt||cm.lastPullAt);
+    const bytes=byteSize();
+    let risk=0;
+    if(backupAge===null || backupAge>=7) risk+=2;
+    if(cloudAge===null || cloudAge>=14) risk+=1;
+    if(bytes>1024*1024*4) risk+=1;
+    if((state.snapshots||[]).length===0) risk+=1;
+    if(risk>=3) return {label:'Yüksek',cls:'bad'};
+    if(risk>=1) return {label:'Orta',cls:'warn'};
+    return {label:'İyi',cls:'good'};
+  }
+  function safetyReport(){
+    const bm=backupMeta(), cm=cloudMeta(), counts=countsOf(), risk=riskLevel();
+    return `THE STANDARD v8.0 Single DATA SAFETY RAPORU
+
+Risk: ${risk.label}
+Veri boyutu: ${prettyBytes(byteSize())}
+Son JSON yedek: ${bm.lastBackupDate || 'yok'}
+Son cloud işlem: ${cm.lastPushAt || cm.lastPullAt || 'yok'}
+Snapshot sayısı: ${(state.snapshots||[]).length}
+
+Kayıt Sayıları:
+- Body: ${counts.body}
+- Öğün: ${counts.meals}
+- Kitap: ${counts.books}
+- Antrenman: ${counts.workouts}
+- Portföy işlem: ${counts.portfolio}
+- Command Session: ${counts.sessions}
+- Hedef: ${counts.goals}
+- Feedback: ${counts.feedback}
+- Prompt geçmişi: ${counts.prompts}
+
+Öneri:
+${risk.label==='Yüksek'?'Hemen Güvenli Yedek Al. Snapshot + JSON export + mümkünse cloud push yap.':risk.label==='Orta'?'Bugün JSON export al ve cloud durumunu kontrol et.':'Veri sağlığı iyi. Haftalık yedek ritmini koru.'}`;
+  }
+  function safeSnapshot(reason){
+    if(typeof createSnapshot==='function'){
+      createSnapshot(reason||'v8.0 safety snapshot');
+    }else{
+      state.snapshots = Array.isArray(state.snapshots)?state.snapshots:[];
+      const snap={id:id(),date:new Date().toISOString(),reason:reason||'v8.0 safety snapshot',data:JSON.parse(JSON.stringify(state))};
+      snap.data.snapshots=[];
+      state.snapshots.unshift(snap);
+      state.snapshots=state.snapshots.slice(0,5);
+      save();
+    }
+  }
+  window.safeBackup=function(){
+    safeSnapshot('Güvenli yedek öncesi snapshot');
+    try{
+      localStorage.setItem('the_standard_backup_meta',JSON.stringify({lastBackupDate:today(),lastBackupAt:new Date().toISOString(),version:'7.5'}));
+    }catch(e){}
+    if(typeof exportData==='function') exportData();
+    else{
+      const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
+      const a=document.createElement('a');
+      a.href=URL.createObjectURL(blob);
+      a.download=`the-standard-safe-backup-${today()}.json`;
+      a.click();
+      setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+    }
+    if(typeof pushToCloud==='function'){
+      const cm=cloudMeta();
+      const cfgRaw=localStorage.getItem('the_standard_cloud_config_v1');
+      if(cfgRaw && cfgRaw.includes('supabase')) setTimeout(()=>pushToCloud(),800);
+    }
+    renderSafety();
+    if(typeof toast==='function') toast('Güvenli yedek başlatıldı.');
+  };
+  window.inspectSafeImport=function(ev){
+    const file=ev.target.files?.[0];
+    if(!file) return;
+    const reader=new FileReader();
+    reader.onload=()=>{
+      try{
+        const data=JSON.parse(reader.result);
+        const imported = data.data && typeof data.data==='object' ? data.data : data;
+        pendingImportData=imported;
+        const c=countsOf(imported);
+        const valid = imported && typeof imported==='object' && (Array.isArray(imported.bodyLogs)||Array.isArray(imported.meals)||Array.isArray(imported.books)||Array.isArray(imported.portfolioTx)||imported.settings);
+        const box=document.getElementById('safeImportPreview');
+        if(box){
+          box.innerHTML=`<div class="safety-item"><b>${valid?'Dosya uygun görünüyor':'Dosya şüpheli'}</b>
+          <div class="small">Body ${c.body} • Öğün ${c.meals} • Kitap ${c.books} • Portföy ${c.portfolio} • Session ${c.sessions}</div>
+          <span class="safety-pill ${valid?'good':'bad'}">${valid?'Import edilebilir':'Dikkat'}</span></div>
+          ${valid?'<button class="btn danger" onclick="confirmSafeImport()">Snapshot al ve geri yükle</button>':''}`;
+        }
+      }catch(e){
+        pendingImportData=null;
+        const box=document.getElementById('safeImportPreview');
+        if(box) box.innerHTML=`<div class="safety-item"><b>JSON okunamadı</b><div class="small">${esc(e.message)}</div><span class="safety-pill bad">Hata</span></div>`;
+      }
+    };
+    reader.readAsText(file);
+  };
+  window.confirmSafeImport=function(){
+    if(!pendingImportData) return alert('İçe aktarılacak veri yok.');
+    if(!confirm('Mevcut veri değişecek. Önce snapshot alınacak. Devam edilsin mi?')) return;
+    safeSnapshot('Import öncesi otomatik snapshot');
+    state=pendingImportData;
+    state.snapshots=Array.isArray(state.snapshots)?state.snapshots:[];
+    save();
+    renderAll();
+    if(typeof toast==='function') toast('Veri güvenli şekilde geri yüklendi.');
+  };
+  window.renderCleanupOptions=function(){
+    const box=document.getElementById('cleanupOptions');
+    if(!box) return;
+    box.innerHTML=CLEANUP_OPTIONS.map(([id,title,desc])=>`<label class="cleanup-option"><input type="checkbox" data-clean="${id}"><div><b>${title}</b><span>${desc}</span></div></label>`).join('');
+  };
+  function selectedCleanup(){
+    return [...document.querySelectorAll('#cleanupOptions input[data-clean]:checked')].map(x=>x.dataset.clean);
+  }
+  function cleanupEstimate(){
+    const ops=selectedCleanup();
+    const out=[];
+    if(ops.includes('oldFeedback')) out.push(['Eski feedback',Math.max(0,(state.feedbackItems||[]).length-30)]);
+    if(ops.includes('oldSessions')) out.push(['Eski session',Math.max(0,(state.sessions||[]).length-100)]);
+    if(ops.includes('oldSnapshots')) out.push(['Eski snapshot',Math.max(0,(state.snapshots||[]).length-5)]);
+    if(ops.includes('emptyMeals')) out.push(['Boş öğün',(state.meals||[]).filter(m=>!(Number(m.cal)||Number(m.protein)||Number(m.carbs)||Number(m.fat)||String(m.text||'').trim())).length]);
+    if(ops.includes('emptyBooks')) out.push(['Boş kitap',(state.books||[]).filter(b=>!(Number(b.pages)||String(b.note||b.learn||b.apply||b.change||'').trim())).length]);
+    if(ops.includes('oldPromptHistory')) out.push(['Eski prompt',Math.max(0,(state.promptHistory||[]).length-20)]);
+    return out;
+  }
+  window.previewCleanup=function(){
+    const box=document.getElementById('cleanupPreview');
+    const est=cleanupEstimate();
+    if(!box) return;
+    box.innerHTML=est.length?est.map(([k,v])=>`<div class="safety-item"><b>${esc(k)}</b><div class="small">${v} kayıt temizlenebilir.</div><span class="safety-pill ${v?'warn':'good'}">${v? 'Temizlenebilir':'Zaten temiz'}</span></div>`).join(''):'<div class="safety-item"><b>Seçim yok</b><div class="small">Temizlenecek alan seç.</div></div>';
+  };
+  window.runCleanup=function(){
+    const ops=selectedCleanup();
+    if(!ops.length) return alert('Temizlik seçeneği seç.');
+    if(!confirm('Temizlikten önce otomatik snapshot alınacak. Devam edilsin mi?')) return;
+    safeSnapshot('Veri temizliği öncesi snapshot');
+    if(ops.includes('oldFeedback')) state.feedbackItems=(state.feedbackItems||[]).slice(0,30);
+    if(ops.includes('oldSessions')) state.sessions=(state.sessions||[]).slice(0,100);
+    if(ops.includes('oldSnapshots')) state.snapshots=(state.snapshots||[]).slice(0,5);
+    if(ops.includes('emptyMeals')) state.meals=(state.meals||[]).filter(m=>Number(m.cal)||Number(m.protein)||Number(m.carbs)||Number(m.fat)||String(m.text||'').trim());
+    if(ops.includes('emptyBooks')) state.books=(state.books||[]).filter(b=>Number(b.pages)||String(b.note||b.learn||b.apply||b.change||'').trim());
+    if(ops.includes('oldPromptHistory')) state.promptHistory=(state.promptHistory||[]).slice(-20);
+    save();
+    renderAll();
+    if(typeof toast==='function') toast('Veri temizliği tamamlandı.');
+  };
+  window.renderSafety=function(){
+    const risk=riskLevel(), bm=backupMeta(), cm=cloudMeta(), counts=countsOf(), bytes=byteSize();
+    const grid=document.getElementById('dataHealthGrid');
+    if(grid){
+      grid.innerHTML=`<div class="safety-card ${risk.cls}"><b>${risk.label}</b><span>Risk</span></div>
+      <div class="safety-card"><b>${prettyBytes(bytes)}</b><span>Veri Boyutu</span></div>
+      <div class="safety-card ${bm.lastBackupDate?'good':'bad'}"><b>${bm.lastBackupDate||'Yok'}</b><span>Son Yedek</span></div>
+      <div class="safety-card ${(state.snapshots||[]).length?'good':'warn'}"><b>${(state.snapshots||[]).length}</b><span>Snapshot</span></div>`;
+    }
+    const st=document.getElementById('safeBackupStatus');
+    if(st){
+      st.innerHTML=`<b>${risk.label==='İyi'?'Veri sağlığı iyi':'Yedek dikkati gerekli'}</b>
+      Son JSON yedek: ${bm.lastBackupDate||'yok'}<br>
+      Son cloud işlem: ${cm.lastPushAt||cm.lastPullAt||'yok'}<br>
+      Toplam kayıt yoğunluğu: ${Object.values(counts).reduce((a,b)=>a+b,0)}`;
+    }
+    const product=document.getElementById('productStatus');
+    if(product){
+      const pwa=(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true)?'Aktif':'Tarayıcı';
+      product.innerHTML=`<div class="system-product-card"><b>THE STANDARD</b>Version 7.5<br>PWA: ${pwa}<br>Cloud: ${(cm.lastPushAt||cm.lastPullAt)?'Kullanıldı':'Kapalı/Yok'}</div>
+      <div class="system-product-card"><b>Data Health</b>Risk: ${risk.label}<br>Boyut: ${prettyBytes(bytes)}<br>Snapshot: ${(state.snapshots||[]).length}</div>`;
+    }
+    renderCleanupOptions();
+    const out=document.getElementById('feedbackReportOutput');
+    // Don't overwrite feedback report screen output intentionally.
+  };
+  window.copyProductReport=function(){
+    navigator.clipboard.writeText(safetyReport()).then(()=>{if(typeof toast==='function')toast('Ürün raporu kopyalandı.')});
+  };
+  window.downloadSafetyJSON=function(){
+    const data={version:'7.5',date:today(),risk:riskLevel(),bytes:byteSize(),counts:countsOf(),backup:backupMeta(),cloud:cloudMeta()};
+    const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download=`the-standard-safety-${today()}.json`;
+    a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  };
+  const oldRenderAll=window.renderAll;
+  if(typeof oldRenderAll==='function'&&!oldRenderAll.__safetyPolishPatched){
+    window.renderAll=function(){
+      oldRenderAll();
+      try{renderSafety()}catch(e){}
+    };
+    window.renderAll.__safetyPolishPatched=true;
+    try{renderAll=window.renderAll}catch(e){}
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    setTimeout(renderSafety,800);
+    setTimeout(renderSafety,2000);
+  });
+})();
+
+
+
+/* ===== THE STANDARD v8.0 Single INFORMATION ARCHITECTURE RESET ===== */
+(function(){
+  const IA_KEY='the_standard_ia_v1';
+  const IA_LABELS={today:'Bugün',execute:'İcraat',growth:'Gelişim',work:'Para & Okul',system:'Sistem'};
+  function iaSettings(){
+    try{return Object.assign({mode:'5 Bölüm',todayMode:'Bugün Odaklı',active:'today'},JSON.parse(localStorage.getItem(IA_KEY)||'{}'))}catch(e){return {mode:'5 Bölüm',todayMode:'Bugün Odaklı',active:'today'}}
+  }
+  function setIA(v){localStorage.setItem(IA_KEY,JSON.stringify(v||{}))}
+  window.saveIASettings=function(){
+    const cfg=iaSettings();
+    cfg.mode=document.getElementById('iaModeSetting')?.value||'5 Bölüm';
+    cfg.todayMode=document.getElementById('iaTodayModeSetting')?.value||'Bugün Odaklı';
+    setIA(cfg);
+    applyIA();
+    if(typeof toast==='function')toast('Navigasyon mimarisi kaydedildi.');
+  };
+  function activeIA(){return iaSettings().active||'today'}
+  window.showIA=function(id){
+    const cfg=iaSettings(); cfg.active=id; setIA(cfg);
+    if(id==='today') show('dashboard');
+    else if(id==='execute') show('ia_execute');
+    else if(id==='growth') show('ia_growth');
+    else if(id==='work') show('ia_work');
+    else if(id==='system') show('ia_system');
+    renderIA();
+  };
+  function setText(id,val){const el=document.getElementById(id);if(el)el.textContent=val}
+  function text(id,f='—'){return (document.getElementById(id)?.innerText||document.getElementById(id)?.textContent||f).trim()}
+  function todayBody(){return (state.bodyLogs||[]).find(x=>x.date===today())||null}
+  function todayFocus(){try{return (state.sessions||[]).filter(s=>s.date===today()).reduce((a,s)=>a+(Number(s.actualMinutes)||0),0)}catch(e){return 0}}
+  function todayKey(){return state.keyTasks?.[today()]||null}
+  function todayPages(){try{return (state.books||[]).filter(x=>x.date===today()).reduce((a,b)=>a+(Number(b.pages)||0),0)}catch(e){return 0}}
+  function todayProtein(){try{return (state.meals||[]).filter(x=>x.date===today()).reduce((a,b)=>a+(Number(b.protein)||0),0)}catch(e){return 0}}
+  window.renderIA=function(){
+    const cfg=iaSettings();
+    document.body.classList.toggle('ia-mode',cfg.mode==='5 Bölüm');
+    document.body.classList.toggle('daily-simple',cfg.todayMode==='Bugün Odaklı');
+
+    if(document.getElementById('iaModeSetting'))document.getElementById('iaModeSetting').value=cfg.mode;
+    if(document.getElementById('iaTodayModeSetting'))document.getElementById('iaTodayModeSetting').value=cfg.todayMode;
+
+    document.querySelectorAll('#iaBottomNav button').forEach(btn=>btn.classList.toggle('active',btn.dataset.ia===activeIA()));
+    const top=document.getElementById('mobileScreenTitle');
+    if(top && cfg.mode==='5 Bölüm') top.textContent=IA_LABELS[activeIA()]||'THE STANDARD';
+
+    const b=todayBody(), kt=todayKey(), focus=todayFocus(), steps=Number(b?.steps)||0;
+    const stepGoal=Number(state.settings?.stepGoal)||7000;
+    const pages=todayPages(), protein=todayProtein();
+    const broken=text('brokenThingMain','Kontrol ediliyor.');
+    const brokenSub=text('brokenThingSub','');
+
+    let cmd='Bugün önce omurgayı tamamla.';
+    let sub='Kilit görev, body check-in ve bir Command Session.';
+    if(!b){cmd='Body check-in gir.'; sub='Veri yoksa sistem seni doğru yönetemez.';}
+    else if(steps<stepGoal){cmd='Adım standardını kurtar.'; sub=`${steps}/${stepGoal} adım. Önce yürüyüş.`;}
+    else if(!kt){cmd='Kilit görevi belirle.'; sub='Bugünün tek ana hamlesi yok.';}
+    else if(!kt.done){cmd='Kilit görevi bitir.'; sub=kt.text||'Planı icraata çevir.';}
+    else if(!focus){cmd='Command Session başlat.'; sub='Bugünü icraatla kapat.';}
+    else{cmd='Omurga sağlam. Ek hamle koy.'; sub='Bugün standardı korudun.';}
+
+    setText('iaTodayCommand',cmd);
+    setText('iaTodaySub',sub);
+    setText('iaTodayKey',kt?((kt.done?'✓ ':'')+(kt.text||'Kilit görev var')):'Henüz kilit görev yok.');
+    setText('iaTodayBody',b?`${steps} adım • ${pages} sayfa • ${protein}g protein`:'Body check-in eksik.');
+    setText('iaTodayExecution',focus?`${focus} dk focus kaydı var.`:'Henüz focus yok.');
+    setText('iaTodayBroken',broken+(brokenSub&&brokenSub!=='—'?' — '+brokenSub:''));
+
+    renderIADrawer();
+  };
+  window.applyIA=window.renderIA;
+
+  window.renderIADrawer=function(){
+    const box=document.getElementById('drawerNav');
+    if(!box || iaSettings().mode!=='5 Bölüm') return;
+    const active=activeIA();
+    const main=[
+      ['today','Bugün','Günlük komut','M3 11 12 3l9 8 M5 10v10h14V10'],
+      ['execute','İcraat','Focus ve plan','M13 2 3 14h8l-1 8 11-14h-8l0-6Z'],
+      ['growth','Gelişim','Body ve alışkanlık','M12 2v20 M7 7h10 M9 14h6'],
+      ['work','Para & Okul','Ciddi işler','M3 3v18h18 m-14-6 4-4 3 3 5-7'],
+      ['system','Sistem','AI, güvenlik, ayar','M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z M4 12h2 M18 12h2']
+    ];
+    const svg=(p)=>`<svg fill="none" viewBox="0 0 24 24">${p.split(' M').map((x,i)=>`<path d="${i?'M':''}${x}"/>`).join('')}</svg>`;
+    box.innerHTML='<div class="ia-drawer-section">ANA BÖLÜMLER</div>'+main.map(([id,l,d,p])=>`<button class="ia-drawer-btn ${active===id?'active':''}" onclick="showIA('${id}');toggleDrawer(false)">${svg(p)}<span>${l}<small>${d}</small></span></button>`).join('')+
+      '<div class="ia-drawer-section">KISA YOLLAR</div>'+
+      [['body','Body'],['portfolio','Portföy'],['school','Okul'],['safety','Güvenlik'],['settings','Ayarlar']].map(([id,l])=>`<button class="ia-drawer-btn" onclick="show('${id}');toggleDrawer(false)"><span>${l}<small>Direkt aç</small></span></button>`).join('');
+  };
+
+  const oldShow=window.show;
+  if(typeof oldShow==='function'&&!oldShow.__iaPatched){
+    window.show=function(id){
+      oldShow(id);
+      setTimeout(()=>{renderIA();},40);
+    };
+    window.show.__iaPatched=true;
+    try{show=window.show}catch(e){}
+  }
+  const oldRenderAll=window.renderAll;
+  if(typeof oldRenderAll==='function'&&!oldRenderAll.__iaRenderPatched){
+    window.renderAll=function(){
+      oldRenderAll();
+      try{renderIA()}catch(e){}
+    };
+    window.renderAll.__iaRenderPatched=true;
+    try{renderAll=window.renderAll}catch(e){}
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    if(!localStorage.getItem(IA_KEY)) setIA({mode:'5 Bölüm',todayMode:'Bugün Odaklı',active:'today'});
+    setTimeout(renderIA,700);
+    setTimeout(renderIA,2000);
+  });
+})();
+
+
+
+/* ===== THE STANDARD v8.0 Single FINAL UX CLEANUP ===== */
+(function(){
+  const FINAL_KEY='the_standard_final_ux_v1';
+  function finalSettings(){
+    try{return Object.assign({mode:'Final Sade',advanced:'Gizli'},JSON.parse(localStorage.getItem(FINAL_KEY)||'{}'))}catch(e){return {mode:'Final Sade',advanced:'Gizli'}}
+  }
+  function setFinal(v){localStorage.setItem(FINAL_KEY,JSON.stringify(v||{}))}
+  function todayBody(){return (state.bodyLogs||[]).find(x=>x.date===today())||null}
+  function todayKey(){return state.keyTasks?.[today()]||null}
+  function todayFocus(){try{return (state.sessions||[]).filter(s=>s.date===today()).reduce((a,s)=>a+(Number(s.actualMinutes)||0),0)}catch(e){return 0}}
+  function todayPages(){try{return (state.books||[]).filter(x=>x.date===today()).reduce((a,b)=>a+(Number(b.pages)||0),0)}catch(e){return 0}}
+  function todayProtein(){try{return (state.meals||[]).filter(x=>x.date===today()).reduce((a,b)=>a+(Number(b.protein)||0),0)}catch(e){return 0}}
+  function text(id,f='—'){return (document.getElementById(id)?.innerText||document.getElementById(id)?.textContent||f).trim()}
+  function set(id,val){const el=document.getElementById(id);if(el)el.textContent=val}
+
+  window.saveFinalUXSettings=function(){
+    const cfg={
+      mode:document.getElementById('finalUXMode')?.value||'Final Sade',
+      advanced:document.getElementById('finalAdvancedMode')?.value||'Gizli'
+    };
+    setFinal(cfg);
+    applyFinalUX();
+    if(typeof toast==='function')toast('Final UX ayarları kaydedildi.');
+  };
+  window.applyFinalUX=function(){
+    const cfg=finalSettings();
+    document.body.classList.toggle('final-ux',cfg.mode==='Final Sade');
+    document.body.classList.toggle('hide-advanced-system',cfg.advanced==='Gizli');
+    if(document.getElementById('finalUXMode'))document.getElementById('finalUXMode').value=cfg.mode;
+    if(document.getElementById('finalAdvancedMode'))document.getElementById('finalAdvancedMode').value=cfg.advanced;
+    renderFinalToday();
+  };
+  window.renderFinalToday=function(){
+    const b=todayBody(), kt=todayKey(), focus=todayFocus();
+    const steps=Number(b?.steps)||0, stepGoal=Number(state.settings?.stepGoal)||7000;
+    const pages=todayPages(), protein=todayProtein();
+    const broken=text('brokenThingMain','Kontrol ediliyor.');
+    const brokenSub=text('brokenThingSub','');
+
+    let cmd='Bugün standardı tamamla.';
+    let sub='Kilit görev, body check-in ve tek bir icraat seansı.';
+    if(!b){cmd='Body check-in gir.'; sub='Günün verisi yoksa sistem kör kalır.'}
+    else if(steps<stepGoal){cmd='Adım açığını kapat.'; sub=`${steps}/${stepGoal} adım. İlk hamle yürüyüş.`}
+    else if(!kt){cmd='Kilit görevi belirle.'; sub='Bugünün tek ana hamlesi yazılmadı.'}
+    else if(!kt.done){cmd='Kilit görevi bitir.'; sub=kt.text||'Planı icraata çevir.'}
+    else if(!focus){cmd='Command Session başlat.'; sub='Bugünü sadece kayıtla değil odakla kapat.'}
+    else{cmd='Omurga sağlam. Ek hamle koy.'; sub='Bugün standardı koruyorsun.'}
+
+    set('finalCommand',cmd);
+    set('finalCommandSub',sub);
+    set('finalKey',kt?((kt.done?'✓ ':'')+(kt.text||'Kilit görev var')):'Plan sekmesinden bugünün tek işini yaz.');
+    set('finalBody',b?`${steps} adım • ${pages} sayfa • ${protein}g protein`:'Body check-in eksik.');
+    set('finalFocus',focus?`${focus} dk focus var.`:'Henüz focus yok.');
+    set('finalBroken',broken+(brokenSub&&brokenSub!=='—'?' — '+brokenSub:''));
+
+    const toggle=(id,cls,on)=>document.getElementById(id)?.classList.toggle(cls,!!on);
+    toggle('finalKeyCard','warning',!!kt&&!kt.done);
+    toggle('finalBodyCard','warning',!b||steps<stepGoal);
+    toggle('finalFocusCard','warning',!focus);
+    toggle('finalBrokenCard','bad',broken && !broken.includes('yok') && !broken.includes('Kontrol'));
+  };
+
+  // Simplify IA drawer labels and keep only 5 main sections visually.
+  const oldRenderIADrawer=window.renderIADrawer;
+  if(typeof oldRenderIADrawer==='function'&&!oldRenderIADrawer.__finalCleanPatched){
+    window.renderIADrawer=function(){
+      oldRenderIADrawer();
+      document.querySelectorAll('.ia-drawer-btn').forEach(btn=>{
+        const txt=(btn.innerText||'').trim();
+        if(txt.includes('Direkt aç')) btn.classList.add('system-advanced-card');
+      });
+    };
+    window.renderIADrawer.__finalCleanPatched=true;
+    try{renderIADrawer=window.renderIADrawer}catch(e){}
+  }
+
+  const oldRenderAll=window.renderAll;
+  if(typeof oldRenderAll==='function'&&!oldRenderAll.__finalUXPatched){
+    window.renderAll=function(){
+      oldRenderAll();
+      try{applyFinalUX()}catch(e){}
+      try{renderFinalToday()}catch(e){}
+    };
+    window.renderAll.__finalUXPatched=true;
+    try{renderAll=window.renderAll}catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded',function(){
+    if(!localStorage.getItem(FINAL_KEY)) setFinal({mode:'Final Sade',advanced:'Gizli'});
+    setTimeout(()=>{applyFinalUX();renderFinalToday()},800);
+    setTimeout(()=>{applyFinalUX();renderFinalToday()},2100);
+  });
+})();
+
+
+
+/* ===== THE STANDARD v8.0 Single ONBOARDING & PERSONAL SETUP ===== */
+(function(){
+  const SETUP_KEY='the_standard_personal_setup_v1';
+  let setupStep=0;
+  let setupPriority='Body';
+  let setupModules={body:true,execution:true,planning:true,portfolio:true,school:true,advanced:false};
+
+  function getSetup(){
+    try{return Object.assign({
+      completed:false,
+      name:'Emircan',
+      motto:'Standardı düşürme.',
+      mainGoal:'',
+      priority:'Body',
+      modules:{body:true,execution:true,planning:true,portfolio:true,school:true,advanced:false}
+    },JSON.parse(localStorage.getItem(SETUP_KEY)||'{}'))}catch(e){
+      return {completed:false,name:'Emircan',motto:'Standardı düşürme.',mainGoal:'',priority:'Body',modules:{body:true,execution:true,planning:true,portfolio:true,school:true,advanced:false}}
+    }
+  }
+  function setSetup(v){localStorage.setItem(SETUP_KEY,JSON.stringify(v||{}))}
+  function settingsObj(){
+    state.settings=state.settings&&typeof state.settings==='object'?state.settings:{};
+    return state.settings;
+  }
+  function fillSetupDefaults(){
+    const setup=getSetup(), st=settingsObj();
+    const set=(id,val)=>{const el=document.getElementById(id);if(el && !el.value)el.value=val ?? ''};
+    set('setupName',setup.name||'Emircan');
+    set('setupMotto',setup.motto||'Standardı düşürme.');
+    set('setupMainGoal',setup.mainGoal||'');
+    set('setupStepGoal',st.stepGoal||7000);
+    set('setupBookGoal',st.bookGoal||20);
+    set('setupProteinGoal',st.proteinGoal||160);
+    set('setupCalGoal',st.calGoal||2200);
+    set('setupStartWeight',st.startWeight||113);
+    set('setupTargetWeight',st.targetWeight||100);
+    setupPriority=setup.priority||'Body';
+    setupModules=Object.assign({},setupModules,setup.modules||{});
+    renderSetupChoices();
+  }
+  window.openOnboarding=function(force){
+    fillSetupDefaults();
+    setupStep=0;
+    renderOnboarding();
+    document.body.classList.add('onboarding-open');
+  };
+  window.skipOnboarding=function(){
+    const setup=getSetup();
+    setup.completed=true;
+    setSetup(setup);
+    document.body.classList.remove('onboarding-open');
+    renderPersonalSetup();
+  };
+  window.prevOnboardingStep=function(){
+    setupStep=Math.max(0,setupStep-1);
+    renderOnboarding();
+  };
+  window.nextOnboardingStep=function(){
+    if(setupStep<5){
+      setupStep++;
+      renderOnboarding();
+      return;
+    }
+    finishOnboarding();
+  };
+  function renderOnboarding(){
+    document.querySelectorAll('.onboarding-step').forEach(el=>el.classList.toggle('active',Number(el.dataset.step)===setupStep));
+    const p=document.getElementById('onboardingProgress');
+    if(p)p.style.width=((setupStep+1)/6*100)+'%';
+    const btn=document.getElementById('onboardingNextBtn');
+    if(btn)btn.textContent=setupStep===5?'Kurulumu Bitir':'Devam';
+    renderSetupChoices();
+    renderSetupSummary();
+  }
+  window.selectSetupPriority=function(p){
+    setupPriority=p;
+    renderSetupChoices();
+  };
+  window.toggleSetupModule=function(m){
+    setupModules[m]=!setupModules[m];
+    renderSetupChoices();
+  };
+  function renderSetupChoices(){
+    document.querySelectorAll('#setupPriorityChoices .onboarding-choice').forEach(btn=>{
+      btn.classList.toggle('active',btn.dataset.priority===setupPriority);
+    });
+    document.querySelectorAll('#setupModuleChoices .onboarding-choice').forEach(btn=>{
+      btn.classList.toggle('active',!!setupModules[btn.dataset.module]);
+    });
+  }
+  function renderSetupSummary(){
+    const box=document.getElementById('setupSummary');
+    if(!box)return;
+    const name=document.getElementById('setupName')?.value||'Emircan';
+    const step=document.getElementById('setupStepGoal')?.value||'7000';
+    const kg=document.getElementById('setupTargetWeight')?.value||'100';
+    const main=document.getElementById('setupMainGoal')?.value||'Ana hedef girilmedi';
+    box.innerHTML=`<div class="setup-summary-item"><b>${esc(name)}</b><span>Profil</span></div>
+    <div class="setup-summary-item"><b>${esc(setupPriority)}</b><span>Öncelik</span></div>
+    <div class="setup-summary-item"><b>${esc(step)}</b><span>Adım hedefi</span></div>
+    <div class="setup-summary-item"><b>${esc(kg)} kg</b><span>Hedef kilo</span></div>
+    <div class="setup-summary-item full"><b>${esc(main)}</b><span>Ana hedef</span></div>`;
+  }
+  function finishOnboarding(){
+    const st=settingsObj();
+    st.stepGoal=Number(document.getElementById('setupStepGoal')?.value)||7000;
+    st.bookGoal=Number(document.getElementById('setupBookGoal')?.value)||20;
+    st.proteinGoal=Number(document.getElementById('setupProteinGoal')?.value)||160;
+    st.calGoal=Number(document.getElementById('setupCalGoal')?.value)||2200;
+    st.startWeight=Number(document.getElementById('setupStartWeight')?.value)||113;
+    st.targetWeight=Number(document.getElementById('setupTargetWeight')?.value)||100;
+    st.dashboardPriority=setupPriority;
+
+    const setup={
+      completed:true,
+      name:document.getElementById('setupName')?.value.trim()||'Emircan',
+      motto:document.getElementById('setupMotto')?.value.trim()||'Standardı düşürme.',
+      mainGoal:document.getElementById('setupMainGoal')?.value.trim()||'',
+      priority:setupPriority,
+      modules:setupModules,
+      updatedAt:new Date().toISOString()
+    };
+    setSetup(setup);
+    applySetupVisibility(setup);
+    save();
+    document.body.classList.remove('onboarding-open');
+    renderAll();
+    if(typeof toast==='function')toast('Kişisel kurulum tamamlandı.');
+  }
+  function applySetupVisibility(setup){
+    setup=setup||getSetup();
+    // Use existing module visibility if available.
+    try{
+      const vis=JSON.parse(localStorage.getItem('the_standard_module_visibility_v1')||'{}');
+      if(!setup.modules.advanced){
+        vis.ai=false; vis.reports=false; vis.feedback=false; vis.intelligence=false;
+      }
+      if(!setup.modules.portfolio) vis.portfolio=false;
+      if(!setup.modules.school) vis.school=false;
+      localStorage.setItem('the_standard_module_visibility_v1',JSON.stringify(vis));
+    }catch(e){}
+  }
+  window.renderPersonalSetup=function(){
+    const setup=getSetup(), st=settingsObj();
+    const setVal=(id,val)=>{const el=document.getElementById(id);if(el)el.value=val??''};
+    setVal('profileNameInput',setup.name||'');
+    setVal('profileMottoInput',setup.motto||'');
+    setVal('profileMainGoalInput',setup.mainGoal||'');
+    setVal('profileStepGoalInput',st.stepGoal||7000);
+    setVal('profileBookGoalInput',st.bookGoal||20);
+    setVal('profileProteinGoalInput',st.proteinGoal||160);
+    setVal('profileTargetWeightInput',st.targetWeight||100);
+    setVal('profilePriorityInput',setup.priority||st.dashboardPriority||'Body');
+
+    const name=document.getElementById('profileIdentityName');
+    const sub=document.getElementById('profileIdentitySub');
+    if(name)name.textContent=(setup.name||'THE STANDARD')+' Standardı';
+    if(sub)sub.textContent=(setup.motto||'Standardı düşürme.')+(setup.mainGoal?' • '+setup.mainGoal:'');
+
+    // Personalize today hero lightly
+    const cmd=document.getElementById('finalCommand');
+    if(cmd && setup.name && !cmd.dataset.personalized){
+      cmd.dataset.personalized='1';
+    }
+  };
+  window.savePersonalSetup=function(){
+    const st=settingsObj();
+    st.stepGoal=Number(document.getElementById('profileStepGoalInput')?.value)||7000;
+    st.bookGoal=Number(document.getElementById('profileBookGoalInput')?.value)||20;
+    st.proteinGoal=Number(document.getElementById('profileProteinGoalInput')?.value)||160;
+    st.targetWeight=Number(document.getElementById('profileTargetWeightInput')?.value)||100;
+    st.dashboardPriority=document.getElementById('profilePriorityInput')?.value||'Body';
+    const setup=getSetup();
+    setup.completed=true;
+    setup.name=document.getElementById('profileNameInput')?.value.trim()||'Emircan';
+    setup.motto=document.getElementById('profileMottoInput')?.value.trim()||'Standardı düşürme.';
+    setup.mainGoal=document.getElementById('profileMainGoalInput')?.value.trim()||'';
+    setup.priority=document.getElementById('profilePriorityInput')?.value||'Body';
+    setup.updatedAt=new Date().toISOString();
+    setSetup(setup);
+    save();
+    renderAll();
+    if(typeof toast==='function')toast('Kişisel kurulum kaydedildi.');
+  };
+
+  // Patch IA drawer system section to include Setup shortcut.
+  const oldRenderIADrawer=window.renderIADrawer;
+  if(typeof oldRenderIADrawer==='function'&&!oldRenderIADrawer.__setupPatched){
+    window.renderIADrawer=function(){
+      oldRenderIADrawer();
+      const box=document.getElementById('drawerNav');
+      if(box && !box.innerHTML.includes("show('setup')")){
+        box.innerHTML += `<div class="ia-drawer-section">KURULUM</div><button class="ia-drawer-btn" onclick="show('setup');toggleDrawer(false)"><span>Kişisel Kurulum<small>Profil ve standartlar</small></span></button>`;
+      }
+    };
+    window.renderIADrawer.__setupPatched=true;
+    try{renderIADrawer=window.renderIADrawer}catch(e){}
+  }
+
+  // Improve System hub if present with setup card
+  function injectSetupCard(){
+    const sys=document.querySelector('#ia_system .ia-section-grid');
+    if(sys && !document.getElementById('iaSetupCard')){
+      sys.insertAdjacentHTML('afterbegin',`<div class="ia-module-card" id="iaSetupCard"><div><b>Kişisel Kurulum</b><div class="small">Profil, standartlar ve öncelik alanı.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('setup')">Aç</button></div></div>`);
+    }
+  }
+
+  const oldRenderAll=window.renderAll;
+  if(typeof oldRenderAll==='function'&&!oldRenderAll.__onboardingPatched){
+    window.renderAll=function(){
+      oldRenderAll();
+      try{renderPersonalSetup()}catch(e){}
+      try{injectSetupCard()}catch(e){}
+    };
+    window.renderAll.__onboardingPatched=true;
+    try{renderAll=window.renderAll}catch(e){}
+  }
+
+  document.addEventListener('DOMContentLoaded',function(){
+    setTimeout(()=>{
+      fillSetupDefaults();
+      renderPersonalSetup();
+      injectSetupCard();
+      const setup=getSetup();
+      if(!setup.completed){
+        openOnboarding(false);
+      }
+    },900);
+    setTimeout(()=>{renderPersonalSetup();injectSetupCard()},2200);
+  });
+})();
+
+
+
+/* ===== THE STANDARD v8.0 Single DATA MODEL STABILIZATION ===== */
+(function(){
+  const SCHEMA_VERSION='7.9';
+  const META_KEY='the_standard_schema_meta_v1';
+
+  const DEFAULT_STATE_SHAPE={
+    settings:{},
+    bodyLogs:[],
+    meals:[],
+    books:[],
+    workouts:[],
+    habits:[],
+    habitLogs:{},
+    portfolioTx:[],
+    currentPrices:{},
+    priceUpdatedAt:{},
+    dynamicSchool:[],
+    academicCRM:{},
+    goals:[],
+    snapshots:[],
+    sessions:[],
+    weeklyPlans:[],
+    keyTasks:{},
+    weeklyReviews:[],
+    feedbackItems:[],
+    promptHistory:[],
+    reminders:[],
+    dayClosures:{}
+  };
+
+  const ARRAY_KEYS=['bodyLogs','meals','books','workouts','habits','portfolioTx','dynamicSchool','goals','snapshots','sessions','weeklyPlans','weeklyReviews','feedbackItems','promptHistory','reminders'];
+  const OBJECT_KEYS=['settings','habitLogs','currentPrices','priceUpdatedAt','academicCRM','keyTasks','dayClosures'];
+
+  function schemaMeta(){
+    try{return Object.assign({version:'unknown',lastMigrationAt:null,migrations:[]},JSON.parse(localStorage.getItem(META_KEY)||'{}'))}catch(e){return {version:'unknown',lastMigrationAt:null,migrations:[]}}
+  }
+  function setSchemaMeta(v){localStorage.setItem(META_KEY,JSON.stringify(v||{}))}
+  function nowISO(){return new Date().toISOString()}
+  function isObj(x){return x && typeof x==='object' && !Array.isArray(x)}
+  function ensureId(x,prefix){
+    if(!x.id) x.id=(typeof id==='function'?id():(prefix||'id')+'_'+Math.random().toString(36).slice(2,9));
+    return x;
+  }
+  function normalizeDate(x){
+    if(!x) return today();
+    if(typeof x==='string' && /^\d{4}-\d{2}-\d{2}/.test(x)) return x.slice(0,10);
+    try{return new Date(x).toISOString().slice(0,10)}catch(e){return today()}
+  }
+  function countAll(st){
+    st=st||state;
+    const out={};
+    ARRAY_KEYS.forEach(k=>out[k]=Array.isArray(st[k])?st[k].length:0);
+    out.habitLogDays=isObj(st.habitLogs)?Object.keys(st.habitLogs).length:0;
+    out.academicCRM=isObj(st.academicCRM)?Object.keys(st.academicCRM).length:0;
+    out.keyTasks=isObj(st.keyTasks)?Object.keys(st.keyTasks).length:0;
+    return out;
+  }
+  function stateBytes(){
+    try{return new Blob([JSON.stringify(state)]).size}catch(e){return 0}
+  }
+  function prettyBytes(bytes){
+    if(bytes<1024) return bytes+' B';
+    if(bytes<1024*1024) return (bytes/1024).toLocaleString('tr-TR',{maximumFractionDigits:1})+' KB';
+    return (bytes/1024/1024).toLocaleString('tr-TR',{maximumFractionDigits:2})+' MB';
+  }
+  function schemaIssues(){
+    const issues=[];
+    ARRAY_KEYS.forEach(k=>{
+      if(!Array.isArray(state[k])) issues.push({level:'bad',key:k,title:`${k} array değil`,detail:'Bu alan liste olmalı.',fix:'array'});
+    });
+    OBJECT_KEYS.forEach(k=>{
+      if(!isObj(state[k])) issues.push({level:'bad',key:k,title:`${k} object değil`,detail:'Bu alan obje olmalı.',fix:'object'});
+    });
+
+    // Record level checks
+    (state.bodyLogs||[]).forEach((x,i)=>{
+      if(!x.date) issues.push({level:'warn',key:'bodyLogs',title:`Body kaydı tarih eksik #${i+1}`,detail:'date alanı yok.',fix:'record'});
+      if(x.weight!=='' && x.weight!=null && isNaN(Number(x.weight))) issues.push({level:'warn',key:'bodyLogs',title:`Body kilo sayı değil #${i+1}`,detail:'weight numeric olmalı.',fix:'record'});
+    });
+    (state.meals||[]).forEach((x,i)=>{
+      if(!x.date) issues.push({level:'warn',key:'meals',title:`Öğün tarihi eksik #${i+1}`,detail:'date alanı yok.',fix:'record'});
+      ['cal','protein','carbs','fat'].forEach(n=>{ if(x[n]!=='' && x[n]!=null && isNaN(Number(x[n]))) issues.push({level:'warn',key:'meals',title:`Öğün ${n} sayı değil #${i+1}`,detail:'Makro alanları numeric olmalı.',fix:'record'}); });
+    });
+    (state.books||[]).forEach((x,i)=>{
+      if(!x.date) issues.push({level:'warn',key:'books',title:`Kitap tarihi eksik #${i+1}`,detail:'date alanı yok.',fix:'record'});
+      if(x.pages!=='' && x.pages!=null && isNaN(Number(x.pages))) issues.push({level:'warn',key:'books',title:`Kitap sayfa sayı değil #${i+1}`,detail:'pages numeric olmalı.',fix:'record'});
+    });
+    (state.portfolioTx||[]).forEach((x,i)=>{
+      if(!x.asset && !x.symbol) issues.push({level:'warn',key:'portfolioTx',title:`Portföy varlık adı eksik #${i+1}`,detail:'asset/symbol alanı yok.',fix:'record'});
+      if(x.qty!=null && isNaN(Number(x.qty))) issues.push({level:'warn',key:'portfolioTx',title:`Portföy adet sayı değil #${i+1}`,detail:'qty numeric olmalı.',fix:'record'});
+    });
+
+    return issues;
+  }
+  function migrateShape(){
+    Object.entries(DEFAULT_STATE_SHAPE).forEach(([k,def])=>{
+      if(state[k]===undefined || state[k]===null){
+        state[k]=Array.isArray(def)?[]:isObj(def)?{}:def;
+      }
+    });
+    ARRAY_KEYS.forEach(k=>{ if(!Array.isArray(state[k])) state[k]=[]; });
+    OBJECT_KEYS.forEach(k=>{ if(!isObj(state[k])) state[k]={}; });
+  }
+  function migrateRecords(){
+    state.bodyLogs=(state.bodyLogs||[]).map(x=>{
+      x=isObj(x)?x:{};
+      ensureId(x,'body');
+      x.date=normalizeDate(x.date);
+      x.weight=x.weight===''||x.weight==null?'':Number(x.weight)||'';
+      x.steps=Number(x.steps)||0;
+      x.sleep=x.sleep===''||x.sleep==null?'':Number(x.sleep)||'';
+      x.water=x.water===''||x.water==null?'':Number(x.water)||'';
+      x.energy=Number(x.energy)||5;
+      x.mood=Number(x.mood)||5;
+      return x;
+    });
+    state.meals=(state.meals||[]).map(x=>{
+      x=isObj(x)?x:{};
+      ensureId(x,'meal');
+      x.date=normalizeDate(x.date);
+      x.type=x.type||x.mealType||'Öğün';
+      x.text=x.text||x.name||'';
+      x.cal=Number(x.cal)||0;
+      x.protein=Number(x.protein)||0;
+      x.carbs=Number(x.carbs)||0;
+      x.fat=Number(x.fat)||0;
+      return x;
+    });
+    state.books=(state.books||[]).map(x=>{
+      x=isObj(x)?x:{};
+      ensureId(x,'book');
+      x.date=normalizeDate(x.date);
+      x.name=x.name||x.book||'Kitap';
+      x.pages=Number(x.pages)||0;
+      x.note=x.note||x.learn||'';
+      return x;
+    });
+    state.workouts=(state.workouts||[]).map(x=>{
+      x=isObj(x)?x:{};
+      ensureId(x,'workout');
+      x.date=normalizeDate(x.date);
+      x.name=x.name||x.title||'Antrenman';
+      x.exercises=Array.isArray(x.exercises)?x.exercises:[];
+      return x;
+    });
+    state.portfolioTx=(state.portfolioTx||[]).map(x=>{
+      x=isObj(x)?x:{};
+      ensureId(x,'tx');
+      x.date=normalizeDate(x.date);
+      x.asset=(x.asset||x.symbol||'').toString().trim().toUpperCase();
+      x.qty=Number(x.qty)||0;
+      x.cost=Number(x.cost)||Number(x.price)||0;
+      x.type=x.type||'buy';
+      return x;
+    }).filter(x=>x.asset);
+    state.sessions=(state.sessions||[]).map(x=>{
+      x=isObj(x)?x:{};
+      ensureId(x,'session');
+      x.date=normalizeDate(x.date);
+      x.category=x.category||'Diğer';
+      x.actualMinutes=Number(x.actualMinutes)||Math.round((Number(x.elapsedSeconds)||0)/60)||0;
+      x.status=x.status||'completed';
+      return x;
+    });
+    state.goals=(state.goals||[]).map(x=>{
+      x=isObj(x)?x:{};
+      ensureId(x,'goal');
+      x.name=x.name||'Hedef';
+      x.category=x.category||'Diğer';
+      x.status=x.status||'Aktif';
+      x.start=Number(x.start)||0;
+      x.current=Number(x.current)||0;
+      x.target=Number(x.target)||0;
+      return x;
+    });
+  }
+  function runMigrationsInternal(reason){
+    const before=JSON.stringify(countAll());
+    migrateShape();
+    migrateRecords();
+    state.schemaVersion=SCHEMA_VERSION;
+    state.updatedAt=nowISO();
+    const meta=schemaMeta();
+    meta.version=SCHEMA_VERSION;
+    meta.lastMigrationAt=nowISO();
+    meta.migrations=(meta.migrations||[]).concat([{version:SCHEMA_VERSION,date:nowISO(),reason:reason||'manual'}]).slice(-20);
+    setSchemaMeta(meta);
+    save();
+    const after=JSON.stringify(countAll());
+    return {before,after,meta};
+  }
+  window.runDataMigrations=function(){
+    if(typeof createSnapshot==='function') createSnapshot('v8.0 migration öncesi snapshot');
+    runMigrationsInternal('manual migration');
+    renderSchema();
+    if(typeof toast==='function')toast('Migration tamamlandı.');
+  };
+  window.runSchemaRepair=function(){
+    if(typeof createSnapshot==='function') createSnapshot('v8.0 schema repair öncesi snapshot');
+    runMigrationsInternal('schema repair');
+    renderAll();
+    if(typeof toast==='function')toast('Veri modeli onarıldı.');
+  };
+  window.runSchemaCheck=function(){ renderSchema(); };
+
+  function schemaReport(){
+    const issues=schemaIssues(), meta=schemaMeta(), counts=countAll();
+    return `THE STANDARD v8.0 Single DATA MODEL RAPORU
+
+Schema version: ${state.schemaVersion||'unknown'}
+Meta version: ${meta.version||'unknown'}
+Son migration: ${meta.lastMigrationAt||'yok'}
+Veri boyutu: ${prettyBytes(stateBytes())}
+Issue sayısı: ${issues.length}
+
+Kayıt Sayıları:
+${Object.entries(counts).map(([k,v])=>`- ${k}: ${v}`).join('\n')}
+
+Sorunlar:
+${issues.length?issues.map((x,i)=>`${i+1}. [${x.level}] ${x.title} — ${x.detail}`).join('\n'):'Sorun bulunmadı.'}
+
+Öneri:
+${issues.length?'Otomatik Onar çalıştır. Onarım öncesi snapshot alınır.':'Veri modeli stabil görünüyor.'}`;
+  }
+  window.renderSchema=function(){
+    const issues=schemaIssues(), meta=schemaMeta(), counts=countAll();
+    const bad=issues.filter(x=>x.level==='bad').length;
+    const warn=issues.filter(x=>x.level==='warn').length;
+    const ok=issues.length===0;
+    const grid=document.getElementById('schemaHealthGrid');
+    if(grid){
+      grid.innerHTML=`<div class="schema-card ${ok?'good':bad?'bad':'warn'}"><b>${ok?'Stabil':bad?'Kritik':'Uyarı'}</b><span>Model</span></div>
+      <div class="schema-card"><b>${SCHEMA_VERSION}</b><span>Hedef Şema</span></div>
+      <div class="schema-card ${issues.length?'warn':'good'}"><b>${issues.length}</b><span>Issue</span></div>
+      <div class="schema-card"><b>${prettyBytes(stateBytes())}</b><span>Boyut</span></div>`;
+    }
+    const list=document.getElementById('schemaIssues');
+    if(list){
+      list.innerHTML=issues.length?issues.slice(0,30).map(x=>`<div class="schema-item"><b>${esc(x.title)}</b><div class="small">${esc(x.detail)} • ${esc(x.key)}</div><span class="schema-pill ${x.level}">${x.level==='bad'?'Kritik':'Uyarı'}</span></div>`).join(''):'<div class="schema-item"><b>Şema temiz</b><div class="small">Zorunlu alanlar ve veri tipleri stabil görünüyor.</div><span class="schema-pill good">OK</span></div>';
+    }
+    const mig=document.getElementById('migrationStatus');
+    if(mig){
+      mig.innerHTML=`<b>Migration meta</b><br>Versiyon: ${esc(meta.version||'unknown')}<br>Son migration: ${esc(meta.lastMigrationAt||'yok')}<br>Migration sayısı: ${(meta.migrations||[]).length}`;
+    }
+    const table=document.getElementById('schemaModuleTable');
+    if(table){
+      table.innerHTML=`<table class="schema-table"><thead><tr><th>Alan</th><th>Tip</th><th>Kayıt</th><th>Durum</th></tr></thead><tbody>
+        ${ARRAY_KEYS.map(k=>`<tr><td>${k}</td><td>Array</td><td>${Array.isArray(state[k])?state[k].length:'—'}</td><td>${Array.isArray(state[k])?'OK':'Hata'}</td></tr>`).join('')}
+        ${OBJECT_KEYS.map(k=>`<tr><td>${k}</td><td>Object</td><td>${isObj(state[k])?Object.keys(state[k]).length:'—'}</td><td>${isObj(state[k])?'OK':'Hata'}</td></tr>`).join('')}
+      </tbody></table>`;
+    }
+    const out=document.getElementById('schemaReportOutput');
+    if(out) out.value=schemaReport();
+  };
+  window.copySchemaReport=function(){
+    navigator.clipboard.writeText(schemaReport()).then(()=>{if(typeof toast==='function')toast('Schema raporu kopyalandı.')});
+  };
+  window.downloadSchemaJSON=function(){
+    const data={version:SCHEMA_VERSION,date:today(),meta:schemaMeta(),counts:countAll(),issues:schemaIssues(),bytes:stateBytes()};
+    const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download=`the-standard-schema-${today()}.json`;
+    a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  };
+
+  // Auto-migrate once per schema version, quietly.
+  function autoMigrateOnce(){
+    const meta=schemaMeta();
+    if(meta.version!==SCHEMA_VERSION){
+      try{ runMigrationsInternal('auto migration'); }catch(e){ console.warn('auto migration failed',e); }
+    }
+  }
+
+  // Add Data Model card into System hub.
+  function injectSchemaCard(){
+    const sys=document.querySelector('#ia_system .ia-section-grid');
+    if(sys && !document.getElementById('iaSchemaCard')){
+      sys.insertAdjacentHTML('afterbegin',`<div class="ia-module-card" id="iaSchemaCard"><div><b>Data Model</b><div class="small">Şema, migration ve veri onarımı.</div></div><div class="ia-module-actions"><button class="ia-chip-btn" onclick="show('schema')">Aç</button></div></div>`);
+    }
+  }
+  const oldRenderAll=window.renderAll;
+  if(typeof oldRenderAll==='function'&&!oldRenderAll.__schemaPatched){
+    window.renderAll=function(){
+      oldRenderAll();
+      try{renderSchema()}catch(e){}
+      try{injectSchemaCard()}catch(e){}
+    };
+    window.renderAll.__schemaPatched=true;
+    try{renderAll=window.renderAll}catch(e){}
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    setTimeout(()=>{autoMigrateOnce();renderSchema();injectSchemaCard()},900);
+    setTimeout(()=>{renderSchema();injectSchemaCard()},2300);
+  });
+})();
+
+</script>
+  <script>
+// THE STANDARD v8.0 Single — Schema Contract
+window.THE_STANDARD_SCHEMA = {
+  version: '8.0',
+  arrays: [
+    'bodyLogs','meals','books','workouts','habits','portfolioTx','dynamicSchool',
+    'goals','snapshots','sessions','weeklyPlans','weeklyReviews','feedbackItems',
+    'promptHistory','reminders'
+  ],
+  objects: [
+    'settings','habitLogs','currentPrices','priceUpdatedAt','academicCRM',
+    'keyTasks','dayClosures'
+  ],
+  note: 'v8.0 keeps the v7.9 state contract and moves architecture into modular files.'
+};
+
+</script>
+  <script>
+// THE STANDARD v8.0 Single — Bootstrap
+(function(){
+  function addV8Badges(){
+    try{
+      const systemHero = document.querySelector('#ia_system .ia-hero .small');
+      if(systemHero && !systemHero.dataset.v8){
+        systemHero.dataset.v8 = '1';
+        systemHero.insertAdjacentHTML('beforeend','<br><span class="v8-architecture-badge">Single File Edition</span>');
+      }
+    }catch(e){}
+  }
+
+  function registerSW(){
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('./service-worker.js').catch(function(err){
+        console.warn('THE STANDARD service worker registration failed', err);
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    addV8Badges();
+    registerSW();
+    setTimeout(addV8Badges, 1500);
+  });
+})();
+
 </script>
 
 </body>
